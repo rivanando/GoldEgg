@@ -1,0 +1,26 @@
+# /etc/conf.d/goldeggd: config file for /etc/init.d/goldeggd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/goldegg/goldegg.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/goldeggd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/goldeggd.pid"
+
+# Where to write goldeggd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/goldeggd"
+
+# User and group to own goldeggd process
+#BITCOIND_USER="goldegg"
+#BITCOIND_GROUP="goldegg"
+
+# Path to goldeggd executable
+#BITCOIND_BIN="/usr/bin/goldeggd"
+
+# Nice value to run goldeggd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

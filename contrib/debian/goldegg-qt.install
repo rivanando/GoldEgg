@@ -1,0 +1,6 @@
+usr/local/bin/goldegg-qt usr/bin
+share/pixmaps/goldegg32.xpm usr/share/pixmaps
+share/pixmaps/goldegg16.xpm usr/share/pixmaps
+share/pixmaps/goldegg128.xpm usr/share/pixmaps
+debian/goldegg-qt.desktop usr/share/applications
+debian/goldegg-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,26 @@
+[Unit]
+Description=Goldegg's distributed currency daemon
+After=network.target
+
+[Service]
+User=goldegg
+Group=goldegg
+
+Type=forking
+PIDFile=/var/lib/goldeggd/goldeggd.pid
+
+ExecStart=/usr/bin/goldeggd -daemon -pid=/var/lib/goldeggd/goldeggd.pid \
+          -conf=/etc/goldegg/goldegg.conf -datadir=/var/lib/goldeggd
+
+ExecStop=-/usr/bin/goldegg-cli -conf=/etc/goldegg/goldegg.conf \
+         -datadir=/var/lib/goldeggd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopGec=60s
+TimeoutStartGec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
