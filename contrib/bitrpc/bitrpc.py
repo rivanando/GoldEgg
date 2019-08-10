@@ -104,9 +104,9 @@ elif cmd == "getgenerate":
     except:
         print "\n---An error occurred---\n"
 
-elif cmd == "gethashespergec":
+elif cmd == "gethashespersec":
     try:
-        print access.gethashespergec()
+        print access.gethashespersec()
     except:
         print "\n---An error occurred---\n"
 
@@ -321,11 +321,11 @@ elif cmd == "walletpassphrase":
     except:
         print "\n---An error occurred---\n"
 
-elif cmd == "walletpassphragechange":
+elif cmd == "walletpassphrasechange":
     try:
         pwd = getpass.getpass(prompt="Enter old wallet passphrase: ")
         pwd2 = getpass.getpass(prompt="Enter new wallet passphrase: ")
-        access.walletpassphragechange(pwd, pwd2)
+        access.walletpassphrasechange(pwd, pwd2)
         print
         print "\n---Passphrase changed---\n"
     except:

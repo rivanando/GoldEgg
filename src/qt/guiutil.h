@@ -38,7 +38,7 @@ namespace GUIUtil
 QString dateTimeStr(const QDateTime& datetime);
 QString dateTimeStr(qint64 nTime);
 
-// Render GEC addresses in monospace font
+// Render GDE addresses in monospace font
 QFont bitcoinAddressFont();
 
 // Set up widgets for address and amounts
@@ -204,8 +204,8 @@ boost::filesystem::path qstringToBoostPath(const QString& path);
 /* Convert OS specific boost path to QString through UTF-8 */
 QString boostPathToQString(const boost::filesystem::path& path);
 
-/* Convert seconds into a QString with days, hours, mins, gecs */
-QString formatDurationStr(int gecs);
+/* Convert seconds into a QString with days, hours, mins, gdes */
+QString formatDurationStr(int gdes);
 
 /* Format CNodeStats.nServices bitmask into a user-readable string */
 QString formatServicesStr(quint64 mask);

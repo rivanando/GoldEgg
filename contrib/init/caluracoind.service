@@ -17,8 +17,8 @@ ExecStop=-/usr/bin/goldegg-cli -conf=/etc/goldegg/goldegg.conf \
 
 Restart=always
 PrivateTmp=true
-TimeoutStopGec=60s
-TimeoutStartGec=2s
+TimeoutStopSec=60s
+TimeoutStartSec=2s
 StartLimitInterval=120s
 StartLimitBurst=5
 

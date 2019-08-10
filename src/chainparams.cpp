@@ -127,16 +127,16 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 3 * 60;      // Goldegg: 3 minutes
-        nTargetSpacing = 3 * 60;       // Goldegg: 3 minutes
-        nStakeMinAge = 3 * 60 * 60;   // Goldegg: 24 hours
+        nTargetTimespan = 7 * 60;      // Goldegg: 3 minutes
+        nTargetSpacing = 7 * 60;       // Goldegg: 3 minutes
+        nStakeMinAge = 2 * 60 * 60;   // Goldegg: 24 hours
         nMaturity = 10;
         nMasternodeCountDrift = 15;
         nMaxMoneyOut = 77000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 250;
-        nModifierUpdateBlock = 1; // We use the version 2 for GEC
+        nLastPOWBlock = 50;
+        nModifierUpdateBlock = 1; // We use the version 2 for GDE
 
 		/**
 		Merkle root: 3b5623bb7b274e63f4f510bf84e8d79746a255af64a6dd35c858bf2eb6fba72f
@@ -178,11 +178,11 @@ public:
         // Goldegg script addresses start with '3'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 10);
         // Goldegg private keys start with 'K'
-        base58Prefixes[GECRET_KEY] = std::vector<unsigned char>(1, 46);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 46);
         // Goldegg BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         // Goldegg BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
-        base58Prefixes[EXT_GECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
         // Goldegg BIP44 coin type is '259' (0x80000103)
         // BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x01)(0x03).convert_to_container<std::vector<unsigned char> >();
@@ -257,11 +257,11 @@ public:
         // Testnet Goldegg script addresses start with '5' or '6'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 12);
         // Testnet private keys start with 'k'
-        base58Prefixes[GECRET_KEY] = std::vector<unsigned char>(1, 108);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 108);
         // Testnet Goldegg BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         // Testnet Goldegg BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
-        base58Prefixes[EXT_GECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
         // Testnet goldegg BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 

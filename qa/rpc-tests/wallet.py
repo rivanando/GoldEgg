@@ -8,8 +8,8 @@
 # Does the following:
 #   a) creates 3 nodes, with an empty chain (no blocks).
 #   b) node0 mines a block
-#   c) node1 mines 32 blocks, so now node 0 has 500000GEC, node 1 has 4250GEC, node2 has none.
-#   d) node0 sends 601 GEC to node2, in two transactions (301 GEC, then 300 GEC).
+#   c) node1 mines 32 blocks, so now node 0 has 500000GDE, node 1 has 4250GDE, node2 has none.
+#   d) node0 sends 601 GDE to node2, in two transactions (301 GDE, then 300 GDE).
 #   e) node0 mines a block, collects the fee on the second transaction
 #   f) node1 mines 16 blocks, to mature node0's just-mined block
 #   g) check that node0 has 100-21, node2 has 21
@@ -50,7 +50,7 @@ class WalletTest (BitcoinTestFramework):
         assert_equal(self.nodes[2].getbalance(), 0)
 
         # Send 601 BTC from 0 to 2 using sendtoaddress call.
-        # Gecond transaction will be child of first, and will require a fee
+        # Gdeond transaction will be child of first, and will require a fee
         self.nodes[0].sendtoaddress(self.nodes[2].getnewaddress(), 351)
         self.nodes[0].sendtoaddress(self.nodes[2].getnewaddress(), 350)
 

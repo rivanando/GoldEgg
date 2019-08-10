@@ -62,12 +62,12 @@
         <translation>Vastaanottavat osoitteet</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat sinun GEC osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat sinun GDE osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Nämä ovat sinun GEC osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Nämä ovat sinun GDE osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -128,7 +128,7 @@
         <translation>Toista uusi salausavain</translation>
     </message>
     <message>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</source>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
         <translation>Ottaa pois käytöstä tavallisen sendmoneyn kun käyttöjärjestelmä on kompromisoitu. Ei tarjoa todellista turvaa.</translation>
     </message>
     <message>
@@ -168,23 +168,23 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella GECien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella GDEien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Oletko varma että tahdot salata lompakkosi?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki GECisi&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki GDEisi&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Lompakko salattu</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>TÄRKEÄÄ: Kaikki edelliset varmuuskopiot, jotka olet tehnyt lompakosta täytyy korvata uudella salatulla lompakko tiedostolla. Turvallisuussyistä edelliset varmuuskopiot salaamattomasta lompakosta muuttuvat hyödyttömiksi heti kun avaat uuden, salatun lompakon.</translation>
     </message>
     <message>
@@ -231,8 +231,8 @@
         <translation>&amp;BIP 38 Salaus</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Syötä GEC osoite, jonnka tahtoisit salata käyttäen BIP 38.
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Syötä GDE osoite, jonnka tahtoisit salata käyttäen BIP 38.
 Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityisavaimen.</translation>
     </message>
     <message>
@@ -240,8 +240,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Osoite:</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>GEC osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>GDE osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -272,8 +272,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän GEC osoitteen</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän GDE osoitteen</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -296,12 +296,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Syötä BIP 38 salattu yksityisavain. Syötä salausavain laatikkoon. Paina Avaa Salaus tuottaaksesi yksityisavaimen. Kun avain on dekryptattu, painamalla "Import osoite" lisää tämän yksityisavaimen lompakkoon.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>GEC osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>GDE osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla GEC osoitteella.</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla GDE osoitteella.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -591,8 +591,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Goldegg Ydin</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Lähetä kolikkoja GEC osoitteeseen</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Lähetä kolikkoja GDE osoitteeseen</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -619,12 +619,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Muokkaa konfiguraatio vaihtoehtoja Goldegg:lle</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
         <translation>Allekirjoita viestejä todistaaksesi, että omistat ne.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä GEC osoiteella.</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä GDE osoiteella.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1535,7 +1535,7 @@ Please check the address and try again.</source>
 <context>
     <name>ReceiveCoinsDialog</name>
     <message>
-        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has gecurity and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
+        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
         <translation>Uudelleenkäytä yksi aikaisemmista vastaanottavista osoitteista. &lt;br&gt; Osoitteen uudelleenkäytössä on turvallisuus- ja yksityisyysongelmia.&lt;br&gt; Älä käytä tätä ellet halua uudelleen käyttää vanhaa maksupyyntöä.</translation>
     </message>
     <message>
@@ -1752,8 +1752,8 @@ Please check the address and try again.</source>
         <translation>Muutos:</translation>
     </message>
     <message>
-        <source>0 GEC</source>
-        <translation>0 GEC</translation>
+        <source>0 GDE</source>
+        <translation>0 GDE</translation>
     </message>
     <message>
         <source>Choose...</source>
@@ -1836,8 +1836,8 @@ Please check the address and try again.</source>
         <translation>käyttää</translation>
     </message>
     <message>
-        <source>Warning: Invalid GEC address</source>
-        <translation>Varoitus: Virheellinen GEC osoite</translation>
+        <source>Warning: Invalid GDE address</source>
+        <translation>Varoitus: Virheellinen GDE osoite</translation>
     </message>
     <message>
         <source>Are you sure you want to send?</source>
@@ -1875,8 +1875,8 @@ Please check the address and try again.</source>
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The GEC address to send the payment to</source>
-        <translation>GEC osoite johon maksu lähetetään</translation>
+        <source>The GDE address to send the payment to</source>
+        <translation>GDE osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1937,8 +1937,8 @@ Please check the address and try again.</source>
         <translation>Voit allekirjoittaa viestejä osoitteillasi todistaaksesi, että omistat ne. Ole varovainen ettet allekirjoita mitään kummallista, sillä kalasteluyritykset saattavat yrittää huijata sinut luovuttamaan tietoja. Allekirjoita vain täysin yksityiskohtaisia sanomia, jotka hyväksyt.</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>GEC osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>GDE osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1969,16 +1969,16 @@ Please check the address and try again.</source>
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän GEC osoitteen</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän GDE osoitteen</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>GEC osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>GDE osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla GEC osoitteella.</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla GDE osoitteella.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>

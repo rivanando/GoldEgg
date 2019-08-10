@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_ECMULT_GEN_
-#define _GECP256K1_ECMULT_GEN_
+#ifndef _GDEP256K1_ECMULT_GEN_
+#define _GDEP256K1_ECMULT_GEN_
 
 #include "scalar.h"
 #include "group.h"

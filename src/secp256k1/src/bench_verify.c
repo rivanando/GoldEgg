@@ -11,7 +11,7 @@
 #include "util.h"
 
 int main(void) {
-    secp256k1_start(GECP256K1_START_VERIFY);
+    secp256k1_start(GDEP256K1_START_VERIFY);
 
     unsigned char msg[32];
     unsigned char sig[64];

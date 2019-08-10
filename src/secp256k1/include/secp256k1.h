@@ -1,49 +1,49 @@
-#ifndef _GECP256K1_
-# define _GECP256K1_
+#ifndef _GDEP256K1_
+# define _GDEP256K1_
 
 # ifdef __cplusplus
 extern "C" {
 # endif
 
-# if !defined(GECP256K1_GNUC_PREREQ)
+# if !defined(GDEP256K1_GNUC_PREREQ)
 #  if defined(__GNUC__)&&defined(__GNUC_MINOR__)
-#   define GECP256K1_GNUC_PREREQ(_maj,_min) \
+#   define GDEP256K1_GNUC_PREREQ(_maj,_min) \
  ((__GNUC__<<16)+__GNUC_MINOR__>=((_maj)<<16)+(_min))
 #  else
-#   define GECP256K1_GNUC_PREREQ(_maj,_min) 0
+#   define GDEP256K1_GNUC_PREREQ(_maj,_min) 0
 #  endif
 # endif
 
 # if (!defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L) )
-#  if GECP256K1_GNUC_PREREQ(2,7)
-#   define GECP256K1_INLINE __inline__
+#  if GDEP256K1_GNUC_PREREQ(2,7)
+#   define GDEP256K1_INLINE __inline__
 #  elif (defined(_MSC_VER))
-#   define GECP256K1_INLINE __inline
+#   define GDEP256K1_INLINE __inline
 #  else
-#   define GECP256K1_INLINE
+#   define GDEP256K1_INLINE
 #  endif
 # else
-#  define GECP256K1_INLINE inline
+#  define GDEP256K1_INLINE inline
 # endif
 
 /**Warning attributes
-  * NONNULL is not used if GECP256K1_BUILD is set to avoid the compiler optimizing out
+  * NONNULL is not used if GDEP256K1_BUILD is set to avoid the compiler optimizing out
   * some paranoid null checks. */
-# if defined(__GNUC__) && GECP256K1_GNUC_PREREQ(3, 4)
-#  define GECP256K1_WARN_UNUSED_RESULT __attribute__ ((__warn_unused_result__))
+# if defined(__GNUC__) && GDEP256K1_GNUC_PREREQ(3, 4)
+#  define GDEP256K1_WARN_UNUSED_RESULT __attribute__ ((__warn_unused_result__))
 # else
-#  define GECP256K1_WARN_UNUSED_RESULT
+#  define GDEP256K1_WARN_UNUSED_RESULT
 # endif
-# if !defined(GECP256K1_BUILD) && defined(__GNUC__) && GECP256K1_GNUC_PREREQ(3, 4)
-#  define GECP256K1_ARG_NONNULL(_x)  __attribute__ ((__nonnull__(_x)))
+# if !defined(GDEP256K1_BUILD) && defined(__GNUC__) && GDEP256K1_GNUC_PREREQ(3, 4)
+#  define GDEP256K1_ARG_NONNULL(_x)  __attribute__ ((__nonnull__(_x)))
 # else
-#  define GECP256K1_ARG_NONNULL(_x)
+#  define GDEP256K1_ARG_NONNULL(_x)
 # endif
 
 
 /** Flags to pass to secp256k1_start. */
-# define GECP256K1_START_VERIFY (1 << 0)
-# define GECP256K1_START_SIGN   (1 << 1)
+# define GDEP256K1_START_VERIFY (1 << 0)
+# define GDEP256K1_START_SIGN   (1 << 1)
 
 /** Initialize the library. This may take some time (10-100 ms).
  *  You need to call this before calling any other function.
@@ -68,57 +68,57 @@ void secp256k1_stop(void);
  *           siglen:    the length of the signature
  *           pubkey:    the public key to verify with (cannot be NULL)
  *           pubkeylen: the length of pubkey
- * Requires starting using GECP256K1_START_VERIFY.
+ * Requires starting using GDEP256K1_START_VERIFY.
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_verify(
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_verify(
   const unsigned char *msg,
   int msglen,
   const unsigned char *sig,
   int siglen,
   const unsigned char *pubkey,
   int pubkeylen
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(3) GECP256K1_ARG_NONNULL(5);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(3) GDEP256K1_ARG_NONNULL(5);
 
 /** Create an ECDSA signature.
  *  Returns: 1: signature created
  *           0: nonce invalid, try another one
  *  In:      msg:    the message being signed (cannot be NULL)
  *           msglen: the length of the message being signed (at most 32)
- *           geckey: pointer to a 32-byte gecret key (cannot be NULL, assumed to be valid)
+ *           gdekey: pointer to a 32-byte secret key (cannot be NULL, assumed to be valid)
  *           nonce:  pointer to a 32-byte nonce (cannot be NULL, generated with a cryptographic PRNG)
  *  Out:     sig:    pointer to an array where the signature will be placed (cannot be NULL)
  *  In/Out:  siglen: pointer to an int with the length of sig, which will be updated
  *                   to contain the actual signature length (<=72).
- * Requires starting using GECP256K1_START_SIGN.
+ * Requires starting using GDEP256K1_START_SIGN.
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_sign(
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_sign(
   const unsigned char *msg,
   int msglen,
   unsigned char *sig,
   int *siglen,
-  const unsigned char *geckey,
+  const unsigned char *gdekey,
   const unsigned char *nonce
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(3) GECP256K1_ARG_NONNULL(4) GECP256K1_ARG_NONNULL(5) GECP256K1_ARG_NONNULL(6);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(3) GDEP256K1_ARG_NONNULL(4) GDEP256K1_ARG_NONNULL(5) GDEP256K1_ARG_NONNULL(6);
 
 /** Create a compact ECDSA signature (64 byte + recovery id).
  *  Returns: 1: signature created
  *           0: nonce invalid, try another one
  *  In:      msg:    the message being signed (cannot be NULL)
  *           msglen: the length of the message being signed (at most 32)
- *           geckey: pointer to a 32-byte gecret key (cannot be NULL, assumed to be valid)
+ *           gdekey: pointer to a 32-byte secret key (cannot be NULL, assumed to be valid)
  *           nonce:  pointer to a 32-byte nonce (cannot be NULL, generated with a cryptographic PRNG)
  *  Out:     sig:    pointer to a 64-byte array where the signature will be placed (cannot be NULL)
  *           recid:  pointer to an int, which will be updated to contain the recovery id (can be NULL)
- * Requires starting using GECP256K1_START_SIGN.
+ * Requires starting using GDEP256K1_START_SIGN.
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_sign_compact(
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_sign_compact(
   const unsigned char *msg,
   int msglen,
   unsigned char *sig64,
-  const unsigned char *geckey,
+  const unsigned char *gdekey,
   const unsigned char *nonce,
   int *recid
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(3) GECP256K1_ARG_NONNULL(4) GECP256K1_ARG_NONNULL(5);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(3) GDEP256K1_ARG_NONNULL(4) GDEP256K1_ARG_NONNULL(5);
 
 /** Recover an ECDSA public key from a compact signature.
  *  Returns: 1: public key successfully recovered (which guarantees a correct signature).
@@ -130,9 +130,9 @@ GECP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_sign_compact(
  *           recid:      the recovery id (0-3, as returned by ecdsa_sign_compact)
  *  Out:     pubkey:     pointer to a 33 or 65 byte array to put the pubkey (cannot be NULL)
  *           pubkeylen:  pointer to an int that will contain the pubkey length (cannot be NULL)
- * Requires starting using GECP256K1_START_VERIFY.
+ * Requires starting using GDEP256K1_START_VERIFY.
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_recover_compact(
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_recover_compact(
   const unsigned char *msg,
   int msglen,
   const unsigned char *sig64,
@@ -140,14 +140,14 @@ GECP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_recover_compact(
   int *pubkeylen,
   int compressed,
   int recid
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(3) GECP256K1_ARG_NONNULL(4) GECP256K1_ARG_NONNULL(5);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(3) GDEP256K1_ARG_NONNULL(4) GDEP256K1_ARG_NONNULL(5);
 
-/** Verify an ECDSA gecret key.
- *  Returns: 1: gecret key is valid
- *           0: gecret key is invalid
- *  In:      geckey: pointer to a 32-byte gecret key (cannot be NULL)
+/** Verify an ECDSA secret key.
+ *  Returns: 1: secret key is valid
+ *           0: secret key is invalid
+ *  In:      gdekey: pointer to a 32-byte secret key (cannot be NULL)
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_geckey_verify(const unsigned char *geckey) GECP256K1_ARG_NONNULL(1);
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_gdekey_verify(const unsigned char *gdekey) GDEP256K1_ARG_NONNULL(1);
 
 /** Just validate a public key.
  *  Returns: 1: valid public key
@@ -155,25 +155,25 @@ GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_geckey_verify(const unsigned char 
  *  In:      pubkey:    pointer to a 33-byte or 65-byte public key (cannot be NULL).
  *           pubkeylen: length of pubkey
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_verify(const unsigned char *pubkey, int pubkeylen) GECP256K1_ARG_NONNULL(1);
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_verify(const unsigned char *pubkey, int pubkeylen) GDEP256K1_ARG_NONNULL(1);
 
-/** Compute the public key for a gecret key.
+/** Compute the public key for a secret key.
  *  In:     compressed: whether the computed public key should be compressed
- *          geckey:     pointer to a 32-byte private key (cannot be NULL)
+ *          gdekey:     pointer to a 32-byte private key (cannot be NULL)
  *  Out:    pubkey:     pointer to a 33-byte (if compressed) or 65-byte (if uncompressed)
  *                      area to store the public key (cannot be NULL)
  *          pubkeylen:  pointer to int that will be updated to contains the pubkey's
  *                      length (cannot be NULL)
- *  Returns: 1: gecret was valid, public key stores
- *           0: gecret was invalid, try again.
- * Requires starting using GECP256K1_START_SIGN.
+ *  Returns: 1: secret was valid, public key stores
+ *           0: secret was invalid, try again.
+ * Requires starting using GDEP256K1_START_SIGN.
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_create(
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_create(
   unsigned char *pubkey,
   int *pubkeylen,
-  const unsigned char *geckey,
+  const unsigned char *gdekey,
   int compressed
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(2) GECP256K1_ARG_NONNULL(3);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(2) GDEP256K1_ARG_NONNULL(3);
 
 /** Decompress a public key.
  * In/Out: pubkey:    pointer to a 65-byte array to put the decompressed public key.
@@ -183,55 +183,55 @@ GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_create(
  * Returns: 0 if the passed public key was invalid, 1 otherwise. If 1 is returned, the
             pubkey is replaced with its decompressed version.
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_decompress(
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_decompress(
   unsigned char *pubkey,
   int *pubkeylen
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(2);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(2);
 
 /** Export a private key in DER format. */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_privkey_export(
-  const unsigned char *geckey,
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_privkey_export(
+  const unsigned char *gdekey,
   unsigned char *privkey,
   int *privkeylen,
   int compressed
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(2) GECP256K1_ARG_NONNULL(3);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(2) GDEP256K1_ARG_NONNULL(3);
 
 /** Import a private key in DER format. */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_privkey_import(
-  unsigned char *geckey,
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_privkey_import(
+  unsigned char *gdekey,
   const unsigned char *privkey,
   int privkeylen
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(2);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(2);
 
 /** Tweak a private key by adding tweak to it. */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_privkey_tweak_add(
-  unsigned char *geckey,
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_privkey_tweak_add(
+  unsigned char *gdekey,
   const unsigned char *tweak
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(2);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(2);
 
 /** Tweak a public key by adding tweak times the generator to it.
- * Requires starting with GECP256K1_START_VERIFY.
+ * Requires starting with GDEP256K1_START_VERIFY.
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_tweak_add(
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_tweak_add(
   unsigned char *pubkey,
   int pubkeylen,
   const unsigned char *tweak
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(3);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(3);
 
 /** Tweak a private key by multiplying it with tweak. */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_privkey_tweak_mul(
-  unsigned char *geckey,
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_privkey_tweak_mul(
+  unsigned char *gdekey,
   const unsigned char *tweak
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(2);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(2);
 
 /** Tweak a public key by multiplying it with tweak.
- * Requires starting with GECP256K1_START_VERIFY.
+ * Requires starting with GDEP256K1_START_VERIFY.
  */
-GECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_tweak_mul(
+GDEP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_tweak_mul(
   unsigned char *pubkey,
   int pubkeylen,
   const unsigned char *tweak
-) GECP256K1_ARG_NONNULL(1) GECP256K1_ARG_NONNULL(3);
+) GDEP256K1_ARG_NONNULL(1) GDEP256K1_ARG_NONNULL(3);
 
 # ifdef __cplusplus
 }

@@ -17,7 +17,7 @@
 CActiveMasternode activeMasternode;
 
 //
-// Bootup the Masternode, look for a GEC collateral input and register on the network
+// Bootup the Masternode, look for a GDE collateral input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
@@ -293,12 +293,12 @@ bool CActiveMasternode::Register(CTxIn vin, CService service, CKey keyCollateral
     return true;
 }
 
-bool CActiveMasternode::GetMasterNodeVin(CTxIn& vin, CPubKey& pubkey, CKey& gecretKey)
+bool CActiveMasternode::GetMasterNodeVin(CTxIn& vin, CPubKey& pubkey, CKey& secretKey)
 {
-    return GetMasterNodeVin(vin, pubkey, gecretKey, "", "");
+    return GetMasterNodeVin(vin, pubkey, secretKey, "", "");
 }
 
-bool CActiveMasternode::GetMasterNodeVin(CTxIn& vin, CPubKey& pubkey, CKey& gecretKey, std::string strTxHash, std::string strOutputIndex)
+bool CActiveMasternode::GetMasterNodeVin(CTxIn& vin, CPubKey& pubkey, CKey& secretKey, std::string strTxHash, std::string strOutputIndex)
 {
     // Find possible candidates
     TRY_LOCK(pwalletMain->cs_wallet, fWallet);
@@ -342,12 +342,12 @@ bool CActiveMasternode::GetMasterNodeVin(CTxIn& vin, CPubKey& pubkey, CKey& gecr
     }
 
     // At this point we have a selected output, retrieve the associated info
-    return GetVinFromOutput(*selectedOutput, vin, pubkey, gecretKey);
+    return GetVinFromOutput(*selectedOutput, vin, pubkey, secretKey);
 }
 
 
 // Extract Masternode vin information from output
-bool CActiveMasternode::GetVinFromOutput(COutput out, CTxIn& vin, CPubKey& pubkey, CKey& gecretKey)
+bool CActiveMasternode::GetVinFromOutput(COutput out, CTxIn& vin, CPubKey& pubkey, CKey& secretKey)
 {
     CScript pubScript;
 
@@ -364,12 +364,12 @@ bool CActiveMasternode::GetVinFromOutput(COutput out, CTxIn& vin, CPubKey& pubke
         return false;
     }
 
-    if (!pwalletMain->GetKey(keyID, gecretKey)) {
+    if (!pwalletMain->GetKey(keyID, secretKey)) {
         LogPrintf("CActiveMasternode::GetMasterNodeVin - Private key for address is not known\n");
         return false;
     }
 
-    pubkey = gecretKey.GetPubKey();
+    pubkey = secretKey.GetPubKey();
     return true;
 }
 

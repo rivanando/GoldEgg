@@ -130,7 +130,7 @@ public:
  * MSVC's vector<T> implementation where it allocates 1 byte of memory in the allocator.)
  * Due to the unpredictable order of static initializers, we have to make sure the
  * LockedPageManager instance exists before any other STL-based objects that use
- * gecure_allocator are created. So instead of having LockedPageManager also be
+ * secure_allocator are created. So instead of having LockedPageManager also be
  * static-initialized, it is created on demand.
  */
 class LockedPageManager : public LockedPageManagerBase<MemoryPageLocker>
@@ -182,7 +182,7 @@ void UnlockObject(const T& t)
 // out of memory and clears its contents before deletion.
 //
 template <typename T>
-struct gecure_allocator : public std::allocator<T> {
+struct secure_allocator : public std::allocator<T> {
     // MSVC8 default copy constructor is broken
     typedef std::allocator<T> base;
     typedef typename base::size_type size_type;
@@ -192,16 +192,16 @@ struct gecure_allocator : public std::allocator<T> {
     typedef typename base::reference reference;
     typedef typename base::const_reference const_reference;
     typedef typename base::value_type value_type;
-    gecure_allocator() throw() {}
-    gecure_allocator(const gecure_allocator& a) throw() : base(a) {}
+    secure_allocator() throw() {}
+    secure_allocator(const secure_allocator& a) throw() : base(a) {}
     template <typename U>
-    gecure_allocator(const gecure_allocator<U>& a) throw() : base(a)
+    secure_allocator(const secure_allocator<U>& a) throw() : base(a)
     {
     }
-    ~gecure_allocator() throw() {}
+    ~secure_allocator() throw() {}
     template <typename _Other>
     struct rebind {
-        typedef gecure_allocator<_Other> other;
+        typedef secure_allocator<_Other> other;
     };
 
     T* allocate(std::size_t n, const void* hint = 0)
@@ -259,7 +259,7 @@ struct zero_after_free_allocator : public std::allocator<T> {
 };
 
 // This is exactly like std::string, but with a custom allocator.
-typedef std::basic_string<char, std::char_traits<char>, gecure_allocator<char> > GecureString;
+typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> > SecureString;
 
 // Byte-vector that clears its contents before deletion.
 typedef std::vector<char, zero_after_free_allocator<char> > CSerializeData;

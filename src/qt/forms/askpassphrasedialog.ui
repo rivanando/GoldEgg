@@ -117,7 +117,7 @@
         <bool>false</bool>
        </property>
        <property name="toolTip">
-        <string>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</string>
+        <string>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color:#fff;</string>

@@ -472,15 +472,15 @@ TEST(LogTest, ReadStart) {
   CheckInitialOffsetRecord(0, 0);
 }
 
-TEST(LogTest, ReadGecondOneOff) {
+TEST(LogTest, ReadGdeondOneOff) {
   CheckInitialOffsetRecord(1, 1);
 }
 
-TEST(LogTest, ReadGecondTenThousand) {
+TEST(LogTest, ReadGdeondTenThousand) {
   CheckInitialOffsetRecord(10000, 1);
 }
 
-TEST(LogTest, ReadGecondStart) {
+TEST(LogTest, ReadGdeondStart) {
   CheckInitialOffsetRecord(10007, 1);
 }
 

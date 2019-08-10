@@ -111,7 +111,7 @@ void setupAddressWidget(QValidatedLineEdit* widget, QWidget* parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a GEC address (e.g. %1)").arg("ZadD7qSMAy7ajW49t6XJNPyjUMChBn7jjU"));
+    widget->setPlaceholderText(QObject::tr("Enter a GDE address (e.g. %1)").arg("ZadD7qSMAy7ajW49t6XJNPyjUMChBn7jjU"));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -162,7 +162,7 @@ bool parseBitcoinURI(const QUrl& uri, SendCoinsRecipient* out)
             fShouldReturnFalse = false;
         } else if (i->first == "amount") {
             if (!i->second.isEmpty()) {
-                if (!BitcoinUnits::parse(BitcoinUnits::GEC, i->second, &rv.amount)) {
+                if (!BitcoinUnits::parse(BitcoinUnits::GDE, i->second, &rv.amount)) {
                     return false;
                 }
             }
@@ -197,7 +197,7 @@ QString formatBitcoinURI(const SendCoinsRecipient& info)
     int paramCount = 0;
 
     if (info.amount) {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::GEC, info.amount, false, BitcoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::GDE, info.amount, false, BitcoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -855,13 +855,13 @@ QString boostPathToQString(const boost::filesystem::path& path)
 }
 #endif
 
-QString formatDurationStr(int gecs)
+QString formatDurationStr(int gdes)
 {
     QStringList strList;
-    int days = gecs / 86400;
-    int hours = (gecs % 86400) / 3600;
-    int mins = (gecs % 3600) / 60;
-    int seconds = gecs % 60;
+    int days = gdes / 86400;
+    int hours = (gdes % 86400) / 3600;
+    int mins = (gdes % 3600) / 60;
+    int seconds = gdes % 60;
 
     if (days)
         strList.append(QString(QObject::tr("%1 d")).arg(days));

@@ -367,7 +367,7 @@ bool MultisigDialog::createMultisigTransaction(vector<CTxIn> vUserIn, vector<CTx
         }
 
         if(totalIn < totalOut){
-            throw runtime_error("Not enough GEC provided as input to complete transaction (including fee).");
+            throw runtime_error("Not enough GDE provided as input to complete transaction (including fee).");
         }
 
         //calculate change amount
@@ -432,7 +432,7 @@ bool MultisigDialog::createMultisigTransaction(vector<CTxIn> vUserIn, vector<CTx
            tx.vout.at(changeIndex).nValue -= fee;
            feeStringRet = strprintf("%d",((double)fee)/COIN).c_str();
         }else{
-            throw runtime_error("Not enough GEC provided to cover fee");
+            throw runtime_error("Not enough GDE provided to cover fee");
         }
 
         //clear junk from script sigs
@@ -555,10 +555,10 @@ bool MultisigDialog::signMultisigTx(CMutableTransaction& tx, string& errorOut, Q
             for(int i = 0; i < keyList->count(); i++){
                 QWidget* keyFrame = qobject_cast<QWidget*>(keyList->itemAt(i)->widget());
                 QLineEdit* key = keyFrame->findChild<QLineEdit*>("key");
-                CBitcoinGecret vchGecret;
-                if (!vchGecret.SetString(key->text().toStdString()))
+                CBitcoinSecret vchSecret;
+                if (!vchSecret.SetString(key->text().toStdString()))
                     throw runtime_error("Invalid private key");
-                CKey cKey = vchGecret.GetKey();
+                CKey cKey = vchSecret.GetKey();
                 if (!cKey.IsValid())
                     throw runtime_error("Private key outside allowed range");
                 privKeystore.AddKey(cKey);
@@ -731,7 +731,7 @@ bool MultisigDialog::createRedeemScript(int m, vector<string> vKeys, CScript& re
         for(vector<string>::iterator it = vKeys.begin(); it != vKeys.end(); ++it) {
             string keyString = *it;
     #ifdef ENABLE_WALLET
-            // Case 1: GEC address and we have full public key:
+            // Case 1: GDE address and we have full public key:
             CBitcoinAddress address(keyString);
             if (pwalletMain && address.IsValid()) {
                 CKeyID keyID;

@@ -303,7 +303,7 @@ static const CRPCCommand vRPCCommands[] =
 #ifdef ENABLE_WALLET
         /* Coin generation */
         {"generating", "getgenerate", &getgenerate, true, false, false},
-        {"generating", "gethashespergec", &gethashespergec, true, false, false},
+        {"generating", "gethashespersec", &gethashespersec, true, false, false},
         {"generating", "setgenerate", &setgenerate, true, true, false},
 #endif
 
@@ -402,7 +402,7 @@ static const CRPCCommand vRPCCommands[] =
         {"wallet", "settxfee", &settxfee, true, false, true},
         {"wallet", "signmessage", &signmessage, true, false, true},
         {"wallet", "walletlock", &walletlock, true, false, true},
-        {"wallet", "walletpassphragechange", &walletpassphragechange, true, false, true},
+        {"wallet", "walletpassphrasechange", &walletpassphrasechange, true, false, true},
         {"wallet", "walletpassphrase", &walletpassphrase, true, false, true},
 #endif // ENABLE_WALLET
 };

@@ -400,7 +400,7 @@
                   </palette>
                  </property>
                  <property name="toolTip">
-                  <string>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has gecurity and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</string>
+                  <string>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</string>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">color:#fff;</string>

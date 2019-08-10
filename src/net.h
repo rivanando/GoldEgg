@@ -364,10 +364,10 @@ public:
     // Ping time measurement:
     // The pong reply we're expecting, or 0 if no pong expected.
     uint64_t nPingNonceSent;
-    // Time (in ugec) the last ping was sent, or 0 if no ping was ever sent.
-    int64_t nPingUgecStart;
+    // Time (in ugde) the last ping was sent, or 0 if no ping was ever sent.
+    int64_t nPingUgdeStart;
     // Last measured round-trip time.
-    int64_t nPingUgecTime;
+    int64_t nPingUgdeTime;
     // Whether a ping is requested.
     bool fPingQueued;
 
@@ -440,7 +440,7 @@ public:
         // after addresses were pushed.
         if (addr.IsValid() && !setAddrKnown.count(addr)) {
             if (vAddrToSend.size() >= MAX_ADDR_TO_SEND) {
-                vAddrToSend[ingecure_rand() % vAddrToSend.size()] = addr;
+                vAddrToSend[insecure_rand() % vAddrToSend.size()] = addr;
             } else {
                 vAddrToSend.push_back(addr);
             }

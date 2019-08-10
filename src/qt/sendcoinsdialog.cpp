@@ -297,10 +297,10 @@ void SendCoinsDialog::on_sendButton_clicked()
             {
                 recipientElement = tr("%1 to %2").arg(amount, address);
             }
-        } else if (!rcp.authenticatedMerchant.isEmpty()) // gecure payment request
+        } else if (!rcp.authenticatedMerchant.isEmpty()) // secure payment request
         {
             recipientElement = tr("%1 to %2").arg(amount, GUIUtil::HtmlEscape(rcp.authenticatedMerchant));
-        } else // ingecure payment request
+        } else // insecure payment request
         {
             recipientElement = tr("%1 to %2").arg(amount, address);
         }
@@ -877,7 +877,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
             ui->labelCoinControlChangeLabel->setText("");
         } else if (!addr.IsValid()) // Invalid address
         {
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid GEC address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid GDE address"));
         } else // Valid address
         {
             CPubKey pubkey;

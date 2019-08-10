@@ -144,8 +144,8 @@
         <translation>Czy na pewno chcesz zakodować portfel?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE GEC!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE GDE!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -223,8 +223,8 @@
         <translation>Zakodowany klucz:</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres GEC jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres GDE jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -518,8 +518,8 @@
         <translation>&amp;Rdzeń Goldegg</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Wyślij monety do adresu GEC</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Wyślij monety do adresu GDE</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -546,12 +546,12 @@
         <translation>Modyfikuj opcje konfiguracji Goldegg</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>Zatwierdź wiadomość z twoimi adresami GEC, by udowodnić, że jesteś w ich posiadaniu</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>Zatwierdź wiadomość z twoimi adresami GDE, by udowodnić, że jesteś w ich posiadaniu</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu GEC</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu GDE</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -982,7 +982,7 @@ MultiWysyłlka: %1</translation>
         <translation>&amp;Status aktualizacji</translation>
     </message>
     <message>
-        <source>Status will be updated automatically in (gec):</source>
+        <source>Status will be updated automatically in (gde):</source>
         <translation>Status będzie uaktualniany automatycznie (w sekundach)</translation>
     </message>
     <message>
@@ -1361,8 +1361,8 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Liczba</translation>
     </message>
     <message>
-        <source>Enter a GEC address (e.g. %1)</source>
-        <translation>Wprowadź adres GEC (np. %1)</translation>
+        <source>Enter a GDE address (e.g. %1)</source>
+        <translation>Wprowadź adres GDE (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1800,8 +1800,8 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres GEC jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres GDE jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>

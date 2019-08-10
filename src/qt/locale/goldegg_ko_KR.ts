@@ -62,12 +62,12 @@
         <translation>받는 주소</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>이 주소들은 전송할 GEC 주소입니다. 송금하기 전 항상 금액과 전송할 주소를 확인해주세요.</translation>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>이 주소들은 전송할 GDE 주소입니다. 송금하기 전 항상 금액과 전송할 주소를 확인해주세요.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>이 주소들은 전송 받을 GEC 주소입니다. 각 트랜잭션별로 새로운 입금 주소를 사용하는 것이 좋습니다.</translation>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>이 주소들은 전송 받을 GDE 주소입니다. 각 트랜잭션별로 새로운 입금 주소를 사용하는 것이 좋습니다.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -132,7 +132,7 @@
         <translation>새로운 암호 확인</translation>
     </message>
     <message>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</source>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
         <translation>운영체제 계정이 손상되었을 때 일반적인 송금을 비활성화 합니다. 실질적인 보안을 제공하지 않습니다.</translation>
     </message>
     <message>
@@ -172,23 +172,23 @@
         <translation>지갑 암호화 확인</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 GECs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 GDEs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>지갑을 암호화 하시겠습니까?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>경고: 지갑 암호화 후 암호를 분실하게 되면 &lt;b&gt;모든 GEC를 잃게 됩니다&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>경고: 지갑 암호화 후 암호를 분실하게 되면 &lt;b&gt;모든 GDE를 잃게 됩니다&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>지갑 암호화 완료</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>중요: 이전에 지갑 파일로 백업 한 경우 지갑 파일을 암호화 된 지갑 파일로 대체해야 합니다. 보안상 문제로, 암호화되지 않은 지갑 파일의 이전 백업은 새롭게 암호화 된 지갑을 사용하게 되면 쓸모없게 될 것입니다.</translation>
     </message>
     <message>
@@ -235,16 +235,16 @@
         <translation>&amp;BIP 38 암호화</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>BIP 38을 사용하여 암호화 할 GEC 주소를 입력하십시오. 중간 입력창에 암호를 입력하십시오. 암호화를 누르면 암호화된 개인 키가 계산됩니다.</translation>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>BIP 38을 사용하여 암호화 할 GDE 주소를 입력하십시오. 중간 입력창에 암호를 입력하십시오. 암호화를 누르면 암호화된 개인 키가 계산됩니다.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>주소:</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>메세지를 서명하기 위한 GEC 주소</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>메세지를 서명하기 위한 GDE 주소</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>현재 서명을 시스템 클립 보드에 복사</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>이 GEC 주소를 소유하고 있다는 것을 증명하기 위해 메세지에 서명하십시오</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>이 GDE 주소를 소유하고 있다는 것을 증명하기 위해 메세지에 서명하십시오</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>BIP 38 암호화 된 개인 키를 입력하십시오. 중간 입력창에 암호를 입력하십시오. 키를 암호해제 후 '주소 가져오기'를 클릭하면 개인 키가 지갑에 추가됩니다.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>메세지에 서명된 GEC 주소</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>메세지에 서명된 GDE 주소</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>메세지가 지정된 GEC 주소로 서명되었는지 확인해주세요</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>메세지가 지정된 GDE 주소로 서명되었는지 확인해주세요</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,8 +598,8 @@
         <translation>Goldegg Core</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>GEC 주소로 전송하기</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>GDE 주소로 전송하기</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -626,12 +626,12 @@
         <translation>Goldegg에 대한 구성 옵션 수정</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>GEC 주소로 메시지에 서명하여 소유하고 있음을 증명하십시오.</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>GDE 주소로 메시지에 서명하여 소유하고 있음을 증명하십시오.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>메시지가 지정된 GEC 주소로 서명되었는지 확인합니다.</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>메시지가 지정된 GDE 주소로 서명되었는지 확인합니다.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1094,8 +1094,8 @@ Address: %4
         <translation>보내는 주소 수정</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid GEC address.</source>
-        <translation>입력된 주소 "%1"는 올바른 GEC 주소가 아닙니다.</translation>
+        <source>The entered address "%1" is not a valid GDE address.</source>
+        <translation>입력된 주소 "%1"는 올바른 GDE 주소가 아닙니다.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1294,7 +1294,7 @@ Address: %4
         <translation>&amp;업데이트 상태</translation>
     </message>
     <message>
-        <source>Status will be updated automatically in (gec):</source>
+        <source>Status will be updated automatically in (gde):</source>
         <translation>상태가 (초) 단위로 자동 업데이트됩니다:</translation>
     </message>
     <message>
@@ -1357,12 +1357,12 @@ Address: %4
         <translation>보낼 주소 입력</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GEC addresses after it matures.
-To Add: enter percentage to give and GEC address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GDE addresses after it matures.
+To Add: enter percentage to give and GDE address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>다중전송을 사용하면 성취 한 뒤 다른 GEC 주소 목록에 최대 100% 스테이크 또는 마스터노드 보상을 자동으로 보낼 수 있습니다.
-추가하려면 : 부여 할 백분율과 다중전송 벡터에 추가 할 GEC 주소를 입력하십시오.
+        <translation>다중전송을 사용하면 성취 한 뒤 다른 GDE 주소 목록에 최대 100% 스테이크 또는 마스터노드 보상을 자동으로 보낼 수 있습니다.
+추가하려면 : 부여 할 백분율과 다중전송 벡터에 추가 할 GDE 주소를 입력하십시오.
 삭제하려면 삭제할 주소를 입력하고 삭제를 누릅니다.
 활성화를 클릭하지 않으면 다중전송이 활성화되지 않습니다.</translation>
     </message>
@@ -1813,8 +1813,8 @@ Please check the address and try again.</source>
         <translation>goldegg을 시작할 수 없습니다: 결제하기 위한 클릭 처리</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid GEC address or malformed URI parameters.</source>
-        <translation>URI를 분석할 수 없습니다! 이는 잘못된 GEC 주소 또는 URI 매개변수 손상으로 인해 발생할 수 있습니다.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid GDE address or malformed URI parameters.</source>
+        <translation>URI를 분석할 수 없습니다! 이는 잘못된 GDE 주소 또는 URI 매개변수 손상으로 인해 발생할 수 있습니다.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1899,8 +1899,8 @@ Please check the address and try again.</source>
         <translation>금액</translation>
     </message>
     <message>
-        <source>Enter a GEC address (e.g. %1)</source>
-        <translation>GEC 주소를 입력하세요 (예 %1)</translation>
+        <source>Enter a GDE address (e.g. %1)</source>
+        <translation>GDE 주소를 입력하세요 (예 %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2261,7 +2261,7 @@ Please check the address and try again.</source>
 <context>
     <name>ReceiveCoinsDialog</name>
     <message>
-        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has gecurity and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
+        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
         <translation>이전에 사용한 수신 주소 중 하나를 다시 사용하십시오.&lt;br&gt;주소 재사용은 보안 및 개인정보보호 문제가 있습니다.&lt;br&gt;이전에 만든 결제 요청을 다시 생성하지 않는 한 이것을 사용하지 마십시오.</translation>
     </message>
     <message>
@@ -2506,8 +2506,8 @@ Please check the address and try again.</source>
         <translation>UTXO 크기:</translation>
     </message>
     <message>
-        <source>0 GEC</source>
-        <translation>0 GEC</translation>
+        <source>0 GDE</source>
+        <translation>0 GDE</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2550,12 +2550,12 @@ Please check the address and try again.</source>
         <translation>승인 시간:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGECs in fee,&lt;br /&gt;while "at least" pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uGECs로 설정되고,&lt;br /&gt;1000 uGECs 안에는 최소 "킬로바이트당" 250 uGECs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
+        <source>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGDEs in fee,&lt;br /&gt;while "at least" pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uGDEs로 설정되고,&lt;br /&gt;1000 uGDEs 안에는 최소 "킬로바이트당" 250 uGDEs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGECs in fee,&lt;br /&gt;while "total at least" pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uGECs로 설정되고,&lt;br /&gt;1000 uGECs 안에는 전체에서 최소 "킬로바이트당" 250 uGECs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
+        <source>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGDEs in fee,&lt;br /&gt;while "total at least" pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uGDEs로 설정되고,&lt;br /&gt;1000 uGDEs 안에는 전체에서 최소 "킬로바이트당" 250 uGDEs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Goldegg transactions than the network can process.</source>
@@ -2658,8 +2658,8 @@ Please check the address and try again.</source>
         <translation>사용</translation>
     </message>
     <message>
-        <source>Warning: Invalid GEC address</source>
-        <translation>경고: 잘못된 GEC 주소</translation>
+        <source>Warning: Invalid GDE address</source>
+        <translation>경고: 잘못된 GDE 주소</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -2753,8 +2753,8 @@ Please check the address and try again.</source>
         <translation>지불 &amp;대상:</translation>
     </message>
     <message>
-        <source>The GEC address to send the payment to</source>
-        <translation>전송할 GEC 주소</translation>
+        <source>The GDE address to send the payment to</source>
+        <translation>전송할 GDE 주소</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2843,8 +2843,8 @@ Please check the address and try again.</source>
         <translation>자신의 주소로 메세지에 서명할 수 있습니다. 피싱 공격으로 사용자를 속일 수 있으므로 서명에 주의해주세요. 동의하는 바에 한하여 서명하십시오.</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>메세지를 서명하기 위한 GEC 주소</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>메세지를 서명하기 위한 GDE 주소</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2875,16 +2875,16 @@ Please check the address and try again.</source>
         <translation>현재 서명을 시스템 클립 보드에 복사</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>이 GEC 주소를 소유하고 있다는 것을 증명하기 위해 메세지에 서명하십시오</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>이 GDE 주소를 소유하고 있다는 것을 증명하기 위해 메세지에 서명하십시오</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>메세지에 서명된 GEC 주소</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>메세지에 서명된 GDE 주소</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>메세지가 지정된 GEC 주소로 서명되었는지 확인해주세요</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>메세지가 지정된 GDE 주소로 서명되었는지 확인해주세요</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3479,8 +3479,8 @@ Please check the address and try again.</source>
         <translation>코인 전송 </translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GEC.</source>
-        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 GEC로 제한됩니다.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GDE.</source>
+        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 GDE로 제한됩니다.</translation>
     </message>
 </context>
 <context>
@@ -3609,12 +3609,12 @@ Please check the address and try again.</source>
         <translation>최고 블록이 변경될 경우 명령을 실행하십시오 (명령 내 %s 는 블록 해시로 대체 되었습니다)</translation>
     </message>
     <message>
-        <source>Fees (in GEC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>이것보다 작은 수수료 (GEC/Kb)는 중계 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
+        <source>Fees (in GDE/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>이것보다 작은 수수료 (GDE/Kb)는 중계 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
     </message>
     <message>
-        <source>Fees (in GEC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>이것보다 작은 수수료 (GEC/Kb)는 트랜잭션 생성 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
+        <source>Fees (in GDE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>이것보다 작은 수수료 (GDE/Kb)는 트랜잭션 생성 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3733,8 +3733,8 @@ rpcpassword=%s
         <translation>이 컴퓨터를 %s 로 지정하는것은 불가능합니다. Goldegg Core는 이미 실행 중입니다.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 GEC.</source>
-        <translation>트랜잭션에 대한 충분한 금액을 찾을 수 없습니다. 10000 GEC와 같지 않음</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 GDE.</source>
+        <translation>트랜잭션에 대한 충분한 금액을 찾을 수 없습니다. 10000 GDE와 같지 않음</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4009,8 +4009,8 @@ rpcpassword=%s
         <translation>블록을 받아오는데 실패했습니다.</translation>
     </message>
     <message>
-        <source>Fee (in GEC/kB) to add to transactions you send (default: %s)</source>
-        <translation>당신이 보내는 트랜잭션에 추가 할 수수료 (GEC/kB) (기본값: %s)</translation>
+        <source>Fee (in SEC/kB) to add to transactions you send (default: %s)</source>
+        <translation>당신이 보내는 트랜잭션에 추가 할 수수료 (SEC/kB) (기본값: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>

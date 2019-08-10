@@ -62,11 +62,11 @@
         <translation>Modtageradresse</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Dine adresser til at sende betalinger med. Kontroller altid både beløb og modtageradresse før afsendelse.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Dette er dine modtager adresser. Det anbefales at anvende en ny adresse til hver transaktion</translation>
     </message>
     <message>
@@ -132,7 +132,7 @@
         <translation>Gentag password</translation>
     </message>
     <message>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</source>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
         <translation>Slår ligegyldige afsendelser fra, når operativsystemets konto er kompromitteret. Denne funktion giver ikke ægte sikkerhed</translation>
     </message>
     <message>
@@ -172,7 +172,7 @@
         <translation>Bekræft, og tegnebogen krypteres.</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
         <translation>Goldegg vil lukke ned for at færdiggøre kryptograferingsprocesserne. Husk at kryptering alene ikke sikrer mod tyveri af mønterne fra malware eller virus på computeren.</translation>
     </message>
     <message>
@@ -180,15 +180,15 @@
         <translation>Er du sikker på, at du vil kryptere din tegnebog?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Advarsel! Hvis du krypterer din tegnebog og mister dit password vil du &lt;b&gt;MISTE ALLE DINE GEC&lt;/b&gt;. Passworded kan ikke genskabes.</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Advarsel! Hvis du krypterer din tegnebog og mister dit password vil du &lt;b&gt;MISTE ALLE DINE GDE&lt;/b&gt;. Passworded kan ikke genskabes.</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Tegnebogen er nu krypteret</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>Vigtigt! Alle sikkerhedskopier er er lavet af tegnebogen bør fjernes og erstattes med den nye kryptograferede tegnebogsfil. Af sikkerhedsmæssige årsager vil alle tidligere sikkerhedskopier, som har været taget af den ukrypterede tegnebog være uanvendelige så snart De tager den nye, krypterede tegnebog i brug.</translation>
     </message>
     <message>
@@ -235,16 +235,16 @@
         <translation>BIP 38 kryptografering</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Indtast den GEC adresse De ønsker at kryptografere ved hjælp af BIP 38. Indtast et kodeord i den midterste boks. Klik på krypter for at generere den kryptograferede private nøgle.</translation>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Indtast den GDE adresse De ønsker at kryptografere ved hjælp af BIP 38. Indtast et kodeord i den midterste boks. Klik på krypter for at generere den kryptograferede private nøgle.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresse</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>Den GEC adresse, der skal bruges til at underskrive beskeden med.</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>Den GDE adresse, der skal bruges til at underskrive beskeden med.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Kopier den aktuelle underskrift til udklipsholderen.</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Underskriv beskeden for at bevise, at De ejer denne GEC adresse.</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Underskriv beskeden for at bevise, at De ejer denne GDE adresse.</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Indtast den krypterede BIP 38 nøgle. Indtast kodeordet i den midterste boks. Klik på dekryptér for at generere den private nøgle. Når nøglen er dekrypteret vil klip på "importér adresse" overføre den private nøgle til tegnebogen.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>Beskeden er underskrevet med denne GEC adresse</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>Beskeden er underskrevet med denne GDE adresse</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>verificer beskeden for at sikre, at den blev underskrevet med den rigtige GEC adresse.</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>verificer beskeden for at sikre, at den blev underskrevet med den rigtige GDE adresse.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,8 +598,8 @@
         <translation>Goldegg kerne</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Send mønter til en GEC adresse</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Send mønter til en GDE adresse</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -626,12 +626,12 @@
         <translation>Ret konfigurationsindstillinger for Goldegg</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>Underskriv beskeder med Deres GEC adresser for at bekræfte at De ejer dem.</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>Underskriv beskeder med Deres GDE adresser for at bekræfte at De ejer dem.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Verificer besked for at sikre, at den er underskrevet med den opgivne GEC adresse</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Verificer besked for at sikre, at den er underskrevet med den opgivne GDE adresse</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -979,8 +979,8 @@ Adresse: %4
         <translation>middelhøj</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 uGEC per input.</source>
-        <translation>kan variere +/- %1 uGEC pr. input</translation>
+        <source>Can vary +/- %1 uGDE per input.</source>
+        <translation>kan variere +/- %1 uGDE pr. input</translation>
     </message>
     <message>
         <source>medium</source>
@@ -1094,8 +1094,8 @@ Adresse: %4
         <translation>Ret afsenderadresse</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid GEC address.</source>
-        <translation>Den indtastede adresse %1 er ikke en gyldig GEC adresse</translation>
+        <source>The entered address "%1" is not a valid GDE address.</source>
+        <translation>Den indtastede adresse %1 er ikke en gyldig GDE adresse</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1294,7 +1294,7 @@ Adresse: %4
         <translation>&amp;opdateringsstatus</translation>
     </message>
     <message>
-        <source>Status will be updated automatically in (gec):</source>
+        <source>Status will be updated automatically in (gde):</source>
         <translation>Status opdateres automatisk om (sek):</translation>
     </message>
     <message>
@@ -1357,12 +1357,12 @@ Adresse: %4
         <translation>Indtast modtageradresse</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GEC addresses after it matures.
-To Add: enter percentage to give and GEC address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GDE addresses after it matures.
+To Add: enter percentage to give and GDE address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>Multisend tillader at De automatisk kan sende op til 100% af Deres belønninger fra såvel indskud som masternodebelønninger til en liste over andre GEC adressater når den er tilstrækkelig stor.
-For at tilføje: Indtast procentsatsen De ønsker at overføre samt den GEC adresse som skal modtage via Multisendsystemet.
+        <translation>Multisend tillader at De automatisk kan sende op til 100% af Deres belønninger fra såvel indskud som masternodebelønninger til en liste over andre GDE adressater når den er tilstrækkelig stor.
+For at tilføje: Indtast procentsatsen De ønsker at overføre samt den GDE adresse som skal modtage via Multisendsystemet.
 For at fjerne: Indtast adressen som skal slettes og klik på slet.
 Multisend vil ikke fungere med mindre systemet er aktiveret.</translation>
     </message>
@@ -1512,7 +1512,7 @@ Kontroller adressen og prøv igen.</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
-        <translation>Størrelse på &amp;databagecache</translation>
+        <translation>Størrelse på &amp;databagdeache</translation>
     </message>
     <message>
         <source>MB</source>
@@ -1813,7 +1813,7 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Kan ikke starte goldegg "klik for at betale" systemet</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid GEC address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid GDE address or malformed URI parameters.</source>
         <translation>URl kan ikke fortolkes! Det kan skyldes en ugyldig adresse, eller forkerte URl parametre.</translation>
     </message>
     <message>
@@ -1899,8 +1899,8 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Beløb</translation>
     </message>
     <message>
-        <source>Enter a GEC address (e.g. %1)</source>
-        <translation>Indtast en GEC adresse (F.eks. %1)</translation>
+        <source>Enter a GDE address (e.g. %1)</source>
+        <translation>Indtast en GDE adresse (F.eks. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2256,7 +2256,7 @@ Kontroller adressen og prøv igen.</translation>
 <context>
     <name>ReceiveCoinsDialog</name>
     <message>
-        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has gecurity and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
+        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
         <translation>Genbrug en af de tidligere benyttede modtageradresser. &lt;br&gt; Genbrug af adresser kan kompromittere anonymiteten og sikkerheden. &lt;br&gt; Anbefales ikke, med mindre der blot er tale om genudsendelse af en tidligere genereret adresse.</translation>
     </message>
     <message>
@@ -2501,8 +2501,8 @@ Kontroller adressen og prøv igen.</translation>
         <translation>UTXO størrelse:</translation>
     </message>
     <message>
-        <source>0 GEC</source>
-        <translation>0 GEC</translation>
+        <source>0 GDE</source>
+        <translation>0 GDE</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2545,12 +2545,12 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Bekræftelsestid</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGECs in fee,&lt;br /&gt;while "at least" pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uGECs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uGEC i gebyr, &lt;br /&gt; mens "mindst" udbetaler 1000 uGECs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
+        <source>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGDEs in fee,&lt;br /&gt;while "at least" pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uGDEs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uGDE i gebyr, &lt;br /&gt; mens "mindst" udbetaler 1000 uGDEs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGECs in fee,&lt;br /&gt;while "total at least" pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uGECs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uGEC i gebyr, &lt;br /&gt; mens "Total-mindst" udbetaler 1000 uGECs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
+        <source>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGDEs in fee,&lt;br /&gt;while "total at least" pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uGDEs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uGDE i gebyr, &lt;br /&gt; mens "Total-mindst" udbetaler 1000 uGDEs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Goldegg transactions than the network can process.</source>
@@ -2653,8 +2653,8 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Anvender</translation>
     </message>
     <message>
-        <source>Warning: Invalid GEC address</source>
-        <translation>Advarsel! Ugyldig GEC adresse</translation>
+        <source>Warning: Invalid GDE address</source>
+        <translation>Advarsel! Ugyldig GDE adresse</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -2752,8 +2752,8 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Betal &amp;Til</translation>
     </message>
     <message>
-        <source>The GEC address to send the payment to</source>
-        <translation>GEC adressen, som betalingen skal sendes til</translation>
+        <source>The GDE address to send the payment to</source>
+        <translation>GDE adressen, som betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2842,8 +2842,8 @@ Kontroller adressen og prøv igen.</translation>
         <translation>De kan underskrive beskeder med Deres adresser or at bevise ejerskab. Vær forsigtig med at underskrive noget De er usikker på såsom forsøg op at narre Dem til at oplyse Deres identitet. Skriv kun under på noget De kan stå inde for, og som De er enig i. </translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>Den GEC adresse, der skal bruges til at underskrive beskeden med.</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>Den GDE adresse, der skal bruges til at underskrive beskeden med.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2874,16 +2874,16 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Kopier den aktuelle underskrift til udklipsholderen.</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Underskriv beskeden for at bevise, at De ejer denne GEC adresse.</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Underskriv beskeden for at bevise, at De ejer denne GDE adresse.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>Beskeden er underskrevet med denne GEC adresse</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>Beskeden er underskrevet med denne GDE adresse</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>verificer beskeden for at sikre, at den blev underskrevet med den rigtige GEC adresse.</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>verificer beskeden for at sikre, at den blev underskrevet med den rigtige GDE adresse.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3477,8 +3477,8 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Send mønter</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GEC.</source>
-        <translation>SwiftTx understøtter ikke afsendelse af så store beløb endnu. Transaktioner er for tiden begrænsede til %1 GEC.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GDE.</source>
+        <translation>SwiftTx understøtter ikke afsendelse af så store beløb endnu. Transaktioner er for tiden begrænsede til %1 GDE.</translation>
     </message>
 </context>
 <context>
@@ -3608,12 +3608,12 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Udfør en kommando når den bedste blok ændres (%s in cmd erstattes med blok hashen)</translation>
     </message>
     <message>
-        <source>Fees (in GEC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Gebyrer (in GEC/kb) lavere end dette betragtes som et nul-gebyr for at videresende (default: %s)</translation>
+        <source>Fees (in GDE/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Gebyrer (in GDE/kb) lavere end dette betragtes som et nul-gebyr for at videresende (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in GEC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Gebyrer (in GEC/kb) lavere end dette betragtes som et nul-gebyr for at oprette en transaktion (default: %s)</translation>
+        <source>Fees (in GDE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Gebyrer (in GDE/kb) lavere end dette betragtes som et nul-gebyr for at oprette en transaktion (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3732,8 +3732,8 @@ For eksempel: alertnotify=Echo %% | mail - s "Goldegg ALARM!" e-mail@administrat
         <translation>Det var ikke muligt at forbinde %s på denne computer. Goldegg kører sandsynligvis allerede.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 GEC.</source>
-        <translation>Det var ikke muligt at allokere tilstrækkelige midler til denne transaktion som er forskellig fra 10000 GEC.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 GDE.</source>
+        <translation>Det var ikke muligt at allokere tilstrækkelige midler til denne transaktion som er forskellig fra 10000 GDE.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4008,8 +4008,8 @@ For eksempel: alertnotify=Echo %% | mail - s "Goldegg ALARM!" e-mail@administrat
         <translation>Læsning af blokken mislykkedes</translation>
     </message>
     <message>
-        <source>Fee (in GEC/kB) to add to transactions you send (default: %s)</source>
-        <translation>Gebyr (i GEC/kB) som skal tilføjes transaktionen der sendes (default: %s)</translation>
+        <source>Fee (in SEC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Gebyr (i SEC/kB) som skal tilføjes transaktionen der sendes (default: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4357,7 +4357,7 @@ For eksempel: alertnotify=Echo %% | mail - s "Goldegg ALARM!" e-mail@administrat
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
-        <translation>Angiv databagecachens størrelse i megabytes (%d til  %d, default: %d)</translation>
+        <translation>Angiv databagdeachens størrelse i megabytes (%d til  %d, default: %d)</translation>
     </message>
     <message>
         <source>Set external address:port to get to this masternode (example: %s)</source>

@@ -52,30 +52,30 @@ libsecp256k1_common_la_SOURCES = src/field_5x52_asm.asm
 endif
 
 libsecp256k1_la_SOURCES = src/secp256k1.c
-libsecp256k1_la_CPPFLAGS = -I$(top_srcdir)/include $(GECP_INCLUDES)
-libsecp256k1_la_LIBADD = $(COMMON_LIB) $(GECP_LIBS)
+libsecp256k1_la_CPPFLAGS = -I$(top_srcdir)/include $(GDEP_INCLUDES)
+libsecp256k1_la_LIBADD = $(COMMON_LIB) $(GDEP_LIBS)
 
 
 noinst_PROGRAMS =
 if USE_BENCHMARK
 noinst_PROGRAMS += bench_verify bench_sign bench_inv
 bench_verify_SOURCES = src/bench_verify.c
-bench_verify_LDADD = libsecp256k1.la $(GECP_LIBS)
+bench_verify_LDADD = libsecp256k1.la $(GDEP_LIBS)
 bench_verify_LDFLAGS = -static
 bench_sign_SOURCES = src/bench_sign.c
-bench_sign_LDADD = libsecp256k1.la $(GECP_LIBS)
+bench_sign_LDADD = libsecp256k1.la $(GDEP_LIBS)
 bench_sign_LDFLAGS = -static
 bench_inv_SOURCES = src/bench_inv.c
-bench_inv_LDADD = $(COMMON_LIB) $(GECP_LIBS)
+bench_inv_LDADD = $(COMMON_LIB) $(GDEP_LIBS)
 bench_inv_LDFLAGS = -static
-bench_inv_CPPFLAGS = $(GECP_INCLUDES)
+bench_inv_CPPFLAGS = $(GDEP_INCLUDES)
 endif
 
 if USE_TESTS
 noinst_PROGRAMS += tests
 tests_SOURCES = src/tests.c
-tests_CPPFLAGS = -DVERIFY $(GECP_INCLUDES) $(GECP_TEST_INCLUDES)
-tests_LDADD = $(COMMON_LIB) $(GECP_LIBS) $(GECP_TEST_LIBS)
+tests_CPPFLAGS = -DVERIFY $(GDEP_INCLUDES) $(GDEP_TEST_INCLUDES)
+tests_LDADD = $(COMMON_LIB) $(GDEP_LIBS) $(GDEP_TEST_LIBS)
 tests_LDFLAGS = -static
 TESTS = tests
 endif

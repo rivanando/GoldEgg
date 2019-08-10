@@ -234,7 +234,7 @@
                   <item>
                    <widget class="QLabel" name="autoupdate_label">
                     <property name="text">
-                     <string>Status will be updated automatically in (gec):</string>
+                     <string>Status will be updated automatically in (gde):</string>
                     </property>
                    </widget>
                   </item>

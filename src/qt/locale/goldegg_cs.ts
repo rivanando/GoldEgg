@@ -62,12 +62,12 @@
         <translation>Adresy pro přijetí peněz</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto jsou Vaše GEC adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto jsou Vaše GDE adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto jsou Vaše GEC adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto jsou Vaše GDE adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -132,7 +132,7 @@
         <translation>Zopakujte frázové heslo</translation>
     </message>
     <message>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</source>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
         <translation>Slouží k neumožnění zaslání jednoduché platby, pokud je učet OS kompromitován. Neposkytuje tak reálné zabezpeční.</translation>
     </message>
     <message>
@@ -172,23 +172,23 @@
         <translation>Potvrdit zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše GECy před krádží, pokud je Váš počítač infikován malwarem.</translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše GDEy před krádží, pokud je Váš počítač infikován malwarem.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Opravdu chcete zašifrovat Vaši peněženku?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Varování: Pokud zašifrujete svou peněženku a ztratíte frázové heslo, tak &lt;b&gt;ZTRATÍTE VŠECHNY VAŠE GECy&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Varování: Pokud zašifrujete svou peněženku a ztratíte frázové heslo, tak &lt;b&gt;ZTRATÍTE VŠECHNY VAŠE GDEy&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Pěněženka je zašifrována</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>DŮLEŽITÉ: Každá předešlá zaloha, kterou jste provedli, by měla být nahrazena nově vygenerovanou, šifrovavou zálohou soboru Vaší peněženky. Z bezpečnostních důvodů budou všechny předešlé zálohy nezašifrované peněženky nepoužitelné, jakmile začnete používat nově zašifrovanou peněženku.</translation>
     </message>
     <message>
@@ -235,16 +235,16 @@
         <translation>&amp;BIP 38 Šifrovat</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadejte GEC adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadejte GDE adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresa:</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>GEC adresa pro podepsání zprávy</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>GDE adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto GEC adresu</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto GDE adresu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Vložte BIP 38 šifrovaný privítní klíc. Frázové heslo vložte do prostředního boxu. Kliknětě na Dešifrovat Klíč pro výpočet privátního klíče. Poté co bude klíč dešifrován, kliknutím na 'Importovat Adresu' přidáte privátní klíč do Vaší peněženky.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>GEC adresa zprávy byla podpsána</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>GDE adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou GEC adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou GDE adresou</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,8 +598,8 @@
         <translation>Goldegg Core</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Odeslat platbuna GEC adresu</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Odeslat platbuna GDE adresu</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -622,16 +622,16 @@
         <translation>Zobraz informace o Goldegg Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for GEC</source>
-        <translation>Upravit možnosti konfigurace pro GEC</translation>
+        <source>Modify configuration options for GDE</source>
+        <translation>Upravit možnosti konfigurace pro GDE</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>Podepsat zprávy Vaší GEC adresou pro prokázaní, že jste jejich vlastníkem</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>Podepsat zprávy Vaší GDE adresou pro prokázaní, že jste jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými GEC adresami</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými GDE adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1058,8 +1058,8 @@ MultiSend: %1</translation>
         <translation>Upravit adresu k odeslání platby</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid GEC address.</source>
-        <translation>Zadaná adresa "%1" není validní GEC adresa.</translation>
+        <source>The entered address "%1" is not a valid GDE address.</source>
+        <translation>Zadaná adresa "%1" není validní GDE adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1234,8 +1234,8 @@ MultiSend: %1</translation>
         <translation>&amp;Update stavu</translation>
     </message>
     <message>
-        <source>Status will be updated automatically in (gec):</source>
-        <translation>Stav bude automaticky updateován za (gec):</translation>
+        <source>Status will be updated automatically in (gde):</source>
+        <translation>Stav bude automaticky updateován za (gde):</translation>
     </message>
     <message>
         <source>0</source>
@@ -1927,8 +1927,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Změna:</translation>
     </message>
     <message>
-        <source>0 GEC</source>
-        <translation>0 GEC</translation>
+        <source>0 GDE</source>
+        <translation>0 GDE</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2056,8 +2056,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>GEC adresa pro podepsání zprávy</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>GDE adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2084,16 +2084,16 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto GEC adresu</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto GDE adresu</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>GEC adresa zprávy byla podpsána</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>GDE adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou GEC adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou GDE adresou</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>

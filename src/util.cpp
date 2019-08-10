@@ -171,7 +171,7 @@ public:
     }
     ~CInit()
     {
-        // Gecurely erase the memory used by the PRNG
+        // Securely erase the memory used by the PRNG
         RAND_cleanup();
         // Shutdown OpenSSL library multithreading support
         CRYPTO_set_locking_callback(NULL);

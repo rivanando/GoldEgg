@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_UTIL_H_
-#define _GECP256K1_UTIL_H_
+#ifndef _GDEP256K1_UTIL_H_
+#define _GDEP256K1_UTIL_H_
 
 #if defined HAVE_CONFIG_H
 #include "libsecp256k1-config.h"
@@ -62,19 +62,19 @@
 #endif
 
 /* Macro for restrict, when available and not in a VERIFY build. */
-#if defined(GECP256K1_BUILD) && defined(VERIFY)
-# define GECP256K1_RESTRICT
+#if defined(GDEP256K1_BUILD) && defined(VERIFY)
+# define GDEP256K1_RESTRICT
 #else
 # if (!defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L) )
-#  if GECP256K1_GNUC_PREREQ(3,0)
-#   define GECP256K1_RESTRICT __restrict__
+#  if GDEP256K1_GNUC_PREREQ(3,0)
+#   define GDEP256K1_RESTRICT __restrict__
 #  elif (defined(_MSC_VER) && _MSC_VER >= 1400)
-#   define GECP256K1_RESTRICT __restrict
+#   define GDEP256K1_RESTRICT __restrict
 #  else
-#   define GECP256K1_RESTRICT
+#   define GDEP256K1_RESTRICT
 #  endif
 # else
-#  define GECP256K1_RESTRICT restrict
+#  define GDEP256K1_RESTRICT restrict
 # endif
 #endif
 

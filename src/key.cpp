@@ -21,7 +21,7 @@ class CSecp256k1Init
 public:
     CSecp256k1Init()
     {
-        secp256k1_start(GECP256K1_START_SIGN);
+        secp256k1_start(GDEP256K1_START_SIGN);
     }
     ~CSecp256k1Init()
     {
@@ -238,7 +238,7 @@ void CExtKey::Decode(const unsigned char code[74])
 
 bool ECC_InitSanityCheck()
 {
-#if !defined(USE_GECP256K1)
+#if !defined(USE_GDEP256K1)
     if (!CECKey::SanityCheck()) {
         return false;
     }

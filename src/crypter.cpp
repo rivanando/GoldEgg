@@ -14,7 +14,7 @@
 #include <string>
 #include <vector>
 
-bool CCrypter::SetKeyFromPassphrase(const GecureString& strKeyData, const std::vector<unsigned char>& chSalt, const unsigned int nRounds, const unsigned int nDerivationMethod)
+bool CCrypter::SetKeyFromPassphrase(const SecureString& strKeyData, const std::vector<unsigned char>& chSalt, const unsigned int nRounds, const unsigned int nDerivationMethod)
 {
     if (nRounds < 1 || chSalt.size() != WALLET_CRYPTO_SALT_SIZE)
         return false;
@@ -97,7 +97,7 @@ bool CCrypter::Decrypt(const std::vector<unsigned char>& vchCiphertext, CKeyingM
 }
 
 
-bool EncryptGecret(const CKeyingMaterial& vMasterKey, const CKeyingMaterial& vchPlaintext, const uint256& nIV, std::vector<unsigned char>& vchCiphertext)
+bool EncryptGderet(const CKeyingMaterial& vMasterKey, const CKeyingMaterial& vchPlaintext, const uint256& nIV, std::vector<unsigned char>& vchCiphertext)
 {
     CCrypter cKeyCrypter;
     std::vector<unsigned char> chIV(WALLET_CRYPTO_KEY_SIZE);
@@ -108,8 +108,8 @@ bool EncryptGecret(const CKeyingMaterial& vMasterKey, const CKeyingMaterial& vch
 }
 
 
-// General gecure AES 256 CBC encryption routine
-bool EncryptAES256(const GecureString& sKey, const GecureString& sPlaintext, const std::string& sIV, std::string& sCiphertext)
+// General secure AES 256 CBC encryption routine
+bool EncryptAES256(const SecureString& sKey, const SecureString& sPlaintext, const std::string& sIV, std::string& sCiphertext)
 {
     // max ciphertext len for a n bytes of plaintext is
     // n + AES_BLOCK_SIZE - 1 bytes
@@ -142,7 +142,7 @@ bool EncryptAES256(const GecureString& sKey, const GecureString& sPlaintext, con
 }
 
 
-bool DecryptGecret(const CKeyingMaterial& vMasterKey, const std::vector<unsigned char>& vchCiphertext, const uint256& nIV, CKeyingMaterial& vchPlaintext)
+bool DecryptGderet(const CKeyingMaterial& vMasterKey, const std::vector<unsigned char>& vchCiphertext, const uint256& nIV, CKeyingMaterial& vchPlaintext)
 {
     CCrypter cKeyCrypter;
     std::vector<unsigned char> chIV(WALLET_CRYPTO_KEY_SIZE);
@@ -152,7 +152,7 @@ bool DecryptGecret(const CKeyingMaterial& vMasterKey, const std::vector<unsigned
     return cKeyCrypter.Decrypt(vchCiphertext, *((CKeyingMaterial*)&vchPlaintext));
 }
 
-bool DecryptAES256(const GecureString& sKey, const std::string& sCiphertext, const std::string& sIV, GecureString& sPlaintext)
+bool DecryptAES256(const SecureString& sKey, const std::string& sCiphertext, const std::string& sIV, SecureString& sPlaintext)
 {
     // plaintext will always be equal to or lesser than length of ciphertext
     int nLen = sCiphertext.size();
@@ -218,18 +218,18 @@ bool CCryptoKeyStore::Unlock(const CKeyingMaterial& vMasterKeyIn)
         CryptedKeyMap::const_iterator mi = mapCryptedKeys.begin();
         for (; mi != mapCryptedKeys.end(); ++mi) {
             const CPubKey& vchPubKey = (*mi).second.first;
-            const std::vector<unsigned char>& vchCryptedGecret = (*mi).second.second;
-            CKeyingMaterial vchGecret;
-            if (!DecryptGecret(vMasterKeyIn, vchCryptedGecret, vchPubKey.GetHash(), vchGecret)) {
+            const std::vector<unsigned char>& vchCryptedGderet = (*mi).second.second;
+            CKeyingMaterial vchSecret;
+            if (!DecryptGderet(vMasterKeyIn, vchCryptedGderet, vchPubKey.GetHash(), vchSecret)) {
                 keyFail = true;
                 break;
             }
-            if (vchGecret.size() != 32) {
+            if (vchSecret.size() != 32) {
                 keyFail = true;
                 break;
             }
             CKey key;
-            key.Set(vchGecret.begin(), vchGecret.end(), vchPubKey.IsCompressed());
+            key.Set(vchSecret.begin(), vchSecret.end(), vchPubKey.IsCompressed());
             if (key.GetPubKey() != vchPubKey) {
                 keyFail = true;
                 break;
@@ -261,26 +261,26 @@ bool CCryptoKeyStore::AddKeyPubKey(const CKey& key, const CPubKey& pubkey)
         if (IsLocked())
             return false;
 
-        std::vector<unsigned char> vchCryptedGecret;
-        CKeyingMaterial vchGecret(key.begin(), key.end());
-        if (!EncryptGecret(vMasterKey, vchGecret, pubkey.GetHash(), vchCryptedGecret))
+        std::vector<unsigned char> vchCryptedGderet;
+        CKeyingMaterial vchSecret(key.begin(), key.end());
+        if (!EncryptGderet(vMasterKey, vchSecret, pubkey.GetHash(), vchCryptedGderet))
             return false;
 
-        if (!AddCryptedKey(pubkey, vchCryptedGecret))
+        if (!AddCryptedKey(pubkey, vchCryptedGderet))
             return false;
     }
     return true;
 }
 
 
-bool CCryptoKeyStore::AddCryptedKey(const CPubKey& vchPubKey, const std::vector<unsigned char>& vchCryptedGecret)
+bool CCryptoKeyStore::AddCryptedKey(const CPubKey& vchPubKey, const std::vector<unsigned char>& vchCryptedGderet)
 {
     {
         LOCK(cs_KeyStore);
         if (!SetCrypted())
             return false;
 
-        mapCryptedKeys[vchPubKey.GetID()] = make_pair(vchPubKey, vchCryptedGecret);
+        mapCryptedKeys[vchPubKey.GetID()] = make_pair(vchPubKey, vchCryptedGderet);
     }
     return true;
 }
@@ -295,13 +295,13 @@ bool CCryptoKeyStore::GetKey(const CKeyID& address, CKey& keyOut) const
         CryptedKeyMap::const_iterator mi = mapCryptedKeys.find(address);
         if (mi != mapCryptedKeys.end()) {
             const CPubKey& vchPubKey = (*mi).second.first;
-            const std::vector<unsigned char>& vchCryptedGecret = (*mi).second.second;
-            CKeyingMaterial vchGecret;
-            if (!DecryptGecret(vMasterKey, vchCryptedGecret, vchPubKey.GetHash(), vchGecret))
+            const std::vector<unsigned char>& vchCryptedGderet = (*mi).second.second;
+            CKeyingMaterial vchSecret;
+            if (!DecryptGderet(vMasterKey, vchCryptedGderet, vchPubKey.GetHash(), vchSecret))
                 return false;
-            if (vchGecret.size() != 32)
+            if (vchSecret.size() != 32)
                 return false;
-            keyOut.Set(vchGecret.begin(), vchGecret.end(), vchPubKey.IsCompressed());
+            keyOut.Set(vchSecret.begin(), vchSecret.end(), vchPubKey.IsCompressed());
             return true;
         }
     }
@@ -335,11 +335,11 @@ bool CCryptoKeyStore::EncryptKeys(CKeyingMaterial& vMasterKeyIn)
         BOOST_FOREACH (KeyMap::value_type& mKey, mapKeys) {
             const CKey& key = mKey.second;
             CPubKey vchPubKey = key.GetPubKey();
-            CKeyingMaterial vchGecret(key.begin(), key.end());
-            std::vector<unsigned char> vchCryptedGecret;
-            if (!EncryptGecret(vMasterKeyIn, vchGecret, vchPubKey.GetHash(), vchCryptedGecret))
+            CKeyingMaterial vchSecret(key.begin(), key.end());
+            std::vector<unsigned char> vchCryptedGderet;
+            if (!EncryptGderet(vMasterKeyIn, vchSecret, vchPubKey.GetHash(), vchCryptedGderet))
                 return false;
-            if (!AddCryptedKey(vchPubKey, vchCryptedGecret))
+            if (!AddCryptedKey(vchPubKey, vchCryptedGderet))
                 return false;
         }
         mapKeys.clear();

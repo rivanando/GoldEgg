@@ -4,48 +4,48 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_SCALAR_REPR_IMPL_H_
-#define _GECP256K1_SCALAR_REPR_IMPL_H_
+#ifndef _GDEP256K1_SCALAR_REPR_IMPL_H_
+#define _GDEP256K1_SCALAR_REPR_IMPL_H_
 
 typedef unsigned __int128 uint128_t;
 
 /* Limbs of the secp256k1 order. */
-#define GECP256K1_N_0 ((uint64_t)0xBFD25E8CD0364141ULL)
-#define GECP256K1_N_1 ((uint64_t)0xBAAEDCE6AF48A03BULL)
-#define GECP256K1_N_2 ((uint64_t)0xFFFFFFFFFFFFFFFEULL)
-#define GECP256K1_N_3 ((uint64_t)0xFFFFFFFFFFFFFFFFULL)
+#define GDEP256K1_N_0 ((uint64_t)0xBFD25E8CD0364141ULL)
+#define GDEP256K1_N_1 ((uint64_t)0xBAAEDCE6AF48A03BULL)
+#define GDEP256K1_N_2 ((uint64_t)0xFFFFFFFFFFFFFFFEULL)
+#define GDEP256K1_N_3 ((uint64_t)0xFFFFFFFFFFFFFFFFULL)
 
 /* Limbs of 2^256 minus the secp256k1 order. */
-#define GECP256K1_N_C_0 (~GECP256K1_N_0 + 1)
-#define GECP256K1_N_C_1 (~GECP256K1_N_1)
-#define GECP256K1_N_C_2 (1)
+#define GDEP256K1_N_C_0 (~GDEP256K1_N_0 + 1)
+#define GDEP256K1_N_C_1 (~GDEP256K1_N_1)
+#define GDEP256K1_N_C_2 (1)
 
 /* Limbs of half the secp256k1 order. */
-#define GECP256K1_N_H_0 ((uint64_t)0xDFE92F46681B20A0ULL)
-#define GECP256K1_N_H_1 ((uint64_t)0x5D576E7357A4501DULL)
-#define GECP256K1_N_H_2 ((uint64_t)0xFFFFFFFFFFFFFFFFULL)
-#define GECP256K1_N_H_3 ((uint64_t)0x7FFFFFFFFFFFFFFFULL)
+#define GDEP256K1_N_H_0 ((uint64_t)0xDFE92F46681B20A0ULL)
+#define GDEP256K1_N_H_1 ((uint64_t)0x5D576E7357A4501DULL)
+#define GDEP256K1_N_H_2 ((uint64_t)0xFFFFFFFFFFFFFFFFULL)
+#define GDEP256K1_N_H_3 ((uint64_t)0x7FFFFFFFFFFFFFFFULL)
 
-GECP256K1_INLINE static void secp256k1_scalar_clear(secp256k1_scalar_t *r) {
+GDEP256K1_INLINE static void secp256k1_scalar_clear(secp256k1_scalar_t *r) {
     r->d[0] = 0;
     r->d[1] = 0;
     r->d[2] = 0;
     r->d[3] = 0;
 }
 
-GECP256K1_INLINE static void secp256k1_scalar_set_int(secp256k1_scalar_t *r, unsigned int v) {
+GDEP256K1_INLINE static void secp256k1_scalar_set_int(secp256k1_scalar_t *r, unsigned int v) {
     r->d[0] = v;
     r->d[1] = 0;
     r->d[2] = 0;
     r->d[3] = 0;
 }
 
-GECP256K1_INLINE static unsigned int secp256k1_scalar_get_bits(const secp256k1_scalar_t *a, unsigned int offset, unsigned int count) {
+GDEP256K1_INLINE static unsigned int secp256k1_scalar_get_bits(const secp256k1_scalar_t *a, unsigned int offset, unsigned int count) {
     VERIFY_CHECK((offset + count - 1) >> 6 == offset >> 6);
     return (a->d[offset >> 6] >> (offset & 0x3F)) & ((((uint64_t)1) << count) - 1);
 }
 
-GECP256K1_INLINE static unsigned int secp256k1_scalar_get_bits_var(const secp256k1_scalar_t *a, unsigned int offset, unsigned int count) {
+GDEP256K1_INLINE static unsigned int secp256k1_scalar_get_bits_var(const secp256k1_scalar_t *a, unsigned int offset, unsigned int count) {
     VERIFY_CHECK(count < 32);
     VERIFY_CHECK(offset + count <= 256);
     if ((offset + count - 1) >> 6 == offset >> 6) {
@@ -56,25 +56,25 @@ GECP256K1_INLINE static unsigned int secp256k1_scalar_get_bits_var(const secp256
     }
 }
 
-GECP256K1_INLINE static int secp256k1_scalar_check_overflow(const secp256k1_scalar_t *a) {
+GDEP256K1_INLINE static int secp256k1_scalar_check_overflow(const secp256k1_scalar_t *a) {
     int yes = 0;
     int no = 0;
-    no |= (a->d[3] < GECP256K1_N_3); /* No need for a > check. */
-    no |= (a->d[2] < GECP256K1_N_2);
-    yes |= (a->d[2] > GECP256K1_N_2) & ~no;
-    no |= (a->d[1] < GECP256K1_N_1);
-    yes |= (a->d[1] > GECP256K1_N_1) & ~no;
-    yes |= (a->d[0] >= GECP256K1_N_0) & ~no;
+    no |= (a->d[3] < GDEP256K1_N_3); /* No need for a > check. */
+    no |= (a->d[2] < GDEP256K1_N_2);
+    yes |= (a->d[2] > GDEP256K1_N_2) & ~no;
+    no |= (a->d[1] < GDEP256K1_N_1);
+    yes |= (a->d[1] > GDEP256K1_N_1) & ~no;
+    yes |= (a->d[0] >= GDEP256K1_N_0) & ~no;
     return yes;
 }
 
-GECP256K1_INLINE static int secp256k1_scalar_reduce(secp256k1_scalar_t *r, unsigned int overflow) {
+GDEP256K1_INLINE static int secp256k1_scalar_reduce(secp256k1_scalar_t *r, unsigned int overflow) {
     VERIFY_CHECK(overflow <= 1);
-    uint128_t t = (uint128_t)r->d[0] + overflow * GECP256K1_N_C_0;
+    uint128_t t = (uint128_t)r->d[0] + overflow * GDEP256K1_N_C_0;
     r->d[0] = t & 0xFFFFFFFFFFFFFFFFULL; t >>= 64;
-    t += (uint128_t)r->d[1] + overflow * GECP256K1_N_C_1;
+    t += (uint128_t)r->d[1] + overflow * GDEP256K1_N_C_1;
     r->d[1] = t & 0xFFFFFFFFFFFFFFFFULL; t >>= 64;
-    t += (uint128_t)r->d[2] + overflow * GECP256K1_N_C_2;
+    t += (uint128_t)r->d[2] + overflow * GDEP256K1_N_C_2;
     r->d[2] = t & 0xFFFFFFFFFFFFFFFFULL; t >>= 64;
     t += (uint64_t)r->d[3];
     r->d[3] = t & 0xFFFFFFFFFFFFFFFFULL;
@@ -130,35 +130,35 @@ static void secp256k1_scalar_get_b32(unsigned char *bin, const secp256k1_scalar_
     bin[24] = a->d[0] >> 56; bin[25] = a->d[0] >> 48; bin[26] = a->d[0] >> 40; bin[27] = a->d[0] >> 32; bin[28] = a->d[0] >> 24; bin[29] = a->d[0] >> 16; bin[30] = a->d[0] >> 8; bin[31] = a->d[0];
 }
 
-GECP256K1_INLINE static int secp256k1_scalar_is_zero(const secp256k1_scalar_t *a) {
+GDEP256K1_INLINE static int secp256k1_scalar_is_zero(const secp256k1_scalar_t *a) {
     return (a->d[0] | a->d[1] | a->d[2] | a->d[3]) == 0;
 }
 
 static void secp256k1_scalar_negate(secp256k1_scalar_t *r, const secp256k1_scalar_t *a) {
     uint64_t nonzero = 0xFFFFFFFFFFFFFFFFULL * (secp256k1_scalar_is_zero(a) == 0);
-    uint128_t t = (uint128_t)(~a->d[0]) + GECP256K1_N_0 + 1;
+    uint128_t t = (uint128_t)(~a->d[0]) + GDEP256K1_N_0 + 1;
     r->d[0] = t & nonzero; t >>= 64;
-    t += (uint128_t)(~a->d[1]) + GECP256K1_N_1;
+    t += (uint128_t)(~a->d[1]) + GDEP256K1_N_1;
     r->d[1] = t & nonzero; t >>= 64;
-    t += (uint128_t)(~a->d[2]) + GECP256K1_N_2;
+    t += (uint128_t)(~a->d[2]) + GDEP256K1_N_2;
     r->d[2] = t & nonzero; t >>= 64;
-    t += (uint128_t)(~a->d[3]) + GECP256K1_N_3;
+    t += (uint128_t)(~a->d[3]) + GDEP256K1_N_3;
     r->d[3] = t & nonzero;
 }
 
-GECP256K1_INLINE static int secp256k1_scalar_is_one(const secp256k1_scalar_t *a) {
+GDEP256K1_INLINE static int secp256k1_scalar_is_one(const secp256k1_scalar_t *a) {
     return ((a->d[0] ^ 1) | a->d[1] | a->d[2] | a->d[3]) == 0;
 }
 
 static int secp256k1_scalar_is_high(const secp256k1_scalar_t *a) {
     int yes = 0;
     int no = 0;
-    no |= (a->d[3] < GECP256K1_N_H_3);
-    yes |= (a->d[3] > GECP256K1_N_H_3) & ~no;
-    no |= (a->d[2] < GECP256K1_N_H_2) & ~yes; /* No need for a > check. */
-    no |= (a->d[1] < GECP256K1_N_H_1) & ~yes;
-    yes |= (a->d[1] > GECP256K1_N_H_1) & ~no;
-    yes |= (a->d[0] > GECP256K1_N_H_0) & ~no;
+    no |= (a->d[3] < GDEP256K1_N_H_3);
+    yes |= (a->d[3] > GDEP256K1_N_H_3) & ~no;
+    no |= (a->d[2] < GDEP256K1_N_H_2) & ~yes; /* No need for a > check. */
+    no |= (a->d[1] < GDEP256K1_N_H_1) & ~yes;
+    yes |= (a->d[1] > GDEP256K1_N_H_1) & ~no;
+    yes |= (a->d[0] > GDEP256K1_N_H_0) & ~no;
     return yes;
 }
 
@@ -255,25 +255,25 @@ static void secp256k1_scalar_reduce_512(secp256k1_scalar_t *r, const uint64_t *l
     uint32_t c2;
 
     /* Reduce 512 bits into 385. */
-    /* m[0..6] = l[0..3] + n[0..3] * GECP256K1_N_C. */
+    /* m[0..6] = l[0..3] + n[0..3] * GDEP256K1_N_C. */
     c0 = l[0]; c1 = 0; c2 = 0;
-    muladd_fast(n0, GECP256K1_N_C_0);
+    muladd_fast(n0, GDEP256K1_N_C_0);
     uint64_t m0; extract_fast(m0);
     sumadd_fast(l[1]);
-    muladd(n1, GECP256K1_N_C_0);
-    muladd(n0, GECP256K1_N_C_1);
+    muladd(n1, GDEP256K1_N_C_0);
+    muladd(n0, GDEP256K1_N_C_1);
     uint64_t m1; extract(m1);
     sumadd(l[2]);
-    muladd(n2, GECP256K1_N_C_0);
-    muladd(n1, GECP256K1_N_C_1);
+    muladd(n2, GDEP256K1_N_C_0);
+    muladd(n1, GDEP256K1_N_C_1);
     sumadd(n0);
     uint64_t m2; extract(m2);
     sumadd(l[3]);
-    muladd(n3, GECP256K1_N_C_0);
-    muladd(n2, GECP256K1_N_C_1);
+    muladd(n3, GDEP256K1_N_C_0);
+    muladd(n2, GDEP256K1_N_C_1);
     sumadd(n1);
     uint64_t m3; extract(m3);
-    muladd(n3, GECP256K1_N_C_1);
+    muladd(n3, GDEP256K1_N_C_1);
     sumadd(n2);
     uint64_t m4; extract(m4);
     sumadd_fast(n3);
@@ -282,31 +282,31 @@ static void secp256k1_scalar_reduce_512(secp256k1_scalar_t *r, const uint64_t *l
     uint32_t m6 = c0;
 
     /* Reduce 385 bits into 258. */
-    /* p[0..4] = m[0..3] + m[4..6] * GECP256K1_N_C. */
+    /* p[0..4] = m[0..3] + m[4..6] * GDEP256K1_N_C. */
     c0 = m0; c1 = 0; c2 = 0;
-    muladd_fast(m4, GECP256K1_N_C_0);
+    muladd_fast(m4, GDEP256K1_N_C_0);
     uint64_t p0; extract_fast(p0);
     sumadd_fast(m1);
-    muladd(m5, GECP256K1_N_C_0);
-    muladd(m4, GECP256K1_N_C_1);
+    muladd(m5, GDEP256K1_N_C_0);
+    muladd(m4, GDEP256K1_N_C_1);
     uint64_t p1; extract(p1);
     sumadd(m2);
-    muladd(m6, GECP256K1_N_C_0);
-    muladd(m5, GECP256K1_N_C_1);
+    muladd(m6, GDEP256K1_N_C_0);
+    muladd(m5, GDEP256K1_N_C_1);
     sumadd(m4);
     uint64_t p2; extract(p2);
     sumadd_fast(m3);
-    muladd_fast(m6, GECP256K1_N_C_1);
+    muladd_fast(m6, GDEP256K1_N_C_1);
     sumadd_fast(m5);
     uint64_t p3; extract_fast(p3);
     uint32_t p4 = c0 + m6;
     VERIFY_CHECK(p4 <= 2);
 
     /* Reduce 258 bits into 256. */
-    /* r[0..3] = p[0..3] + p[4] * GECP256K1_N_C. */
-    uint128_t c = p0 + (uint128_t)GECP256K1_N_C_0 * p4;
+    /* r[0..3] = p[0..3] + p[4] * GDEP256K1_N_C. */
+    uint128_t c = p0 + (uint128_t)GDEP256K1_N_C_0 * p4;
     r->d[0] = c & 0xFFFFFFFFFFFFFFFFULL; c >>= 64;
-    c += p1 + (uint128_t)GECP256K1_N_C_1 * p4;
+    c += p1 + (uint128_t)GDEP256K1_N_C_1 * p4;
     r->d[1] = c & 0xFFFFFFFFFFFFFFFFULL; c >>= 64;
     c += p2 + (uint128_t)p4;
     r->d[2] = c & 0xFFFFFFFFFFFFFFFFULL; c >>= 64;
@@ -408,11 +408,11 @@ static void secp256k1_scalar_split_128(secp256k1_scalar_t *r1, secp256k1_scalar_
     r2->d[3] = 0;
 }
 
-GECP256K1_INLINE static int secp256k1_scalar_eq(const secp256k1_scalar_t *a, const secp256k1_scalar_t *b) {
+GDEP256K1_INLINE static int secp256k1_scalar_eq(const secp256k1_scalar_t *a, const secp256k1_scalar_t *b) {
     return ((a->d[0] ^ b->d[0]) | (a->d[1] ^ b->d[1]) | (a->d[2] ^ b->d[2]) | (a->d[3] ^ b->d[3])) == 0;
 }
 
-GECP256K1_INLINE static void secp256k1_scalar_mul_shift_var(secp256k1_scalar_t *r, const secp256k1_scalar_t *a, const secp256k1_scalar_t *b, unsigned int shift) {
+GDEP256K1_INLINE static void secp256k1_scalar_mul_shift_var(secp256k1_scalar_t *r, const secp256k1_scalar_t *a, const secp256k1_scalar_t *b, unsigned int shift) {
     VERIFY_CHECK(shift >= 256);
     uint64_t l[8];
     secp256k1_scalar_mul_512(l, a, b);

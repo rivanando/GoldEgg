@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Use the raw transactions API to spend GECs received on particular addresses,
+# Use the raw transactions API to spend GDEs received on particular addresses,
 # and send any change back to that same address.
 #
 # Example usage:
@@ -44,14 +44,14 @@ def read_bitcoin_config(dbdir):
     """Read the goldegg.conf file from dbdir, returns dictionary of settings"""
     from ConfigParser import SafeConfigParser
 
-    class FakeGecHead(object):
+    class FakeGdeHead(object):
         def __init__(self, fp):
             self.fp = fp
-            self.gechead = '[all]\n'
+            self.gdehead = '[all]\n'
         def readline(self):
-            if self.gechead:
-                try: return self.gechead
-                finally: self.gechead = None
+            if self.gdehead:
+                try: return self.gdehead
+                finally: self.gdehead = None
             else:
                 s = self.fp.readline()
                 if s.find('#') != -1:
@@ -59,7 +59,7 @@ def read_bitcoin_config(dbdir):
                 return s
 
     config_parser = SafeConfigParser()
-    config_parser.readfp(FakeGecHead(open(os.path.join(dbdir, "goldegg.conf"))))
+    config_parser.readfp(FakeGdeHead(open(os.path.join(dbdir, "goldegg.conf"))))
     return dict(config_parser.items("all"))
 
 def connect_JSON(config):
@@ -221,9 +221,9 @@ def main():
 
     parser = optparse.OptionParser(usage="%prog [options]")
     parser.add_option("--from", dest="fromaddresses", default=None,
-                      help="addresses to get GECs from")
+                      help="addresses to get GDEs from")
     parser.add_option("--to", dest="to", default=None,
-                      help="address to get send GECs to")
+                      help="address to get send GDEs to")
     parser.add_option("--amount", dest="amount", default=None,
                       help="amount to send")
     parser.add_option("--fee", dest="fee", default="0.0",

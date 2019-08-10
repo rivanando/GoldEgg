@@ -84,15 +84,15 @@ CPubKey CWallet::GenerateNewKey()
     bool fCompressed = CanSupportFeature(FEATURE_COMPRPUBKEY); // default to compressed public keys if we want 0.6.0 wallets
 
     RandAddSeedPerfmon();
-    CKey gecret;
-    gecret.MakeNewKey(fCompressed);
+    CKey secret;
+    secret.MakeNewKey(fCompressed);
 
     // Compressed public keys were introduced in version 0.6.0
     if (fCompressed)
         SetMinVersion(FEATURE_COMPRPUBKEY);
 
-    CPubKey pubkey = gecret.GetPubKey();
-    assert(gecret.VerifyPubKey(pubkey));
+    CPubKey pubkey = secret.GetPubKey();
+    assert(secret.VerifyPubKey(pubkey));
 
     // Create new metadata
     int64_t nCreationTime = GetTime();
@@ -100,15 +100,15 @@ CPubKey CWallet::GenerateNewKey()
     if (!nTimeFirstKey || nCreationTime < nTimeFirstKey)
         nTimeFirstKey = nCreationTime;
 
-    if (!AddKeyPubKey(gecret, pubkey))
+    if (!AddKeyPubKey(secret, pubkey))
         throw std::runtime_error("CWallet::GenerateNewKey() : AddKey failed");
     return pubkey;
 }
 
-bool CWallet::AddKeyPubKey(const CKey& gecret, const CPubKey& pubkey)
+bool CWallet::AddKeyPubKey(const CKey& secret, const CPubKey& pubkey)
 {
     AssertLockHeld(cs_wallet); // mapKeyMetadata
-    if (!CCryptoKeyStore::AddKeyPubKey(gecret, pubkey))
+    if (!CCryptoKeyStore::AddKeyPubKey(secret, pubkey))
         return false;
 
     // check if we need to remove from watch-only
@@ -120,15 +120,15 @@ bool CWallet::AddKeyPubKey(const CKey& gecret, const CPubKey& pubkey)
     if (!fFileBacked)
         return true;
     if (!IsCrypted()) {
-        return CWalletDB(strWalletFile).WriteKey(pubkey, gecret.GetPrivKey(), mapKeyMetadata[pubkey.GetID()]);
+        return CWalletDB(strWalletFile).WriteKey(pubkey, secret.GetPrivKey(), mapKeyMetadata[pubkey.GetID()]);
     }
     return true;
 }
 
 bool CWallet::AddCryptedKey(const CPubKey& vchPubKey,
-    const vector<unsigned char>& vchCryptedGecret)
+    const vector<unsigned char>& vchCryptedGderet)
 {
-    if (!CCryptoKeyStore::AddCryptedKey(vchPubKey, vchCryptedGecret))
+    if (!CCryptoKeyStore::AddCryptedKey(vchPubKey, vchCryptedGderet))
         return false;
     if (!fFileBacked)
         return true;
@@ -136,10 +136,10 @@ bool CWallet::AddCryptedKey(const CPubKey& vchPubKey,
         LOCK(cs_wallet);
         if (pwalletdbEncryption)
             return pwalletdbEncryption->WriteCryptedKey(vchPubKey,
-                vchCryptedGecret,
+                vchCryptedGderet,
                 mapKeyMetadata[vchPubKey.GetID()]);
         else
-            return CWalletDB(strWalletFile).WriteCryptedKey(vchPubKey, vchCryptedGecret, mapKeyMetadata[vchPubKey.GetID()]);
+            return CWalletDB(strWalletFile).WriteCryptedKey(vchPubKey, vchCryptedGderet, mapKeyMetadata[vchPubKey.GetID()]);
     }
     return false;
 }
@@ -154,9 +154,9 @@ bool CWallet::LoadKeyMetadata(const CPubKey& pubkey, const CKeyMetadata& meta)
     return true;
 }
 
-bool CWallet::LoadCryptedKey(const CPubKey& vchPubKey, const std::vector<unsigned char>& vchCryptedGecret)
+bool CWallet::LoadCryptedKey(const CPubKey& vchPubKey, const std::vector<unsigned char>& vchCryptedGderet)
 {
-    return CCryptoKeyStore::AddCryptedKey(vchPubKey, vchCryptedGecret);
+    return CCryptoKeyStore::AddCryptedKey(vchPubKey, vchCryptedGderet);
 }
 
 bool CWallet::AddCScript(const CScript& redeemScript)
@@ -243,9 +243,9 @@ bool CWallet::LoadMultiSig(const CScript& dest)
     return CCryptoKeyStore::AddMultiSig(dest);
 }
 
-bool CWallet::Unlock(const GecureString& strWalletPassphrase, bool stakingOnly)
+bool CWallet::Unlock(const SecureString& strWalletPassphrase, bool stakingOnly)
 {
-    GecureString strWalletPassphraseFinal;
+    SecureString strWalletPassphraseFinal;
 
     if (!IsLocked()) {
         fWalletUnlockStakingOnly = stakingOnly;
@@ -273,10 +273,10 @@ bool CWallet::Unlock(const GecureString& strWalletPassphrase, bool stakingOnly)
     return false;
 }
 
-bool CWallet::ChangeWalletPassphrase(const GecureString& strOldWalletPassphrase, const GecureString& strNewWalletPassphrase)
+bool CWallet::ChangeWalletPassphrase(const SecureString& strOldWalletPassphrase, const SecureString& strNewWalletPassphrase)
 {
     bool fWasLocked = IsLocked();
-    GecureString strOldWalletPassphraseFinal = strOldWalletPassphrase;
+    SecureString strOldWalletPassphraseFinal = strOldWalletPassphrase;
 
     {
         LOCK(cs_wallet);
@@ -520,7 +520,7 @@ bool CWallet::GetVinAndKeysFromOutput(COutput out, CTxIn& txinRet, CPubKey& pubK
     return true;
 }
 
-bool CWallet::EncryptWallet(const GecureString& strWalletPassphrase)
+bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
 {
     if (IsCrypted())
         return false;
@@ -1311,7 +1311,7 @@ static void ApproximateBestSubset(vector<pair<CAmount, pair<const CWalletTx*, un
     vfBest.assign(vValue.size(), true);
     nBest = nTotalLower;
 
-    seed_ingecure_rand();
+    seed_insecure_rand();
 
     for (int nRep = 0; nRep < iterations && nBest != nTargetValue; nRep++) {
         vfIncluded.assign(vValue.size(), false);
@@ -1320,12 +1320,12 @@ static void ApproximateBestSubset(vector<pair<CAmount, pair<const CWalletTx*, un
         for (int nPass = 0; nPass < 2 && !fReachedTarget; nPass++) {
             for (unsigned int i = 0; i < vValue.size(); i++) {
                 //The solver here uses a randomized algorithm,
-                //the randomness serves no real gecurity purpose but is just
+                //the randomness serves no real security purpose but is just
                 //needed to prevent degenerate behavior and it is important
                 //that the rng is fast. We do not use a constant random sequence,
                 //because there may be some privacy improvement by making
                 //the selection random.
-                if (nPass == 0 ? ingecure_rand() & 1 : !vfIncluded[i]) {
+                if (nPass == 0 ? insecure_rand() & 1 : !vfIncluded[i]) {
                     nTotal += vValue[i].first;
                     vfIncluded[i] = true;
                     if (nTotal >= nTargetValue) {
@@ -1678,7 +1678,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend,
                     if (coin_type == ALL_COINS) {
                         strFailReason = _("Insufficient funds.");
                     } else if (coin_type == ONLY_NOT10000IFMN) {
-                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 10000 GEC.");
+                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 10000 GDE.");
                     }
 
                     if (useIX) {
@@ -1814,7 +1814,7 @@ bool CWallet::CreateTransaction(CScript scriptPubKey, const CAmount& nValue, CWa
 // ppcoin: create coin stake transaction
 bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int64_t nSearchInterval, CMutableTransaction& txNew, unsigned int& nTxNewTime)
 {
-    // The following split & combine thresholds are important to gecurity
+    // The following split & combine thresholds are important to security
     // Should not be adjusted if you don't understand the consequences
     //int64_t nCombineThreshold = 0;
 

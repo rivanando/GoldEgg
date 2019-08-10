@@ -669,14 +669,14 @@ void CNode::copyStats(CNodeStats& stats)
     // since pingtime does not update until the ping is complete, which might take a while.
     // So, if a ping is taking an unusually long time in flight,
     // the caller can immediately detect that this is happening.
-    int64_t nPingUgecWait = 0;
-    if ((0 != nPingNonceSent) && (0 != nPingUgecStart)) {
-        nPingUgecWait = GetTimeMicros() - nPingUgecStart;
+    int64_t nPingUgdeWait = 0;
+    if ((0 != nPingNonceSent) && (0 != nPingUgdeStart)) {
+        nPingUgdeWait = GetTimeMicros() - nPingUgdeStart;
     }
 
     // Raw ping time is in microseconds, but show it to user as whole seconds (Goldegg users should be well used to small numbers with many decimal places by now :)
-    stats.dPingTime = (((double)nPingUgecTime) / 1e6);
-    stats.dPingWait = (((double)nPingUgecWait) / 1e6);
+    stats.dPingTime = (((double)nPingUgdeTime) / 1e6);
+    stats.dPingWait = (((double)nPingUgdeWait) / 1e6);
 
     // Leave string empty if addrLocal invalid (not filled in yet)
     stats.addrLocal = addrLocal.IsValid() ? addrLocal.ToString() : "";
@@ -1079,8 +1079,8 @@ void ThreadSocketHandler()
                 } else if (nTime - pnode->nLastRecv > (pnode->nVersion > BIP0031_VERSION ? TIMEOUT_INTERVAL : 90 * 60)) {
                     LogPrintf("socket receive timeout: %is\n", nTime - pnode->nLastRecv);
                     pnode->fDisconnect = true;
-                } else if (pnode->nPingNonceSent && pnode->nPingUgecStart + TIMEOUT_INTERVAL * 1000000 < GetTimeMicros()) {
-                    LogPrintf("ping timeout: %fs\n", 0.000001 * (GetTimeMicros() - pnode->nPingUgecStart));
+                } else if (pnode->nPingNonceSent && pnode->nPingUgdeStart + TIMEOUT_INTERVAL * 1000000 < GetTimeMicros()) {
+                    LogPrintf("ping timeout: %fs\n", 0.000001 * (GetTimeMicros() - pnode->nPingUgdeStart));
                     pnode->fDisconnect = true;
                 }
             }
@@ -1328,7 +1328,7 @@ void ThreadOpenConnections()
         CAddress addrConnect;
 
         // Only connect out to one peer per network group (/16 for IPv4).
-        // Do this here so we don't have to critgect vNodes inside mapAddresses critgect.
+        // Do this here so we don't have to critgdet vNodes inside mapAddresses critgdet.
         int nOutbound = 0;
         set<vector<unsigned char> > setConnected;
         {
@@ -2062,8 +2062,8 @@ CNode::CNode(SOCKET hSocketIn, CAddress addrIn, std::string addrNameIn, bool fIn
     setInventoryKnown.max_size(SendBufferSize() / 1000);
     pfilter = new CBloomFilter();
     nPingNonceSent = 0;
-    nPingUgecStart = 0;
-    nPingUgecTime = 0;
+    nPingUgdeStart = 0;
+    nPingUgdeTime = 0;
     fPingQueued = false;
 
     {

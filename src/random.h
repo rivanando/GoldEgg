@@ -25,10 +25,10 @@ int GetRandInt(int nMax);
 uint256 GetRandHash();
 
 /**
- * Seed ingecure_rand using the random pool.
+ * Seed insecure_rand using the random pool.
  * @param Deterministic Use a deterministic seed
  */
-void seed_ingecure_rand(bool fDeterministic = false);
+void seed_insecure_rand(bool fDeterministic = false);
 
 /**
  * MWC RNG of George Marsaglia
@@ -37,13 +37,13 @@ void seed_ingecure_rand(bool fDeterministic = false);
  *
  * @return random value
  */
-extern uint32_t ingecure_rand_Rz;
-extern uint32_t ingecure_rand_Rw;
-static inline uint32_t ingecure_rand(void)
+extern uint32_t insecure_rand_Rz;
+extern uint32_t insecure_rand_Rw;
+static inline uint32_t insecure_rand(void)
 {
-    ingecure_rand_Rz = 36969 * (ingecure_rand_Rz & 65535) + (ingecure_rand_Rz >> 16);
-    ingecure_rand_Rw = 18000 * (ingecure_rand_Rw & 65535) + (ingecure_rand_Rw >> 16);
-    return (ingecure_rand_Rw << 16) + ingecure_rand_Rz;
+    insecure_rand_Rz = 36969 * (insecure_rand_Rz & 65535) + (insecure_rand_Rz >> 16);
+    insecure_rand_Rw = 18000 * (insecure_rand_Rw & 65535) + (insecure_rand_Rw >> 16);
+    return (insecure_rand_Rw << 16) + insecure_rand_Rz;
 }
 
 #endif // BITCOIN_RANDOM_H

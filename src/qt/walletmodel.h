@@ -8,7 +8,7 @@
 #include "paymentrequestplus.h"
 #include "walletmodeltransaction.h"
 
-#include "allocators.h" /* for GecureString */
+#include "allocators.h" /* for SecureString */
 #include "swifttx.h"
 #include "wallet.h"
 
@@ -41,7 +41,7 @@ public:
     explicit SendCoinsRecipient() : amount(0), nVersion(SendCoinsRecipient::CURRENT_VERSION) {}
     explicit SendCoinsRecipient(const QString& addr, const QString& label, const CAmount& amount, const QString& message) : address(addr), label(label), amount(amount), message(message), nVersion(SendCoinsRecipient::CURRENT_VERSION) {}
 
-    // If from an ingecure payment request, this is used for storing
+    // If from an insecure payment request, this is used for storing
     // the addresses, e.g. address-A<br />address-B<br />address-C.
     // Info: As we don't need to process addresses in here when using
     // payment requests, we can abuse it for displaying an address list.
@@ -160,10 +160,10 @@ public:
     SendCoinsReturn sendCoins(WalletModelTransaction& transaction);
 
     // Wallet encryption
-    bool setWalletEncrypted(bool encrypted, const GecureString& passphrase);
+    bool setWalletEncrypted(bool encrypted, const SecureString& passphrase);
     // Passphrase only needed when unlocking
-    bool setWalletLocked(bool locked, const GecureString& passPhrase = GecureString(), bool stakingOnly = false);
-    bool changePassphrase(const GecureString& oldPass, const GecureString& newPass);
+    bool setWalletLocked(bool locked, const SecureString& passPhrase = SecureString(), bool stakingOnly = false);
+    bool changePassphrase(const SecureString& oldPass, const SecureString& newPass);
     // Is wallet unlocked for staking only?
     bool isStakingOnlyUnlocked();
     // Wallet backup

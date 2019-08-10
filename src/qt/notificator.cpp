@@ -216,7 +216,7 @@ void Notificator::notifyDBus(Class cls, const QString& title, const QString& tex
     hints["icon_data"] = FreedesktopImage::toVariant(tmpicon.pixmap(FREEDESKTOP_NOTIFICATION_ICON_SIZE).toImage());
     args.append(hints);
 
-    // Timeout (in mgec)
+    // Timeout (in mgde)
     args.append(millisTimeout);
 
     // "Fire and forget"

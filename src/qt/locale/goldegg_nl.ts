@@ -62,12 +62,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw GEC adressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw GDE adressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw GEC adressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw GDE adressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,23 +168,23 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw GECs stelen.</translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw GDEs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW GEC VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW GDE VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Portemonnee versleuteld</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>BELANGRIJK: Elke eerder gemaakte backup van uw portemonneebestand dient te worden vervangen door het nieuw gegenereerde, versleutelde portemonneebestand. Om veiligheidsredenen zullen eerdere backups van het niet-versleutelde portemonneebestand onbruikbaar worden zodra u uw nieuwe, versleutelde, portemonnee begint te gebruiken.</translation>
     </message>
     <message>
@@ -231,16 +231,16 @@
         <translation>&amp;BIP 38 Versleuteling</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Voer een GEC adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Voer een GDE adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>Het GEC adres om het bericht met te ondertekenen</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>Het GDE adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -271,8 +271,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het GEC adres bezit</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het GDE adres bezit</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -295,12 +295,12 @@
         <translation>Voer de BIP 38 versleutelde geheime sleutel in. Voer het wachtwoord in, in het middelste veld. Druk op Ontsleutelen Sleutel om de geheime sleutel te berekenen.  Nadat de geheime sleutel is ontsleuteld, zal het klikken op 'Adres Importeren' de geheime sleutel toevoegen aan de portemonnee.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>Het GEC adres waarmee het bericht was ondertekend</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>Het GDE adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde GEC adres</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde GDE adres</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -594,8 +594,8 @@
         <translation>Goldegg Kern</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Verstuur munten naar een GEC adres</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Verstuur munten naar een GDE adres</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -622,12 +622,12 @@
         <translation>Wijzig Goldegg configuratie opties</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw GEC adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw GDE adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde GEC adressen</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde GDE adressen</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1034,8 +1034,8 @@ MultiSend: %1</translation>
         <translation>Wijzig verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid GEC address.</source>
-        <translation>Het ingevoerde adres: "%1" is geen geldig GEC adres.</translation>
+        <source>The entered address "%1" is not a valid GDE address.</source>
+        <translation>Het ingevoerde adres: "%1" is geen geldig GDE adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1473,8 +1473,8 @@ MultiSend: %1</translation>
         <translation>Hoeveelheid</translation>
     </message>
     <message>
-        <source>Enter a GEC address (e.g. %1)</source>
-        <translation>Voer een GEC adres in (b.v. %1)</translation>
+        <source>Enter a GDE address (e.g. %1)</source>
+        <translation>Voer een GDE adres in (b.v. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1883,8 +1883,8 @@ MultiSend: %1</translation>
         <translation>Wijzig:</translation>
     </message>
     <message>
-        <source>0 GEC</source>
-        <translation>0 GEC</translation>
+        <source>0 GDE</source>
+        <translation>0 GDE</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -1971,8 +1971,8 @@ MultiSend: %1</translation>
         <translation>gebruikt</translation>
     </message>
     <message>
-        <source>Warning: Invalid GEC address</source>
-        <translation>Waarschuwing: Ongeldig GEC adres</translation>
+        <source>Warning: Invalid GDE address</source>
+        <translation>Waarschuwing: Ongeldig GDE adres</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -2026,8 +2026,8 @@ MultiSend: %1</translation>
         <translation>Betaal &amp;Naar:</translation>
     </message>
     <message>
-        <source>The GEC address to send the payment to</source>
-        <translation>Het GEC adres om de betaling naar te verzenden</translation>
+        <source>The GDE address to send the payment to</source>
+        <translation>Het GDE adres om de betaling naar te verzenden</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2100,8 +2100,8 @@ MultiSend: %1</translation>
         <translation>&amp;Onderteken Bericht</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>Het GEC adres om het bericht met te ondertekenen</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>Het GDE adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2132,16 +2132,16 @@ MultiSend: %1</translation>
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het GEC adres bezit</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het GDE adres bezit</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>Het GEC adres waarmee het bericht was ondertekend</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>Het GDE adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde GEC adres</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde GDE adres</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>

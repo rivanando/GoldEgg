@@ -929,7 +929,7 @@ int GetIXConfirmations(uint256 nTXHash)
 // age (trust score) of competing branches.
 bool GetCoinAge(const CTransaction& tx, const unsigned int nTxTime, uint64_t& nCoinAge)
 {
-    uint256 bnCentGecond = 0; // coin age in the unit of cent-seconds
+    uint256 bnCentGdeond = 0; // coin age in the unit of cent-seconds
     nCoinAge = 0;
 
     CBlockIndex* pindex = NULL;
@@ -962,10 +962,10 @@ bool GetCoinAge(const CTransaction& tx, const unsigned int nTxTime, uint64_t& nC
         }
 
         int64_t nValueIn = txPrev.vout[txin.prevout.n].nValue;
-        bnCentGecond += uint256(nValueIn) * (nTxTime - prevblock.nTime);
+        bnCentGdeond += uint256(nValueIn) * (nTxTime - prevblock.nTime);
     }
 
-    uint256 bnCoinDay = bnCentGecond / COIN / (24 * 60 * 60);
+    uint256 bnCoinDay = bnCentGdeond / COIN / (24 * 60 * 60);
     LogPrintf("coin age bnCoinDay=%s\n", bnCoinDay.ToString().c_str());
     nCoinAge = bnCoinDay.GetCompact();
     return true;
@@ -1618,11 +1618,11 @@ int64_t GetBlockValue(int nHeight)
     int64_t nSubsidy = 0;
 
     if (nHeight == 0)
-        nSubsidy = 21000000 * COIN; // Premine: 70,000
-	else if (nHeight <= 350)
-		nSubsidy = 25 * COIN; // POW fase
+        nSubsidy = 10000000 * COIN; // Premine: 10,000,000
+	else if (nHeight <= 50)
+		nSubsidy = 1 * COIN; // POW fase
     else
-        nSubsidy = 25 * COIN;
+        nSubsidy = 1 * COIN;
 
     // Check if we reached the coin max supply.
     int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
@@ -1852,20 +1852,20 @@ bool CheckInputs(const CTransaction& tx, CValidationState& state, const CCoinsVi
         }
 
         if (!tx.IsCoinStake()) {
-            // if (nValueIn < tx.GetValueOut())
-            //     return state.DoS(100, error("CheckInputs() : %s value in (%s) < value out (%s)",
-            //                               tx.GetHash().ToString(), FormatMoney(nValueIn), FormatMoney(tx.GetValueOut())),
-            //         REJECT_INVALID, "bad-txns-in-belowout");
+             if (nValueIn < tx.GetValueOut())
+                 return state.DoS(100, error("CheckInputs() : %s value in (%s) < value out (%s)",
+                                           tx.GetHash().ToString(), FormatMoney(nValueIn), FormatMoney(tx.GetValueOut())),
+                     REJECT_INVALID, "bad-txns-in-belowout");
 
             // Tally transaction fees
             CAmount nTxFee = nValueIn - tx.GetValueOut();
-            // if (nTxFee < 0)
-            //     return state.DoS(100, error("CheckInputs() : %s nTxFee < 0", tx.GetHash().ToString()),
-            //         REJECT_INVALID, "bad-txns-fee-negative");
+             if (nTxFee < 0)
+                 return state.DoS(100, error("CheckInputs() : %s nTxFee < 0", tx.GetHash().ToString()),
+                     REJECT_INVALID, "bad-txns-fee-negative");
             nFees += nTxFee;
-            // if (!MoneyRange(nFees))
-            //     return state.DoS(100, error("CheckInputs() : nFees out of range"),
-            //         REJECT_INVALID, "bad-txns-fee-outofrange");
+             if (!MoneyRange(nFees))
+                 return state.DoS(100, error("CheckInputs() : nFees out of range"),
+                     REJECT_INVALID, "bad-txns-fee-outofrange");
         }
         // The first loop above does all the inexpensive checks.
         // Only if ALL inputs pass do we perform expensive ECDSA signature checks.
@@ -3087,7 +3087,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
         if (block.vtx[0].vout.size() != 1 || !block.vtx[0].vout[0].IsEmpty())
             return state.DoS(100, error("CheckBlock() : coinbase output not empty for proof-of-stake block"));
 
-        // Gecond transaction must be coinstake, the rest must not be
+        // Gdeond transaction must be coinstake, the rest must not be
         if (block.vtx.empty() || !block.vtx[1].IsCoinStake())
             return state.DoS(100, error("CheckBlock() : second tx is not coinstake"));
         for (unsigned int i = 2; i < block.vtx.size(); i++)
@@ -3128,7 +3128,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
-        // GEC
+        // GDE
         // It is entierly possible that we don't have enough data and this could fail
         // (i.e. the block could indeed be valid). Store the block for later consideration
         // but issue an initial reject message.
@@ -4561,7 +4561,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             return false;
         }
 
-        // GEC: We use certain sporks during IBD, so check to see if they are
+        // GDE: We use certain sporks during IBD, so check to see if they are
         // available. If not, ask the first peer connected for them.
         bool fMissingSporks = !pSporkDB->SporkExists(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) &&
                 !pSporkDB->SporkExists(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2);
@@ -5150,7 +5150,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 
 
     else if (strCommand == "pong") {
-        int64_t pingUgecEnd = nTimeReceived;
+        int64_t pingUgdeEnd = nTimeReceived;
         uint64_t nonce = 0;
         size_t nAvail = vRecv.in_avail();
         bool bPingFinished = false;
@@ -5164,10 +5164,10 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                 if (nonce == pfrom->nPingNonceSent) {
                     // Matching pong received, this ping is no longer outstanding
                     bPingFinished = true;
-                    int64_t pingUgecTime = pingUgecEnd - pfrom->nPingUgecStart;
-                    if (pingUgecTime > 0) {
+                    int64_t pingUgdeTime = pingUgdeEnd - pfrom->nPingUgdeStart;
+                    if (pingUgdeTime > 0) {
                         // Successful ping time measurement, replace previous
-                        pfrom->nPingUgecTime = pingUgecTime;
+                        pfrom->nPingUgdeTime = pingUgdeTime;
                     } else {
                         // This should never happen
                         sProblem = "Timing mishap";
@@ -5465,7 +5465,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
             // RPC ping request by user
             pingSend = true;
         }
-        if (pto->nPingNonceSent == 0 && pto->nPingUgecStart + PING_INTERVAL * 1000000 < GetTimeMicros()) {
+        if (pto->nPingNonceSent == 0 && pto->nPingUgdeStart + PING_INTERVAL * 1000000 < GetTimeMicros()) {
             // Ping automatically sent as a latency probe & keepalive.
             pingSend = true;
         }
@@ -5475,7 +5475,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
                 GetRandBytes((unsigned char*)&nonce, sizeof(nonce));
             }
             pto->fPingQueued = false;
-            pto->nPingUgecStart = GetTimeMicros();
+            pto->nPingUgdeStart = GetTimeMicros();
             if (pto->nVersion > BIP0031_VERSION) {
                 pto->nPingNonceSent = nonce;
                 pto->PushMessage("ping", nonce);

@@ -178,9 +178,9 @@ public:
         unsigned int nMaskSize = 0, nMaskCode = 0;
         CalcMaskSize(nMaskSize, nMaskCode);
         bool fFirst = vout.size() > 0 && !vout[0].IsNull();
-        bool fGecond = vout.size() > 1 && !vout[1].IsNull();
-        assert(fFirst || fGecond || nMaskCode);
-        unsigned int nCode = 8 * (nMaskCode - (fFirst || fGecond ? 0 : 1)) + (fCoinBase ? 1 : 0) + (fCoinStake ? 2 : 0) + (fFirst ? 4 : 0) + (fGecond ? 8 : 0);
+        bool fGdeond = vout.size() > 1 && !vout[1].IsNull();
+        assert(fFirst || fGdeond || nMaskCode);
+        unsigned int nCode = 8 * (nMaskCode - (fFirst || fGdeond ? 0 : 1)) + (fCoinBase ? 1 : 0) + (fCoinStake ? 2 : 0) + (fFirst ? 4 : 0) + (fGdeond ? 8 : 0);
         // version
         nSize += ::GetSerializeSize(VARINT(this->nVersion), nType, nVersion);
         // size of header code
@@ -202,9 +202,9 @@ public:
         unsigned int nMaskSize = 0, nMaskCode = 0;
         CalcMaskSize(nMaskSize, nMaskCode);
         bool fFirst = vout.size() > 0 && !vout[0].IsNull();
-        bool fGecond = vout.size() > 1 && !vout[1].IsNull();
-        assert(fFirst || fGecond || nMaskCode);
-        unsigned int nCode = 16 * (nMaskCode - (fFirst || fGecond ? 0 : 1)) + (fCoinBase ? 1 : 0) + (fCoinStake ? 2 : 0) + (fFirst ? 4 : 0) + (fGecond ? 8 : 0);
+        bool fGdeond = vout.size() > 1 && !vout[1].IsNull();
+        assert(fFirst || fGdeond || nMaskCode);
+        unsigned int nCode = 16 * (nMaskCode - (fFirst || fGdeond ? 0 : 1)) + (fCoinBase ? 1 : 0) + (fCoinStake ? 2 : 0) + (fFirst ? 4 : 0) + (fGdeond ? 8 : 0);
         // version
         ::Serialize(s, VARINT(this->nVersion), nType, nVersion);
         // header code

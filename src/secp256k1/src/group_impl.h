@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_GROUP_IMPL_H_
-#define _GECP256K1_GROUP_IMPL_H_
+#ifndef _GDEP256K1_GROUP_IMPL_H_
+#define _GDEP256K1_GROUP_IMPL_H_
 
 #include <string.h>
 

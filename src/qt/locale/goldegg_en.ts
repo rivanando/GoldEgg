@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -166,8 +166,8 @@
     </message>
     <message>
         <location line="+33"/>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</source>
-        <translation>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</translation>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
+        <translation>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+44"/>
@@ -216,7 +216,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -226,7 +226,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -237,8 +237,8 @@
     </message>
     <message>
         <location line="-39"/>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</translation>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -302,7 +302,7 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -313,7 +313,7 @@
     </message>
     <message>
         <location line="-355"/>
-        <source>The GEC address to sign the message with</source>
+        <source>The GDE address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -355,7 +355,7 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this GEC address</source>
+        <source>Sign the message to prove you own this GDE address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -386,12 +386,12 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>The GEC address the message was signed with</source>
+        <source>The GDE address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+29"/>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -806,7 +806,7 @@
     </message>
     <message>
         <location line="-707"/>
-        <source>Send coins to a GEC address</source>
+        <source>Send coins to a GDE address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -846,12 +846,12 @@
     </message>
     <message>
         <location line="+16"/>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1481,7 +1481,7 @@ Address: %4
     </message>
     <message>
         <location line="+67"/>
-        <source>The entered address &quot;%1&quot; is not a valid GEC address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid GDE address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1729,7 +1729,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Status will be updated automatically in (gec):</source>
+        <source>Status will be updated automatically in (gde):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1807,8 +1807,8 @@ Address: %4
     </message>
     <message>
         <location line="+16"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GEC addresses after it matures.
-To Add: enter percentage to give and GEC address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GDE addresses after it matures.
+To Add: enter percentage to give and GDE address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
         <translation type="unfinished"></translation>
@@ -2063,7 +2063,7 @@ Please be patient after clicking import.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Add destinations to send GEC to</source>
+        <source>Add destinations to send GDE to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2473,7 +2473,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+43"/>
-        <source>GEC Balances</source>
+        <source>GDE Balances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2574,7 +2574,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+36"/>
-        <source>GEC:</source>
+        <source>GDE:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2589,7 +2589,7 @@ p, li { white-space: pre-wrap; }
         <location line="+189"/>
         <location line="+31"/>
         <location line="+44"/>
-        <source>0.000 000 00 GEC</source>
+        <source>0.000 000 00 GDE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2650,7 +2650,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+114"/>
-        <source>URI cannot be parsed! This can be caused by an invalid GEC address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid GDE address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2758,7 +2758,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+113"/>
-        <source>Enter a GEC address (e.g. %1)</source>
+        <source>Enter a GDE address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3275,8 +3275,8 @@ p, li { white-space: pre-wrap; }
     <name>ReceiveCoinsDialog</name>
     <message>
         <location filename="../forms/receivecoinsdialog.ui" line="+34"/>
-        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has gecurity and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
-        <translation>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has gecurity and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</translation>
+        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
+        <translation>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3584,7 +3584,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+7"/>
-        <source>0 GEC</source>
+        <source>0 GDE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3654,12 +3654,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+772"/>
-        <source>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uGECs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uGDEs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uGECs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uGDEs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3786,7 +3786,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+622"/>
-        <source>Warning: Invalid GEC address</source>
+        <source>Warning: Invalid GDE address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3915,7 +3915,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+18"/>
-        <source>The GEC address to send the payment to</source>
+        <source>The GDE address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4032,7 +4032,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+18"/>
-        <source>The GEC address to sign the message with</source>
+        <source>The GDE address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4074,17 +4074,17 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this GEC address</source>
+        <source>Sign the message to prove you own this GDE address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>
-        <source>The GEC address the message was signed with</source>
+        <source>The GDE address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4882,7 +4882,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location line="-18"/>
         <location line="+9"/>
-        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 GEC.</source>
+        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 GDE.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5033,12 +5033,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in GEC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in GDE/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in GEC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in GDE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5173,7 +5173,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Goldegg Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 GEC.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 GDE.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5553,7 +5553,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Goldegg Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Fee (in GEC/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in SEC/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -4,7 +4,7 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#define GECP256K1_BUILD (1)
+#define GDEP256K1_BUILD (1)
 
 #include "include/secp256k1.h"
 
@@ -23,10 +23,10 @@ void secp256k1_start(unsigned int flags) {
     secp256k1_ge_start();
     secp256k1_scalar_start();
     secp256k1_ecdsa_start();
-    if (flags & GECP256K1_START_SIGN) {
+    if (flags & GDEP256K1_START_SIGN) {
         secp256k1_ecmult_gen_start();
     }
-    if (flags & GECP256K1_START_VERIFY) {
+    if (flags & GDEP256K1_START_VERIFY) {
         secp256k1_ecmult_start();
     }
 }
@@ -72,17 +72,17 @@ end:
     return ret;
 }
 
-int secp256k1_ecdsa_sign(const unsigned char *message, int messagelen, unsigned char *signature, int *signaturelen, const unsigned char *geckey, const unsigned char *nonce) {
+int secp256k1_ecdsa_sign(const unsigned char *message, int messagelen, unsigned char *signature, int *signaturelen, const unsigned char *gdekey, const unsigned char *nonce) {
     DEBUG_CHECK(secp256k1_ecmult_gen_consts != NULL);
     DEBUG_CHECK(message != NULL);
     DEBUG_CHECK(messagelen <= 32);
     DEBUG_CHECK(signature != NULL);
     DEBUG_CHECK(signaturelen != NULL);
-    DEBUG_CHECK(geckey != NULL);
+    DEBUG_CHECK(gdekey != NULL);
     DEBUG_CHECK(nonce != NULL);
 
-    secp256k1_scalar_t gec, non, msg;
-    secp256k1_scalar_set_b32(&gec, geckey, NULL);
+    secp256k1_scalar_t gde, non, msg;
+    secp256k1_scalar_set_b32(&gde, gdekey, NULL);
     int overflow = 0;
     secp256k1_scalar_set_b32(&non, nonce, &overflow);
     {
@@ -94,27 +94,27 @@ int secp256k1_ecdsa_sign(const unsigned char *message, int messagelen, unsigned 
     int ret = !secp256k1_scalar_is_zero(&non) && !overflow;
     secp256k1_ecdsa_sig_t sig;
     if (ret) {
-        ret = secp256k1_ecdsa_sig_sign(&sig, &gec, &msg, &non, NULL);
+        ret = secp256k1_ecdsa_sig_sign(&sig, &gde, &msg, &non, NULL);
     }
     if (ret) {
         secp256k1_ecdsa_sig_serialize(signature, signaturelen, &sig);
     }
     secp256k1_scalar_clear(&msg);
     secp256k1_scalar_clear(&non);
-    secp256k1_scalar_clear(&gec);
+    secp256k1_scalar_clear(&gde);
     return ret;
 }
 
-int secp256k1_ecdsa_sign_compact(const unsigned char *message, int messagelen, unsigned char *sig64, const unsigned char *geckey, const unsigned char *nonce, int *recid) {
+int secp256k1_ecdsa_sign_compact(const unsigned char *message, int messagelen, unsigned char *sig64, const unsigned char *gdekey, const unsigned char *nonce, int *recid) {
     DEBUG_CHECK(secp256k1_ecmult_gen_consts != NULL);
     DEBUG_CHECK(message != NULL);
     DEBUG_CHECK(messagelen <= 32);
     DEBUG_CHECK(sig64 != NULL);
-    DEBUG_CHECK(geckey != NULL);
+    DEBUG_CHECK(gdekey != NULL);
     DEBUG_CHECK(nonce != NULL);
 
-    secp256k1_scalar_t gec, non, msg;
-    secp256k1_scalar_set_b32(&gec, geckey, NULL);
+    secp256k1_scalar_t gde, non, msg;
+    secp256k1_scalar_set_b32(&gde, gdekey, NULL);
     int overflow = 0;
     secp256k1_scalar_set_b32(&non, nonce, &overflow);
     {
@@ -126,7 +126,7 @@ int secp256k1_ecdsa_sign_compact(const unsigned char *message, int messagelen, u
     int ret = !secp256k1_scalar_is_zero(&non) && !overflow;
     secp256k1_ecdsa_sig_t sig;
     if (ret) {
-        ret = secp256k1_ecdsa_sig_sign(&sig, &gec, &msg, &non, recid);
+        ret = secp256k1_ecdsa_sig_sign(&sig, &gde, &msg, &non, recid);
     }
     if (ret) {
         secp256k1_scalar_get_b32(sig64, &sig.r);
@@ -134,7 +134,7 @@ int secp256k1_ecdsa_sign_compact(const unsigned char *message, int messagelen, u
     }
     secp256k1_scalar_clear(&msg);
     secp256k1_scalar_clear(&non);
-    secp256k1_scalar_clear(&gec);
+    secp256k1_scalar_clear(&gde);
     return ret;
 }
 
@@ -170,14 +170,14 @@ int secp256k1_ecdsa_recover_compact(const unsigned char *msg, int msglen, const 
     return ret;
 }
 
-int secp256k1_ec_geckey_verify(const unsigned char *geckey) {
-    DEBUG_CHECK(geckey != NULL);
+int secp256k1_ec_gdekey_verify(const unsigned char *gdekey) {
+    DEBUG_CHECK(gdekey != NULL);
 
-    secp256k1_scalar_t gec;
+    secp256k1_scalar_t gde;
     int overflow;
-    secp256k1_scalar_set_b32(&gec, geckey, &overflow);
-    int ret = !secp256k1_scalar_is_zero(&gec) && !overflow;
-    secp256k1_scalar_clear(&gec);
+    secp256k1_scalar_set_b32(&gde, gdekey, &overflow);
+    int ret = !secp256k1_scalar_is_zero(&gde) && !overflow;
+    secp256k1_scalar_clear(&gde);
     return ret;
 }
 
@@ -188,17 +188,17 @@ int secp256k1_ec_pubkey_verify(const unsigned char *pubkey, int pubkeylen) {
     return secp256k1_eckey_pubkey_parse(&q, pubkey, pubkeylen);
 }
 
-int secp256k1_ec_pubkey_create(unsigned char *pubkey, int *pubkeylen, const unsigned char *geckey, int compressed) {
+int secp256k1_ec_pubkey_create(unsigned char *pubkey, int *pubkeylen, const unsigned char *gdekey, int compressed) {
     DEBUG_CHECK(secp256k1_ecmult_gen_consts != NULL);
     DEBUG_CHECK(pubkey != NULL);
     DEBUG_CHECK(pubkeylen != NULL);
-    DEBUG_CHECK(geckey != NULL);
+    DEBUG_CHECK(gdekey != NULL);
 
-    secp256k1_scalar_t gec;
-    secp256k1_scalar_set_b32(&gec, geckey, NULL);
+    secp256k1_scalar_t gde;
+    secp256k1_scalar_set_b32(&gde, gdekey, NULL);
     secp256k1_gej_t pj;
-    secp256k1_ecmult_gen(&pj, &gec);
-    secp256k1_scalar_clear(&gec);
+    secp256k1_ecmult_gen(&pj, &gde);
+    secp256k1_scalar_clear(&gde);
     secp256k1_ge_t p;
     secp256k1_ge_set_gej(&p, &pj);
     return secp256k1_eckey_pubkey_serialize(&p, pubkey, pubkeylen, compressed);
@@ -214,22 +214,22 @@ int secp256k1_ec_pubkey_decompress(unsigned char *pubkey, int *pubkeylen) {
     return secp256k1_eckey_pubkey_serialize(&p, pubkey, pubkeylen, 0);
 }
 
-int secp256k1_ec_privkey_tweak_add(unsigned char *geckey, const unsigned char *tweak) {
-    DEBUG_CHECK(geckey != NULL);
+int secp256k1_ec_privkey_tweak_add(unsigned char *gdekey, const unsigned char *tweak) {
+    DEBUG_CHECK(gdekey != NULL);
     DEBUG_CHECK(tweak != NULL);
 
     secp256k1_scalar_t term;
     int overflow = 0;
     secp256k1_scalar_set_b32(&term, tweak, &overflow);
-    secp256k1_scalar_t gec;
-    secp256k1_scalar_set_b32(&gec, geckey, NULL);
+    secp256k1_scalar_t gde;
+    secp256k1_scalar_set_b32(&gde, gdekey, NULL);
 
-    int ret = secp256k1_eckey_privkey_tweak_add(&gec, &term) && !overflow;
+    int ret = secp256k1_eckey_privkey_tweak_add(&gde, &term) && !overflow;
     if (ret) {
-        secp256k1_scalar_get_b32(geckey, &gec);
+        secp256k1_scalar_get_b32(gdekey, &gde);
     }
 
-    secp256k1_scalar_clear(&gec);
+    secp256k1_scalar_clear(&gde);
     secp256k1_scalar_clear(&term);
     return ret;
 }
@@ -259,21 +259,21 @@ int secp256k1_ec_pubkey_tweak_add(unsigned char *pubkey, int pubkeylen, const un
     return ret;
 }
 
-int secp256k1_ec_privkey_tweak_mul(unsigned char *geckey, const unsigned char *tweak) {
-    DEBUG_CHECK(geckey != NULL);
+int secp256k1_ec_privkey_tweak_mul(unsigned char *gdekey, const unsigned char *tweak) {
+    DEBUG_CHECK(gdekey != NULL);
     DEBUG_CHECK(tweak != NULL);
 
     secp256k1_scalar_t factor;
     int overflow = 0;
     secp256k1_scalar_set_b32(&factor, tweak, &overflow);
-    secp256k1_scalar_t gec;
-    secp256k1_scalar_set_b32(&gec, geckey, NULL);
-    int ret = secp256k1_eckey_privkey_tweak_mul(&gec, &factor) && !overflow;
+    secp256k1_scalar_t gde;
+    secp256k1_scalar_set_b32(&gde, gdekey, NULL);
+    int ret = secp256k1_eckey_privkey_tweak_mul(&gde, &factor) && !overflow;
     if (ret) {
-        secp256k1_scalar_get_b32(geckey, &gec);
+        secp256k1_scalar_get_b32(gdekey, &gde);
     }
 
-    secp256k1_scalar_clear(&gec);
+    secp256k1_scalar_clear(&gde);
     secp256k1_scalar_clear(&factor);
     return ret;
 }
@@ -303,26 +303,26 @@ int secp256k1_ec_pubkey_tweak_mul(unsigned char *pubkey, int pubkeylen, const un
     return ret;
 }
 
-int secp256k1_ec_privkey_export(const unsigned char *geckey, unsigned char *privkey, int *privkeylen, int compressed) {
-    DEBUG_CHECK(geckey != NULL);
+int secp256k1_ec_privkey_export(const unsigned char *gdekey, unsigned char *privkey, int *privkeylen, int compressed) {
+    DEBUG_CHECK(gdekey != NULL);
     DEBUG_CHECK(privkey != NULL);
     DEBUG_CHECK(privkeylen != NULL);
 
     secp256k1_scalar_t key;
-    secp256k1_scalar_set_b32(&key, geckey, NULL);
+    secp256k1_scalar_set_b32(&key, gdekey, NULL);
     int ret = secp256k1_eckey_privkey_serialize(privkey, privkeylen, &key, compressed);
     secp256k1_scalar_clear(&key);
     return ret;
 }
 
-int secp256k1_ec_privkey_import(unsigned char *geckey, const unsigned char *privkey, int privkeylen) {
-    DEBUG_CHECK(geckey != NULL);
+int secp256k1_ec_privkey_import(unsigned char *gdekey, const unsigned char *privkey, int privkeylen) {
+    DEBUG_CHECK(gdekey != NULL);
     DEBUG_CHECK(privkey != NULL);
 
     secp256k1_scalar_t key;
     int ret = secp256k1_eckey_privkey_parse(&key, privkey, privkeylen);
     if (ret)
-        secp256k1_scalar_get_b32(geckey, &key);
+        secp256k1_scalar_get_b32(gdekey, &key);
     secp256k1_scalar_clear(&key);
     return ret;
 }

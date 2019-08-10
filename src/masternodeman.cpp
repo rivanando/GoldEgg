@@ -359,7 +359,7 @@ int CMasternodeMan::stable_size ()
         if (IsSporkActive (SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT)) {
             nMasternode_Age = GetAdjustedTime() - mn.sigTime;
             if ((nMasternode_Age) < nMasternode_Min_Age) {
-                continue; // Skip masternodes younger than (default) 8000 gec (MUST be > MASTERNODE_REMOVAL_SECONDS)
+                continue; // Skip masternodes younger than (default) 8000 gde (MUST be > MASTERNODE_REMOVAL_SECONDS)
             }
         }
         mn.Check ();

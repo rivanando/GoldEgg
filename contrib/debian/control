@@ -46,7 +46,7 @@ Package: goldegg-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Goldegg (GEC) is a sustainable cryptocurrency modeled after
+ Goldegg (GDE) is a sustainable cryptocurrency modeled after
  Satoshi Nakamoto’s vision for Bitcoin.
  It is a decentralized, peer-to-peer transactional currency designed
  to offer a solution to the problem posed by the exponential increase

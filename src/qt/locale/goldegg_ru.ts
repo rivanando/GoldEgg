@@ -62,12 +62,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши GEC-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши GDE-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши GEC-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши GDE-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,23 +168,23 @@
         <translation>Подтверждение шифрования кошелька</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши GEC от кражи с использованием вредоносного ПО.</translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши GDE от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Вы действительно хотите зашифровать свой кошелек?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ GEC&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ GDE&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Кошелек зашифрован</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>ВАЖНО: все предыдущие резервные копии вашего файла кошелька должны быть заменены вновь созданным зашифрованным файлом кошелька. Из соображений безопасности предыдущие резервные копии незашифрованного файла кошелька станут бесполезными, как только вы начнете использовать новый зашифрованный кошелек.</translation>
     </message>
     <message>
@@ -231,16 +231,16 @@
         <translation>&amp;BIP 38 Шифрование</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Введите GEC адрес, которым вы хотите зашифровать, используя BIP 38. Введите пароль в среднем поле. Нажмите "Зашифровать", чтобы создать зашиврованный секретный ключ.</translation>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Введите GDE адрес, которым вы хотите зашифровать, используя BIP 38. Введите пароль в среднем поле. Нажмите "Зашифровать", чтобы создать зашиврованный секретный ключ.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Адрес:</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>Адрес GEC для подписи сообщения с помощью</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>Адрес GDE для подписи сообщения с помощью</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -271,8 +271,8 @@
         <translation>Копировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Подпишите сообщение, чтобы подтвердить свой адрес GEC</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Подпишите сообщение, чтобы подтвердить свой адрес GDE</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -295,12 +295,12 @@
         <translation>Введите зашифрованный с помощью BIP 38 секретный ключ. Введите секретную фразу в среднем окне. Нажмите Дешифровать Ключ чтобы создать секретный ключ. Нажав на Импортировать Адрес после дешифровки, вы добавите секретный ключ к кошельку.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>Адрес GEC, которым подписано сообщение</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>Адрес GDE, которым подписано сообщение</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным GEC адресом </translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным GDE адресом </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -594,8 +594,8 @@
         <translation>Goldegg Core</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Отправить монеты на GEC адрес</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Отправить монеты на GDE адрес</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -622,12 +622,12 @@
         <translation>Изменение параметров конфигурации Goldegg</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>Подписывайте сообщения вашими GEC адресами, чтобы доказать, что вы их владелец</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>Подписывайте сообщения вашими GDE адресами, чтобы доказать, что вы их владелец</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Проверте сообщения, чтобы убедиться, что они были подписаны указанным GEC адресом </translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Проверте сообщения, чтобы убедиться, что они были подписаны указанным GDE адресом </translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1090,8 +1090,8 @@ MultiSend: %1</translation>
         <translation>Изменить адрес отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid GEC address.</source>
-        <translation>Введенный адрес "%1" не является GEC адресом.</translation>
+        <source>The entered address "%1" is not a valid GDE address.</source>
+        <translation>Введенный адрес "%1" не является GDE адресом.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1290,7 +1290,7 @@ MultiSend: %1</translation>
         <translation>&amp;Обновить состояние</translation>
     </message>
     <message>
-        <source>Status will be updated automatically in (gec):</source>
+        <source>Status will be updated automatically in (gde):</source>
         <translation>Состояние будет автоматически обновлено через (сек):</translation>
     </message>
     <message>
@@ -1353,12 +1353,12 @@ MultiSend: %1</translation>
         <translation>Введите адрес для отправки</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GEC addresses after it matures.
-To Add: enter percentage to give and GEC address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GDE addresses after it matures.
+To Add: enter percentage to give and GDE address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend позволяет вам автоматически отправлять до 100% вознаграждения за мастерноды и хранение, после их созревания, на другие GEC адреса.
-Для добавления: введите передаваемый процент и GEC адрес для добавления к вектору MultiSend.
+        <translation>MultiSend позволяет вам автоматически отправлять до 100% вознаграждения за мастерноды и хранение, после их созревания, на другие GDE адреса.
+Для добавления: введите передаваемый процент и GDE адрес для добавления к вектору MultiSend.
 Для удаления: введите удаляемый адрес и нажмите удалить.
 MultiSend будет неактивен до тех пор, пока вы не нажмете Включить</translation>
     </message>
@@ -1805,8 +1805,8 @@ Please check the address and try again.</source>
         <translation>Не удалось запустить goldegg: обработчик click-to-pay </translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid GEC address or malformed URI parameters.</source>
-        <translation>URI не интерпретируется! Причиной этому может быть неверный GEC адрес или неверные параметеры URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid GDE address or malformed URI parameters.</source>
+        <translation>URI не интерпретируется! Причиной этому может быть неверный GDE адрес или неверные параметеры URI.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1891,8 +1891,8 @@ Please check the address and try again.</source>
         <translation>Сумма</translation>
     </message>
     <message>
-        <source>Enter a GEC address (e.g. %1)</source>
-        <translation>Введите адрес GEC (например %1)</translation>
+        <source>Enter a GDE address (e.g. %1)</source>
+        <translation>Введите адрес GDE (например %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2406,8 +2406,8 @@ Please check the address and try again.</source>
         <translation>Изменить:</translation>
     </message>
     <message>
-        <source>0 GEC</source>
-        <translation>0 GEC</translation>
+        <source>0 GDE</source>
+        <translation>0 GDE</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2486,8 +2486,8 @@ Please check the address and try again.</source>
         <translation>Копировать изменение</translation>
     </message>
     <message>
-        <source>Warning: Invalid GEC address</source>
-        <translation>Предупреждение: неправильный GEC адрес</translation>
+        <source>Warning: Invalid GDE address</source>
+        <translation>Предупреждение: неправильный GDE адрес</translation>
     </message>
     <message>
         <source>and SwiftTX</source>
@@ -2551,8 +2551,8 @@ Please check the address and try again.</source>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>Адрес GEC для подписи сообщения с помощью</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>Адрес GDE для подписи сообщения с помощью</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2575,16 +2575,16 @@ Please check the address and try again.</source>
         <translation>Копировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Подпишите сообщение, чтобы подтвердить свой адрес GEC</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Подпишите сообщение, чтобы подтвердить свой адрес GDE</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>Адрес GEC, которым подписано сообщение</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>Адрес GDE, которым подписано сообщение</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным GEC адресом </translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным GDE адресом </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>

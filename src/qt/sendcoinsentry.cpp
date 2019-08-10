@@ -93,16 +93,16 @@ void SendCoinsEntry::clear()
     ui->messageTextLabel->clear();
     ui->messageTextLabel->hide();
     ui->messageLabel->hide();
-    // clear UI elements for ingecure payment request
+    // clear UI elements for insecure payment request
     ui->payTo_is->clear();
     ui->memoTextLabel_is->clear();
     ui->payAmount_is->clear();
-    // clear UI elements for gecure payment request
+    // clear UI elements for secure payment request
     ui->payTo_s->clear();
     ui->memoTextLabel_s->clear();
     ui->payAmount_s->clear();
 
-    // update the display unit, to not use the default ("GEC")
+    // update the display unit, to not use the default ("GDE")
     updateDisplayUnit();
 }
 
@@ -179,20 +179,20 @@ void SendCoinsEntry::setValue(const SendCoinsRecipient& value)
 
     if (recipient.paymentRequest.IsInitialized()) // payment request
     {
-        if (recipient.authenticatedMerchant.isEmpty()) // ingecure
+        if (recipient.authenticatedMerchant.isEmpty()) // insecure
         {
             ui->payTo_is->setText(recipient.address);
             ui->memoTextLabel_is->setText(recipient.message);
             ui->payAmount_is->setValue(recipient.amount);
             ui->payAmount_is->setReadOnly(true);
-            setCurrentWidget(ui->SendCoins_IngecurePaymentRequest);
-        } else // gecure
+            setCurrentWidget(ui->SendCoins_InsecurePaymentRequest);
+        } else // secure
         {
             ui->payTo_s->setText(recipient.authenticatedMerchant);
             ui->memoTextLabel_s->setText(recipient.message);
             ui->payAmount_s->setValue(recipient.amount);
             ui->payAmount_s->setReadOnly(true);
-            setCurrentWidget(ui->SendCoins_GecurePaymentRequest);
+            setCurrentWidget(ui->SendCoins_SecurePaymentRequest);
         }
     } else // normal payment
     {

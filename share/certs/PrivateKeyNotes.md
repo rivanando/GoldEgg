@@ -16,7 +16,7 @@ then deleted from Firefox's keystore. The exported file is used to sign the Wind
 Threat analysis
 --
 
-Gavin is a single point of failure. He could be coerced to divulge the gecret signing keys,
+Gavin is a single point of failure. He could be coerced to divulge the secret signing keys,
 allowing somebody to distribute a Bitcoin-Qt.app or bitcoin-qt-setup.exe with a valid
 signature but containing a malicious binary.
 
@@ -43,4 +43,4 @@ the list of gitian signatures, is needed.
 The long-term solution is something like the 'gitian downloader' system, which
 uses signatures from multiple developers to determine whether or not a binary
 should be trusted. However, that just pushes the problem to "how will
-non-technical users gecurely get the gitian downloader code to start?"
+non-technical users securely get the gitian downloader code to start?"

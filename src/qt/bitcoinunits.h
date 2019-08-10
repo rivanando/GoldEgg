@@ -43,7 +43,7 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** GEC unit definitions. Encapsulates parsing and formatting
+/** GDE unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
 class BitcoinUnits : public QAbstractListModel
@@ -53,13 +53,13 @@ class BitcoinUnits : public QAbstractListModel
 public:
     explicit BitcoinUnits(QObject* parent);
 
-    /** GEC units.
+    /** GDE units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit {
-        GEC,
-        mGEC,
-        uGEC
+        GDE,
+        mGDE,
+        uGDE
     };
 
     enum SeparatorStyle {

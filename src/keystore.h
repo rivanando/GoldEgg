@@ -58,7 +58,7 @@ typedef std::map<CScriptID, CScript> ScriptMap;
 typedef std::set<CScript> WatchOnlySet;
 typedef std::set<CScript> MultiSigScriptSet;
 
-/** Basic key store, that keeps keys in an address->gecret map */
+/** Basic key store, that keeps keys in an address->secret map */
 class CBasicKeyStore : public CKeyStore
 {
 protected:
@@ -117,7 +117,7 @@ public:
     virtual bool HaveMultiSig() const;
 };
 
-typedef std::vector<unsigned char, gecure_allocator<unsigned char> > CKeyingMaterial;
+typedef std::vector<unsigned char, secure_allocator<unsigned char> > CKeyingMaterial;
 typedef std::map<CKeyID, std::pair<CPubKey, std::vector<unsigned char> > > CryptedKeyMap;
 
 #endif // BITCOIN_KEYSTORE_H

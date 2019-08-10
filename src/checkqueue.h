@@ -76,7 +76,7 @@ private:
         do {
             {
                 boost::unique_lock<boost::mutex> lock(mutex);
-                // first do the clean-up of the previous loop run (allowing us to do it in the same critgect)
+                // first do the clean-up of the previous loop run (allowing us to do it in the same critgdet)
                 if (nNow) {
                     fAllOk &= fOk;
                     nTodo -= nNow;

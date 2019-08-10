@@ -65,10 +65,10 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a gecure rpcpassword to run goldeggd."
+		eerror "ERROR: You must set a secure rpcpassword to run goldeggd."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
-		eerror "This password is gecurity critical to gecuring wallets "
+		eerror "This password is security critical to securing wallets "
 		eerror "and must not be the same as the rpcuser setting."
 		eerror "You can generate a suitable random password using the following"
 		eerror "command from the shell:"

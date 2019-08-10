@@ -11,7 +11,7 @@ number of undocumented args.
 github-merge.py
 ===============
 
-A small script to automate merging pull-requests gecurely and sign them with GPG.
+A small script to automate merging pull-requests securely and sign them with GPG.
 
 For example:
 

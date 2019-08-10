@@ -62,12 +62,12 @@
         <translation>Endereços de recebimento</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Esses são seus endereços GEC para enviar pagamentos. Sempre confira a quantidade e os endereços de destino antes de enviar moedas.</translation>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Esses são seus endereços GDE para enviar pagamentos. Sempre confira a quantidade e os endereços de destino antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Esses são seus endereços GEC para receber pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Esses são seus endereços GDE para receber pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -132,7 +132,7 @@
         <translation>Repetir senha</translation>
     </message>
     <message>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</source>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
         <translation>Serve para desabilitar envio trivial de dinheiro quando a conta do SO for comprometida, mas não provê segurança real.</translation>
     </message>
     <message>
@@ -172,23 +172,23 @@
         <translation>Confirmar encriptação da carteira</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas GECs contra roubo por malware infectando seu computador.</translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas GDEs contra roubo por malware infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Tem certeza que deseja encriptar sua carteira?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Atenção: Se você encriptar sua carteira e perder a senha, você &lt;B&gt;PERDERÁ TODA SUA GEC&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Atenção: Se você encriptar sua carteira e perder a senha, você &lt;B&gt;PERDERÁ TODA SUA GDE&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Carteira encriptada</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>IMPORTANTE: Qualquer backup que você fez da sua carteira precisa ser substituído pelo novo arquivo encriptado. Por razões de segurança, arquivos anteriores de backup vão se tornar inúteis assim que você usar a carteira nova e encriptada.</translation>
     </message>
     <message>
@@ -235,16 +235,16 @@
         <translation>Encriptar com &amp;BIP 38</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Digite um endereço GEC que você gostaria de criptografar usando BIP 38. Digite uma frase gecreta na caixa do meio. Pressione criptografar para calcular a chave privada criptografada.</translation>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Digite um endereço GDE que você gostaria de criptografar usando BIP 38. Digite uma frase secreta na caixa do meio. Pressione criptografar para calcular a chave privada criptografada.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Endereço:</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>Um endereço GEC para assinar a mensagem</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>Um endereço GDE para assinar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Copiar a assinatura para a area de trabalho</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Assinar a Mensagem para provar que você e dono desse endereço GEC.</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Assinar a Mensagem para provar que você e dono desse endereço GDE.</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -295,8 +295,8 @@
         <translation>Criptografia BIP 38</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>O endereço GEC que foi assinado com</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>O endereço GDE que foi assinado com</translation>
     </message>
     <message>
         <source>Decrypted Key:</source>
@@ -626,8 +626,8 @@
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>Um endereço GEC para assinar a mensagem</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>Um endereço GDE para assinar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -658,12 +658,12 @@
         <translation>Copiar a assinatura para a area de trabalho</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Assinar a Mensagem para provar que você e dono desse endereço GEC.</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Assinar a Mensagem para provar que você e dono desse endereço GDE.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>O endereço GEC que foi assinado com</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>O endereço GDE que foi assinado com</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>

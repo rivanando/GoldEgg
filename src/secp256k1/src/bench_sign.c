@@ -10,7 +10,7 @@
 #include "util.h"
 
 int main(void) {
-    secp256k1_start(GECP256K1_START_SIGN);
+    secp256k1_start(GDEP256K1_START_SIGN);
 
     unsigned char msg[32];
     unsigned char nonce[32];

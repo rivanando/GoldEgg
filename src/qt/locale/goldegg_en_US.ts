@@ -62,12 +62,12 @@
         <translation>Receiving addresses</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -132,8 +132,8 @@
         <translation>Repeat new passphrase</translation>
     </message>
     <message>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</source>
-        <translation>Serves to disable the trivial sendmoney when OS account compromised. Provides no real gecurity.</translation>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
+        <translation>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</translation>
     </message>
     <message>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
@@ -172,24 +172,24 @@
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Are you sure you wish to encrypt your wallet?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>Wallet encrypted</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</translation>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -235,16 +235,16 @@
         <translation>&amp;BIP 38 Encrypt</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</translation>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Address:</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>The GEC address to sign the message with</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>The GDE address to sign the message with</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Copy the current signature to the system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Sign the message to prove you own this GEC address</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Sign the message to prove you own this GDE address</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Enter the BIP 38 encrypted private key. Enter the passphrase in the middle box. Click Decrypt Key to compute the private key. After the key is decrypted, clicking 'Import Address' will add this private key to the wallet.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>The GEC address the message was signed with</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>The GDE address the message was signed with</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Verify the message to ensure it was signed with the specified GEC address</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Verify the message to ensure it was signed with the specified GDE address</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -602,8 +602,8 @@
         <translation>Goldegg Core</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Send coins to a GEC address</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Send coins to a GDE address</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -630,12 +630,12 @@
         <translation>Modify configuration options for Goldegg</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>Sign messages with your GEC addresses to prove you own them</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>Sign messages with your GDE addresses to prove you own them</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Verify messages to ensure they were signed with specified GEC addresses</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Verify messages to ensure they were signed with specified GDE addresses</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1122,8 +1122,8 @@ Address: %4
         <translation>Edit sending address</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid GEC address.</source>
-        <translation>The entered address "%1" is not a valid GEC address.</translation>
+        <source>The entered address "%1" is not a valid GDE address.</source>
+        <translation>The entered address "%1" is not a valid GDE address.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1322,8 +1322,8 @@ Address: %4
         <translation>&amp;Update status</translation>
     </message>
     <message>
-        <source>Status will be updated automatically in (gec):</source>
-        <translation>Status will be updated automatically in (gec):</translation>
+        <source>Status will be updated automatically in (gde):</source>
+        <translation>Status will be updated automatically in (gde):</translation>
     </message>
     <message>
         <source>0</source>
@@ -1385,12 +1385,12 @@ Address: %4
         <translation>Enter Address to Send to</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GEC addresses after it matures.
-To Add: enter percentage to give and GEC address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GDE addresses after it matures.
+To Add: enter percentage to give and GDE address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GEC addresses after it matures.
-To Add: enter percentage to give and GEC address to add to the MultiSend vector.
+        <translation>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other GDE addresses after it matures.
+To Add: enter percentage to give and GDE address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</translation>
     </message>
@@ -1857,8 +1857,8 @@ Please check the address and try again.</translation>
         <translation>Cannot start goldegg: click-to-pay handler</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid GEC address or malformed URI parameters.</source>
-        <translation>URI cannot be parsed! This can be caused by an invalid GEC address or malformed URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid GDE address or malformed URI parameters.</source>
+        <translation>URI cannot be parsed! This can be caused by an invalid GDE address or malformed URI parameters.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1943,8 +1943,8 @@ Please check the address and try again.</translation>
         <translation>Amount</translation>
     </message>
     <message>
-        <source>Enter a GEC address (e.g. %1)</source>
-        <translation>Enter a GEC address (e.g. %1)</translation>
+        <source>Enter a GDE address (e.g. %1)</source>
+        <translation>Enter a GDE address (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2300,8 +2300,8 @@ Please check the address and try again.</translation>
 <context>
     <name>ReceiveCoinsDialog</name>
     <message>
-        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has gecurity and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
-        <translation>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has gecurity and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</translation>
+        <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
+        <translation>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</translation>
     </message>
     <message>
         <source>R&amp;euse an existing receiving address (not recommended)</source>
@@ -2553,8 +2553,8 @@ Please check the address and try again.</translation>
         <translation>UTXO Size:</translation>
     </message>
     <message>
-        <source>0 GEC</source>
-        <translation>0 GEC</translation>
+        <source>0 GDE</source>
+        <translation>0 GDE</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2597,12 +2597,12 @@ Please check the address and try again.</translation>
         <translation>Confirmation time:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGECs in fee,&lt;br /&gt;while "at least" pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGECs in fee,&lt;br /&gt;while "at least" pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGDEs in fee,&lt;br /&gt;while "at least" pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGDEs in fee,&lt;br /&gt;while "at least" pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGECs in fee,&lt;br /&gt;while "total at least" pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uGECs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGECs in fee,&lt;br /&gt;while "total at least" pays 1000 uGECs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGDEs in fee,&lt;br /&gt;while "total at least" pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uGDEs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uGDEs in fee,&lt;br /&gt;while "total at least" pays 1000 uGDEs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Goldegg transactions than the network can process.</source>
@@ -2705,8 +2705,8 @@ Please check the address and try again.</translation>
         <translation>using</translation>
     </message>
     <message>
-        <source>Warning: Invalid GEC address</source>
-        <translation>Warning: Invalid GEC address</translation>
+        <source>Warning: Invalid GDE address</source>
+        <translation>Warning: Invalid GDE address</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -2804,8 +2804,8 @@ Please check the address and try again.</translation>
         <translation>Pay &amp;To:</translation>
     </message>
     <message>
-        <source>The GEC address to send the payment to</source>
-        <translation>The GEC address to send the payment to</translation>
+        <source>The GDE address to send the payment to</source>
+        <translation>The GDE address to send the payment to</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2894,8 +2894,8 @@ Please check the address and try again.</translation>
         <translation>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>The GEC address to sign the message with</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>The GDE address to sign the message with</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2926,16 +2926,16 @@ Please check the address and try again.</translation>
         <translation>Copy the current signature to the system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Sign the message to prove you own this GEC address</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Sign the message to prove you own this GDE address</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>The GEC address the message was signed with</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>The GDE address the message was signed with</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Verify the message to ensure it was signed with the specified GEC address</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Verify the message to ensure it was signed with the specified GDE address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3545,8 +3545,8 @@ Please check the address and try again.</translation>
         <translation>Send Coins</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GEC.</source>
-        <translation>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GEC.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GDE.</source>
+        <translation>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 GDE.</translation>
     </message>
 </context>
 <context>
@@ -3675,12 +3675,12 @@ Please check the address and try again.</translation>
         <translation>Execute command when the best block changes (%s in cmd is replaced by block hash)</translation>
     </message>
     <message>
-        <source>Fees (in GEC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Fees (in GEC/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
+        <source>Fees (in GDE/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Fees (in GDE/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in GEC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Fees (in GEC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
+        <source>Fees (in GDE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Fees (in GDE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3799,8 +3799,8 @@ for example: alertnotify=echo %%s | mail -s "Goldegg Alert" admin@foo.com
         <translation>Unable to bind to %s on this computer. Goldegg Core is probably already running.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 GEC.</source>
-        <translation>Unable to locate enough funds for this transaction that are not equal 10000 GEC.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 GDE.</source>
+        <translation>Unable to locate enough funds for this transaction that are not equal 10000 GDE.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4075,8 +4075,8 @@ for example: alertnotify=echo %%s | mail -s "Goldegg Alert" admin@foo.com
         <translation>Failed to read block</translation>
     </message>
     <message>
-        <source>Fee (in GEC/kB) to add to transactions you send (default: %s)</source>
-        <translation>Fee (in GEC/kB) to add to transactions you send (default: %s)</translation>
+        <source>Fee (in SEC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in SEC/kB) to add to transactions you send (default: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>

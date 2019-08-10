@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_FIELD_REPR_IMPL_H_
-#define _GECP256K1_FIELD_REPR_IMPL_H_
+#ifndef _GDEP256K1_FIELD_REPR_IMPL_H_
+#define _GDEP256K1_FIELD_REPR_IMPL_H_
 
 #include <stdio.h>
 #include <string.h>
@@ -46,36 +46,36 @@ static void secp256k1_fe_normalize(secp256k1_fe_t *r) {
         mpn_sub(r->n, r->n, FIELD_LIMBS, secp256k1_field_p, FIELD_LIMBS);
 }
 
-GECP256K1_INLINE static void secp256k1_fe_set_int(secp256k1_fe_t *r, int a) {
+GDEP256K1_INLINE static void secp256k1_fe_set_int(secp256k1_fe_t *r, int a) {
     r->n[0] = a;
     for (int i=1; i<FIELD_LIMBS+1; i++)
         r->n[i] = 0;
 }
 
-GECP256K1_INLINE static void secp256k1_fe_clear(secp256k1_fe_t *r) {
+GDEP256K1_INLINE static void secp256k1_fe_clear(secp256k1_fe_t *r) {
     for (int i=0; i<FIELD_LIMBS+1; i++)
         r->n[i] = 0;
 }
 
-GECP256K1_INLINE static int secp256k1_fe_is_zero(const secp256k1_fe_t *a) {
+GDEP256K1_INLINE static int secp256k1_fe_is_zero(const secp256k1_fe_t *a) {
     int ret = 1;
     for (int i=0; i<FIELD_LIMBS+1; i++)
         ret &= (a->n[i] == 0);
     return ret;
 }
 
-GECP256K1_INLINE static int secp256k1_fe_is_odd(const secp256k1_fe_t *a) {
+GDEP256K1_INLINE static int secp256k1_fe_is_odd(const secp256k1_fe_t *a) {
     return a->n[0] & 1;
 }
 
-GECP256K1_INLINE static int secp256k1_fe_equal(const secp256k1_fe_t *a, const secp256k1_fe_t *b) {
+GDEP256K1_INLINE static int secp256k1_fe_equal(const secp256k1_fe_t *a, const secp256k1_fe_t *b) {
     int ret = 1;
     for (int i=0; i<FIELD_LIMBS+1; i++)
         ret &= (a->n[i] == b->n[i]);
     return ret;
 }
 
-GECP256K1_INLINE static int secp256k1_fe_cmp_var(const secp256k1_fe_t *a, const secp256k1_fe_t *b) {
+GDEP256K1_INLINE static int secp256k1_fe_cmp_var(const secp256k1_fe_t *a, const secp256k1_fe_t *b) {
     for (int i=FIELD_LIMBS; i>=0; i--) {
         if (a->n[i] > b->n[i]) return 1;
         if (a->n[i] < b->n[i]) return -1;
@@ -107,7 +107,7 @@ static void secp256k1_fe_get_b32(unsigned char *r, const secp256k1_fe_t *a) {
     }
 }
 
-GECP256K1_INLINE static void secp256k1_fe_negate(secp256k1_fe_t *r, const secp256k1_fe_t *a, int m) {
+GDEP256K1_INLINE static void secp256k1_fe_negate(secp256k1_fe_t *r, const secp256k1_fe_t *a, int m) {
     (void)m;
     *r = *a;
     secp256k1_fe_normalize(r);
@@ -121,11 +121,11 @@ GECP256K1_INLINE static void secp256k1_fe_negate(secp256k1_fe_t *r, const secp25
 #endif
 }
 
-GECP256K1_INLINE static void secp256k1_fe_mul_int(secp256k1_fe_t *r, int a) {
+GDEP256K1_INLINE static void secp256k1_fe_mul_int(secp256k1_fe_t *r, int a) {
     mpn_mul_1(r->n, r->n, FIELD_LIMBS+1, a);
 }
 
-GECP256K1_INLINE static void secp256k1_fe_add(secp256k1_fe_t *r, const secp256k1_fe_t *a) {
+GDEP256K1_INLINE static void secp256k1_fe_add(secp256k1_fe_t *r, const secp256k1_fe_t *a) {
     mpn_add(r->n, r->n, FIELD_LIMBS+1, a->n, FIELD_LIMBS+1);
 }
 
@@ -151,7 +151,7 @@ static void secp256k1_fe_reduce(secp256k1_fe_t *r, mp_limb_t *tmp) {
     r->n[FIELD_LIMBS] = mpn_add(r->n, tmp, FIELD_LIMBS, q, 1+(33+GMP_NUMB_BITS-1)/GMP_NUMB_BITS);
 }
 
-static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * GECP256K1_RESTRICT b) {
+static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * GDEP256K1_RESTRICT b) {
     VERIFY_CHECK(r != b);
     secp256k1_fe_t ac = *a;
     secp256k1_fe_t bc = *b;

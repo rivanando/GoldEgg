@@ -86,7 +86,7 @@ bool CWalletDB::WriteKey(const CPubKey& vchPubKey, const CPrivKey& vchPrivKey, c
 }
 
 bool CWalletDB::WriteCryptedKey(const CPubKey& vchPubKey,
-    const std::vector<unsigned char>& vchCryptedGecret,
+    const std::vector<unsigned char>& vchCryptedGderet,
     const CKeyMetadata& keyMeta)
 {
     const bool fEraseUnencryptedKey = true;
@@ -96,7 +96,7 @@ bool CWalletDB::WriteCryptedKey(const CPubKey& vchPubKey,
             keyMeta))
         return false;
 
-    if (!Write(std::make_pair(std::string("ckey"), vchPubKey), vchCryptedGecret, false))
+    if (!Write(std::make_pair(std::string("ckey"), vchPubKey), vchCryptedGderet, false))
         return false;
     if (fEraseUnencryptedKey) {
         Erase(std::make_pair(std::string("key"), vchPubKey));

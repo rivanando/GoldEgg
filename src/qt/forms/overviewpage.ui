@@ -347,7 +347,7 @@
                          <string notr="true">color:#ffe900; font-size:18px</string>
                         </property>
                         <property name="text">
-                         <string notr="true">0.000 000 00 GEC</string>
+                         <string notr="true">0.000 000 00 GDE</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -374,7 +374,7 @@
                          <string notr="true">color:#ffe900; font-size:18px</string>
                         </property>
                         <property name="text">
-                         <string notr="true">0.000 000 00 GEC</string>
+                         <string notr="true">0.000 000 00 GDE</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -447,7 +447,7 @@
                          <string notr="true">color:transparent;</string>
                         </property>
                         <property name="text">
-                         <string notr="true">0.000 000 00 GEC</string>
+                         <string notr="true">0.000 000 00 GDE</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -481,7 +481,7 @@
                          <string notr="true">color:transparent;</string>
                         </property>
                         <property name="text">
-                         <string notr="true">0.000 000 00 GEC</string>
+                         <string notr="true">0.000 000 00 GDE</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -548,7 +548,7 @@
                   <string notr="true">color:transparent;</string>
                  </property>
                  <property name="text">
-                  <string notr="true">0.000 000 00 GEC</string>
+                  <string notr="true">0.000 000 00 GDE</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -607,7 +607,7 @@
                   <string notr="true">color:transparent;</string>
                  </property>
                  <property name="text">
-                  <string notr="true">0.000 000 00 GEC</string>
+                  <string notr="true">0.000 000 00 GDE</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -657,7 +657,7 @@
                   <string notr="true">color:transparent;</string>
                  </property>
                  <property name="text">
-                  <string notr="true">0.000 000 00 GEC</string>
+                  <string notr="true">0.000 000 00 GDE</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

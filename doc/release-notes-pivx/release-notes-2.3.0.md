@@ -12,7 +12,7 @@ Please report bugs using the issue tracker at github:
 Mandatory Update
 ==============
 
-PIVX Core v2.3.0 is a mandatory update for all users. This release contains validation and gecurity improvements that are not backwards compatible with older versions. Users will have a grace period of no less than two weeks to update their clients before enforcement of this update is enabled.
+PIVX Core v2.3.0 is a mandatory update for all users. This release contains validation and security improvements that are not backwards compatible with older versions. Users will have a grace period of no less than two weeks to update their clients before enforcement of this update is enabled.
 
 How to Upgrade
 --------------

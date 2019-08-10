@@ -18,12 +18,12 @@ class CMasternodeSigner
 public:
     CScript collateralPubKey;
 
-    /// Is the inputs associated with this public key? (and there is GEC collateral - checking if valid masternode)
+    /// Is the inputs associated with this public key? (and there is GDE collateral - checking if valid masternode)
     bool IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey);
     /// Set the private/public key values, returns true if successful
-    bool GetKeysFromGecret(std::string strGecret, CKey& keyRet, CPubKey& pubkeyRet);
+    bool GetKeysFromGderet(std::string strSecret, CKey& keyRet, CPubKey& pubkeyRet);
     /// Set the private/public key values, returns true if successful
-    bool SetKey(std::string strGecret, std::string& errorMessage, CKey& key, CPubKey& pubkey);
+    bool SetKey(std::string strSecret, std::string& errorMessage, CKey& key, CPubKey& pubkey);
     /// Sign the message, returns true if successful
     bool SignMessage(std::string strMessage, std::string& errorMessage, std::vector<unsigned char>& vchSig, CKey key);
     /// Verify the message, returns true if succcessful

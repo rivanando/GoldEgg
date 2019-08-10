@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_FIELD_REPR_IMPL_H_
-#define _GECP256K1_FIELD_REPR_IMPL_H_
+#ifndef _GDEP256K1_FIELD_REPR_IMPL_H_
+#define _GDEP256K1_FIELD_REPR_IMPL_H_
 
 #include <stdio.h>
 #include <string.h>
@@ -103,7 +103,7 @@ static void secp256k1_fe_normalize(secp256k1_fe_t *r) {
 #endif
 }
 
-GECP256K1_INLINE static void secp256k1_fe_set_int(secp256k1_fe_t *r, int a) {
+GDEP256K1_INLINE static void secp256k1_fe_set_int(secp256k1_fe_t *r, int a) {
     r->n[0] = a;
     r->n[1] = r->n[2] = r->n[3] = r->n[4] = r->n[5] = r->n[6] = r->n[7] = r->n[8] = r->n[9] = 0;
 #ifdef VERIFY
@@ -113,7 +113,7 @@ GECP256K1_INLINE static void secp256k1_fe_set_int(secp256k1_fe_t *r, int a) {
 #endif
 }
 
-GECP256K1_INLINE static int secp256k1_fe_is_zero(const secp256k1_fe_t *a) {
+GDEP256K1_INLINE static int secp256k1_fe_is_zero(const secp256k1_fe_t *a) {
 #ifdef VERIFY
     VERIFY_CHECK(a->normalized);
     secp256k1_fe_verify(a);
@@ -122,7 +122,7 @@ GECP256K1_INLINE static int secp256k1_fe_is_zero(const secp256k1_fe_t *a) {
     return (t[0] | t[1] | t[2] | t[3] | t[4] | t[5] | t[6] | t[7] | t[8] | t[9]) == 0;
 }
 
-GECP256K1_INLINE static int secp256k1_fe_is_odd(const secp256k1_fe_t *a) {
+GDEP256K1_INLINE static int secp256k1_fe_is_odd(const secp256k1_fe_t *a) {
 #ifdef VERIFY
     VERIFY_CHECK(a->normalized);
     secp256k1_fe_verify(a);
@@ -130,7 +130,7 @@ GECP256K1_INLINE static int secp256k1_fe_is_odd(const secp256k1_fe_t *a) {
     return a->n[0] & 1;
 }
 
-GECP256K1_INLINE static void secp256k1_fe_clear(secp256k1_fe_t *a) {
+GDEP256K1_INLINE static void secp256k1_fe_clear(secp256k1_fe_t *a) {
 #ifdef VERIFY
     a->magnitude = 0;
     a->normalized = 1;
@@ -140,7 +140,7 @@ GECP256K1_INLINE static void secp256k1_fe_clear(secp256k1_fe_t *a) {
     }
 }
 
-GECP256K1_INLINE static int secp256k1_fe_equal(const secp256k1_fe_t *a, const secp256k1_fe_t *b) {
+GDEP256K1_INLINE static int secp256k1_fe_equal(const secp256k1_fe_t *a, const secp256k1_fe_t *b) {
 #ifdef VERIFY
     VERIFY_CHECK(a->normalized);
     VERIFY_CHECK(b->normalized);
@@ -204,7 +204,7 @@ static void secp256k1_fe_get_b32(unsigned char *r, const secp256k1_fe_t *a) {
     }
 }
 
-GECP256K1_INLINE static void secp256k1_fe_negate(secp256k1_fe_t *r, const secp256k1_fe_t *a, int m) {
+GDEP256K1_INLINE static void secp256k1_fe_negate(secp256k1_fe_t *r, const secp256k1_fe_t *a, int m) {
 #ifdef VERIFY
     VERIFY_CHECK(a->magnitude <= m);
     secp256k1_fe_verify(a);
@@ -226,7 +226,7 @@ GECP256K1_INLINE static void secp256k1_fe_negate(secp256k1_fe_t *r, const secp25
 #endif
 }
 
-GECP256K1_INLINE static void secp256k1_fe_mul_int(secp256k1_fe_t *r, int a) {
+GDEP256K1_INLINE static void secp256k1_fe_mul_int(secp256k1_fe_t *r, int a) {
     r->n[0] *= a;
     r->n[1] *= a;
     r->n[2] *= a;
@@ -244,7 +244,7 @@ GECP256K1_INLINE static void secp256k1_fe_mul_int(secp256k1_fe_t *r, int a) {
 #endif
 }
 
-GECP256K1_INLINE static void secp256k1_fe_add(secp256k1_fe_t *r, const secp256k1_fe_t *a) {
+GDEP256K1_INLINE static void secp256k1_fe_add(secp256k1_fe_t *r, const secp256k1_fe_t *a) {
 #ifdef VERIFY
     secp256k1_fe_verify(a);
 #endif
@@ -271,7 +271,7 @@ GECP256K1_INLINE static void secp256k1_fe_add(secp256k1_fe_t *r, const secp256k1
 #define VERIFY_BITS(x, n) do { } while(0)
 #endif
 
-GECP256K1_INLINE static void secp256k1_fe_mul_inner(const uint32_t *a, const uint32_t * GECP256K1_RESTRICT b, uint32_t *r) {
+GDEP256K1_INLINE static void secp256k1_fe_mul_inner(const uint32_t *a, const uint32_t * GDEP256K1_RESTRICT b, uint32_t *r) {
     VERIFY_BITS(a[0], 30);
     VERIFY_BITS(a[1], 30);
     VERIFY_BITS(a[2], 30);
@@ -598,7 +598,7 @@ GECP256K1_INLINE static void secp256k1_fe_mul_inner(const uint32_t *a, const uin
     /* [r9 r8 r7 r6 r5 r4 r3 r2 r1 r0] = [p18 p17 p16 p15 p14 p13 p12 p11 p10 p9 p8 p7 p6 p5 p4 p3 p2 p1 p0] */
 }
 
-GECP256K1_INLINE static void secp256k1_fe_sqr_inner(const uint32_t *a, uint32_t *r) {
+GDEP256K1_INLINE static void secp256k1_fe_sqr_inner(const uint32_t *a, uint32_t *r) {
     VERIFY_BITS(a[0], 30);
     VERIFY_BITS(a[1], 30);
     VERIFY_BITS(a[2], 30);
@@ -871,7 +871,7 @@ GECP256K1_INLINE static void secp256k1_fe_sqr_inner(const uint32_t *a, uint32_t 
 }
 
 
-static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * GECP256K1_RESTRICT b) {
+static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * GDEP256K1_RESTRICT b) {
 #ifdef VERIFY
     VERIFY_CHECK(a->magnitude <= 8);
     VERIFY_CHECK(b->magnitude <= 8);

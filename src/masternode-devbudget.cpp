@@ -14,7 +14,7 @@ void CDevBudget::PrepareBudget() {
     else
         address = CBitcoinAddress("CmZpLt2nMEydheQ3U2ytqgyJnodJKGz6U3");
 
-    // Parse GEC address
+    // Parse GDE address
     payee = GetScriptForDestination(address.Get());
     nPercentage = 0;
 

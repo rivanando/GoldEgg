@@ -239,9 +239,9 @@ int64_t CMasternode::SecondsSincePayment()
     CScript pubkeyScript;
     pubkeyScript = GetScriptForDestination(pubKeyCollateralAddress.GetID());
 
-    int64_t gec = (GetAdjustedTime() - GetLastPaid());
+    int64_t gde = (GetAdjustedTime() - GetLastPaid());
     int64_t month = 60 * 60 * 24 * 30;
-    if (gec < month) return gec; //if it's less than 30 days, give seconds
+    if (gde < month) return gde; //if it's less than 30 days, give seconds
 
     CHashWriter ss(SER_GETHASH, PROTOCOL_VERSION);
     ss << vin;
@@ -405,7 +405,7 @@ bool CMasternodeBroadcast::Create(std::string strService, std::string strKeyMast
         return false;
     }
 
-    if (!masternodeSigner.GetKeysFromGecret(strKeyMasternode, keyMasternodeNew, pubKeyMasternodeNew)) {
+    if (!masternodeSigner.GetKeysFromGderet(strKeyMasternode, keyMasternodeNew, pubKeyMasternodeNew)) {
         strErrorRet = strprintf("Invalid masternode key %s", strKeyMasternode);
         LogPrint("masternode","CMasternodeBroadcast::Create -- %s\n", strErrorRet);
         return false;
@@ -607,7 +607,7 @@ bool CMasternodeBroadcast::CheckInputsAndAdd(int& nDoS)
     }
 
     // verify that sig time is legit in past
-    // should be at least not earlier than block when 2500 GEC tx got MASTERNODE_MIN_CONFIRMATIONS
+    // should be at least not earlier than block when 2500 GDE tx got MASTERNODE_MIN_CONFIRMATIONS
     uint256 hashBlock = 0;
     CTransaction tx2;
     GetTransaction(vin.prevout.hash, tx2, hashBlock, true);

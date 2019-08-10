@@ -17,10 +17,10 @@
 
 using namespace std;
 
-static const string strGecret1     ("2a6Rd6XtMKvFrjkDi6FcfSrJkpaKc382bCDadKjxPsSAHKXoZok");
-static const string strGecret2     ("2YtPcre7RfCg6TdakgACcAiFBakczN41n1D68nvseWST5eVqqxU");
-static const string strGecret1C    ("7w4wgKRKeiW4aXfm6NBWQh6dNQz57eN21vWXRKibVwc3xfUaExcT");
-static const string strGecret2C    ("7qjpqG6oMqcXZ6YTymqcEDs3bhyXrBvJRdvMfPinYYwL7HbEPDnQ");
+static const string strSecret1     ("2a6Rd6XtMKvFrjkDi6FcfSrJkpaKc382bCDadKjxPsSAHKXoZok");
+static const string strSecret2     ("2YtPcre7RfCg6TdakgACcAiFBakczN41n1D68nvseWST5eVqqxU");
+static const string strSecret1C    ("7w4wgKRKeiW4aXfm6NBWQh6dNQz57eN21vWXRKibVwc3xfUaExcT");
+static const string strSecret2C    ("7qjpqG6oMqcXZ6YTymqcEDs3bhyXrBvJRdvMfPinYYwL7HbEPDnQ");
 static const CBitcoinAddress addr1 ("GPbEQ1hJxpJkWBDKMpc4y2KkugwuUaRUTY");
 static const CBitcoinAddress addr2 ("GMLyt6XF2uyf5D154j7VW8oYGbcmvREGBm");
 static const CBitcoinAddress addr1C("GRswJtXD3dWyWpz8oXdbxWeTEvYAuXmQUx");
@@ -44,14 +44,14 @@ void dumpKeyInfo()
 
         CKey key;
         key.SetPrivKey(s, bCompressed);
-        CPrivKey gecret = key.GetPrivKey();
+        CPrivKey secret = key.GetPrivKey();
         CPubKey pubKey = key.GetPubKey();
 
-        CBitcoinGecret bgecret;
-        bgecret.SetKey(key);
+        CBitcoinSecret bsecret;
+        bsecret.SetKey(key);
 
         printf("  * %s:\n", bCompressed ? "compressed" : "uncompressed");
-        printf("    * gecret (base58): %s\n", bgecret.ToString().c_str());
+        printf("    * secret (base58): %s\n", bsecret.ToString().c_str());
         printf("    * pubkey (hex): %s\n", HexStr(pubKey).c_str());
         printf("    * address (base58): %s\n", CBitcoinAddress(CTxDestination(pubKey.GetID())).ToString().c_str());
 }
@@ -62,20 +62,20 @@ BOOST_AUTO_TEST_SUITE(key_tests)
 
 BOOST_AUTO_TEST_CASE(key_test1)
 {
-    CBitcoinGecret bgecret1, bgecret2, bgecret1C, bgecret2C, baddress1;
-    BOOST_CHECK( bgecret1.SetString (strGecret1));
-    BOOST_CHECK( bgecret2.SetString (strGecret2));
-    BOOST_CHECK( bgecret1C.SetString(strGecret1C));
-    BOOST_CHECK( bgecret2C.SetString(strGecret2C));
+    CBitcoinSecret bsecret1, bsecret2, bsecret1C, bsecret2C, baddress1;
+    BOOST_CHECK( bsecret1.SetString (strSecret1));
+    BOOST_CHECK( bsecret2.SetString (strSecret2));
+    BOOST_CHECK( bsecret1C.SetString(strSecret1C));
+    BOOST_CHECK( bsecret2C.SetString(strSecret2C));
     BOOST_CHECK(!baddress1.SetString(strAddressBad));
 
-    CKey key1  = bgecret1.GetKey();
+    CKey key1  = bsecret1.GetKey();
     BOOST_CHECK(key1.IsCompressed() == false);
-    CKey key2  = bgecret2.GetKey();
+    CKey key2  = bsecret2.GetKey();
     BOOST_CHECK(key2.IsCompressed() == false);
-    CKey key1C = bgecret1C.GetKey();
+    CKey key1C = bsecret1C.GetKey();
     BOOST_CHECK(key1C.IsCompressed() == true);
-    CKey key2C = bgecret2C.GetKey();
+    CKey key2C = bsecret2C.GetKey();
     BOOST_CHECK(key2C.IsCompressed() == true);
 
     CPubKey pubkey1  = key1. GetPubKey();
@@ -110,7 +110,7 @@ BOOST_AUTO_TEST_CASE(key_test1)
 
     for (int n=0; n<16; n++)
     {
-        string strMsg = strprintf("Very gecret message %i: 11", n);
+        string strMsg = strprintf("Very secret message %i: 11", n);
         uint256 hashMsg = Hash(strMsg.begin(), strMsg.end());
 
         // normal signatures

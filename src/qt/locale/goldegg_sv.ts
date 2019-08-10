@@ -58,12 +58,12 @@
         <translation>Mottagar adresser</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Det här är dina GEC adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
+        <source>These are your GDE addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Det här är dina GDE adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
     </message>
     <message>
-        <source>These are your GEC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Det här är dina GEC adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your GDE addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Det här är dina GDE adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,23 +160,23 @@
         <translation>Bekräfta plånboks krypering</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina GECs från att bli stulna av skadeprogram som infekterat din dator.</translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina GDEs från att bli stulna av skadeprogram som infekterat din dator.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Är du säker på att du vill kryptera din plånbok?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA GEC&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA GDE&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
         <translation>PLånbok krypterad</translation>
     </message>
     <message>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For gecurity reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>VIKTIGT: Alla dina tidigare säkerhetskopior du har gjort av plånboks filen bör ersättas med den nygenerade,kryyterade plånboks filen. För säkerhetsskäl, tidigar säkerhetskopior av okrypterade plånboks filer kommer bli oanvändbar så fort du börjar använda den nya krypterade plånboken.</translation>
     </message>
     <message>
@@ -223,8 +223,8 @@
         <translation>BIP 38 Kryptering</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Ange en GEC adress som du vill kryptera med BIP 38.
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Ange en GDE adress som du vill kryptera med BIP 38.
 Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den krypterade privata nyckeln.</translation>
     </message>
     <message>
@@ -232,8 +232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Adress:</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>GEC adressen för signera meddelandet med</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>GDE adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -264,8 +264,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna GEC adress</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna GDE adress</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -288,12 +288,12 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Ange BIP 38 krypterade privata nyckeln. Ange lösenfrasen i med mittersta boxen. Tryck på krypetra nyckel för att beräkna den privata nyckeln. Efter att nyckeln är avkrypterad, Tryck på 'Importera Adress' kommer att lägga till denna privata nyckel till plånboken.</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>GEC adressen meddelandet blev signerat med</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>GDE adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GEC adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GDE adressen.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -587,8 +587,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Goldegg Kärna</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Skicka mynt till en GEC adress</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Skicka mynt till en GDE adress</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and goldegg: URIs)</source>
@@ -615,12 +615,12 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Ändra konfigurationsval för Goldegg</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>Signera meddelanden med din GEC adress för att visa att du äger dem</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>Signera meddelanden med din GDE adress för att visa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GEC adressen.</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GDE adressen.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1095,8 +1095,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>GEC adressen för signera meddelandet med</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>GDE adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1119,16 +1119,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna GEC adress</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna GDE adress</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>GEC adressen meddelandet blev signerat med</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>GDE adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GEC adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GDE adressen.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>

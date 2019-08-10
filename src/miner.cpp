@@ -408,7 +408,7 @@ void IncrementExtraNonce(CBlock* pblock, CBlockIndex* pindexPrev, unsigned int& 
 //
 // Internal miner
 //
-double dHashesPerGec = 0.0;
+double dHashesPerGde = 0.0;
 int64_t nHPSTimerStart = 0;
 
 CBlockTemplate* CreateNewBlockWithKey(CReserveKey& reservekey, CWallet* pwallet, bool fProofOfStake)
@@ -568,7 +568,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
                     break;
             }
 
-            // Meter hashes/gec
+            // Meter hashes/gde
             static int64_t nHashCounter;
             if (nHPSTimerStart == 0) {
                 nHPSTimerStart = GetTimeMillis();
@@ -580,13 +580,13 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
                 {
                     LOCK(cs);
                     if (GetTimeMillis() - nHPSTimerStart > 4000) {
-                        dHashesPerGec = 1000.0 * nHashCounter / (GetTimeMillis() - nHPSTimerStart);
+                        dHashesPerGde = 1000.0 * nHashCounter / (GetTimeMillis() - nHPSTimerStart);
                         nHPSTimerStart = GetTimeMillis();
                         nHashCounter = 0;
                         static int64_t nLogTime;
                         if (GetTime() - nLogTime > 30 * 60) {
                             nLogTime = GetTime();
-                            LogPrintf("hashmeter %6.0f khash/s\n", dHashesPerGec / 1000.0);
+                            LogPrintf("hashmeter %6.0f khash/s\n", dHashesPerGde / 1000.0);
                         }
                     }
                 }

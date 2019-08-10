@@ -31,7 +31,7 @@ These dependencies are required:
 
  Library     | Purpose          | Description
  ------------|------------------|----------------------
- libssl      | SSL Support      | Gecure communications
+ libssl      | SSL Support      | Secure communications
  libboost    | Boost            | C++ Library
 
 Optional dependencies:
@@ -131,10 +131,10 @@ Berkeley DB
 It is recommended to use Berkeley DB 4.8. If you have to build it yourself:
 
 ```bash
-GEC_ROOT=$(pwd)
+GDE_ROOT=$(pwd)
 
 # Pick some path to install BDB to, here we create a directory within the goldegg directory
-BDB_PREFIX="${GEC_ROOT}/db4"
+BDB_PREFIX="${GDE_ROOT}/db4"
 mkdir -p $BDB_PREFIX
 
 # Fetch the source and verify that it is not tampered with
@@ -150,7 +150,7 @@ cd db-4.8.30.NC/build_unix/
 make install
 
 # Configure Goldegg Core to use our own-built instance of BDB
-cd $GEC_ROOT
+cd $GDE_ROOT
 ./configure (other args...) LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/"
 ```
 
@@ -165,9 +165,9 @@ If you need to build Boost yourself:
 	./bjam install
 
 
-Gecurity
+Gdeurity
 --------
-To help make your Goldegg installation more gecure by making certain attacks impossible to
+To help make your Goldegg installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 

@@ -109,15 +109,15 @@
     <name>AskPassphraseDialog</name>
     <message>
         <source>Enter passphrase</source>
-        <translation>Entrer la phrase gecrète</translation>
+        <translation>Entrer la phrase gderète</translation>
     </message>
     <message>
         <source>New passphrase</source>
-        <translation>Nouvelle phrase gecrète</translation>
+        <translation>Nouvelle phrase gderète</translation>
     </message>
     <message>
         <source>Repeat new passphrase</source>
-        <translation>Confirmer la nouvelle phrase gecrète</translation>
+        <translation>Confirmer la nouvelle phrase gderète</translation>
     </message>
     <message>
         <source>Encrypt wallet</source>
@@ -125,7 +125,7 @@
     </message>
     <message>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Cette opération requiert votre phrase gecrète pour déverrouiller votre portefeuille.</translation>
+        <translation>Cette opération requiert votre phrase gderète pour déverrouiller votre portefeuille.</translation>
     </message>
     <message>
         <source>Unlock wallet</source>
@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Cette opération nécessite votre phrase gecrète de portefeuille pour décrypter le portefeuille </translation>
+        <translation>Cette opération nécessite votre phrase gderète de portefeuille pour décrypter le portefeuille </translation>
     </message>
     <message>
         <source>Decrypt wallet</source>
@@ -141,27 +141,27 @@
     </message>
     <message>
         <source>Change passphrase</source>
-        <translation>Changer la phrase gecrète</translation>
+        <translation>Changer la phrase gderète</translation>
     </message>
     <message>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Entrer l'ancienne et la nouvelle phrase gecrète dans le portefeuille</translation>
+        <translation>Entrer l'ancienne et la nouvelle phrase gderète dans le portefeuille</translation>
     </message>
     <message>
         <source>Confirm wallet encryption</source>
         <translation>Confirmer le cryptage du portefeuille</translation>
     </message>
     <message>
-        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GECs from being stolen by malware infecting your computer.</source>
-        <translation>Goldegg va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos GECs d'un vol par un malware ayant infecté votre ordinateur. </translation>
+        <source>Goldegg will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GDEs from being stolen by malware infecting your computer.</source>
+        <translation>Goldegg va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos GDEs d'un vol par un malware ayant infecté votre ordinateur. </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Êtes-vous sûr de vouloir crypter votre portefeuille?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GEC&lt;/b&gt;!</source>
-        <translation>Attention : si vous cryptez votre portefeuille et perdez votre phrase gecrète, vous &lt;b&gt;PERDREZ TOUS VOS GEC&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GDE&lt;/b&gt;!</source>
+        <translation>Attention : si vous cryptez votre portefeuille et perdez votre phrase gderète, vous &lt;b&gt;PERDREZ TOUS VOS GDE&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -177,7 +177,7 @@
     </message>
     <message>
         <source>The supplied passphrases do not match.</source>
-        <translation>Les phrases gecrètes fournies ne correspondent pas.</translation>
+        <translation>Les phrases gderètes fournies ne correspondent pas.</translation>
     </message>
     <message>
         <source>Wallet unlock failed</source>
@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>La phrase gecrète entrée pour le décryptage de votre portefeuille était incorrecte.</translation>
+        <translation>La phrase gderète entrée pour le décryptage de votre portefeuille était incorrecte.</translation>
     </message>
     <message>
         <source>Wallet decryption failed</source>
@@ -193,7 +193,7 @@
     </message>
     <message>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>La phrase gecrète de votre portefeuille a été changée avec succès.</translation>
+        <translation>La phrase gderète de votre portefeuille a été changée avec succès.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -211,16 +211,16 @@
         <translation>BIP 38 crypter</translation>
     </message>
     <message>
-        <source>Enter a GEC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Entrez une adresse GEC que vous voulez crypter en utilisant BIP 38. Entrez une phrase gecrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
+        <source>Enter a GDE Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Entrez une adresse GDE que vous voulez crypter en utilisant BIP 38. Entrez une phrase gderète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresse :</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>L'adresse GEC avec laquelle signer le message</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>L'adresse GDE avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -240,7 +240,7 @@
     </message>
     <message>
         <source>Passphrase: </source>
-        <translation>Phrase gecrète :</translation>
+        <translation>Phrase gderète :</translation>
     </message>
     <message>
         <source>Encrypted Key:</source>
@@ -251,8 +251,8 @@
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse GEC</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse GDE</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -271,12 +271,12 @@
         <translation>BIP 38 Décrypter</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>L'adresse GEC avec laquelle le message a été signé</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>L'adresse GDE avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse GEC renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse GDE renseignée</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -296,7 +296,7 @@
     </message>
     <message>
         <source>The entered passphrase is invalid. </source>
-        <translation>La phrase gecrète entrée est incorrect.</translation>
+        <translation>La phrase gderète entrée est incorrect.</translation>
     </message>
     <message>
         <source>Allowed: 0-9,a-z,A-Z,</source>
@@ -328,7 +328,7 @@
     </message>
     <message>
         <source>Please check the key and passphrase and try again.</source>
-        <translation>Veuillez vérifier la clé et la phrase gecrète et réessayer.</translation>
+        <translation>Veuillez vérifier la clé et la phrase gderète et réessayer.</translation>
     </message>
     <message>
         <source>Data Not Valid.</source>
@@ -427,7 +427,7 @@
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Changer la phrase gecrète utilisée pour l'encryptage du portefeuille</translation>
+        <translation>Changer la phrase gderète utilisée pour l'encryptage du portefeuille</translation>
     </message>
     <message>
         <source>&amp;Unlock Wallet...</source>
@@ -534,8 +534,8 @@
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <source>Send coins to a GEC address</source>
-        <translation>Envoyer des pièces à une adresse GEC</translation>
+        <source>Send coins to a GDE address</source>
+        <translation>Envoyer des pièces à une adresse GDE</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -546,16 +546,16 @@
         <translation>Afficher les masternodes</translation>
     </message>
     <message>
-        <source>Modify configuration options for GEC</source>
-        <translation>Modifier les options de configuration pour GEC</translation>
+        <source>Modify configuration options for GDE</source>
+        <translation>Modifier les options de configuration pour GDE</translation>
     </message>
     <message>
-        <source>Sign messages with your GEC addresses to prove you own them</source>
-        <translation>Signer les messages avec votre adresse GEC pour prouver qu'elles sont bien à vous.</translation>
+        <source>Sign messages with your GDE addresses to prove you own them</source>
+        <translation>Signer les messages avec votre adresse GDE pour prouver qu'elles sont bien à vous.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GEC addresses</source>
-        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse GEC spécifié</translation>
+        <source>Verify messages to ensure they were signed with specified GDE addresses</source>
+        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse GDE spécifié</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -563,7 +563,7 @@
     </message>
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
-        <translation>Crypter et décrypter les clés privées en utilisant une phrase gecrète</translation>
+        <translation>Crypter et décrypter les clés privées en utilisant une phrase gderète</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -854,8 +854,8 @@ Adresse : %4
         <translation>Modifier l'adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid GEC address.</source>
-        <translation>L'adresse entrée "%1" n'est pas une adresse GEC valide</translation>
+        <source>The entered address "%1" is not a valid GDE address.</source>
+        <translation>L'adresse entrée "%1" n'est pas une adresse GDE valide</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1319,8 +1319,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Après commission</translation>
     </message>
     <message>
-        <source>0 GEC</source>
-        <translation>0 GEC</translation>
+        <source>0 GDE</source>
+        <translation>0 GDE</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -1402,8 +1402,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Payer à :</translation>
     </message>
     <message>
-        <source>The GEC address to send the payment to</source>
-        <translation>L'adresse GEC à laquelle envoyer le paiement</translation>
+        <source>The GDE address to send the payment to</source>
+        <translation>L'adresse GDE à laquelle envoyer le paiement</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1448,8 +1448,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Signer le message</translation>
     </message>
     <message>
-        <source>The GEC address to sign the message with</source>
-        <translation>L'adresse GEC avec laquelle signer le message</translation>
+        <source>The GDE address to sign the message with</source>
+        <translation>L'adresse GDE avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1476,16 +1476,16 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GEC address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse GEC</translation>
+        <source>Sign the message to prove you own this GDE address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse GDE</translation>
     </message>
     <message>
-        <source>The GEC address the message was signed with</source>
-        <translation>L'adresse GEC avec laquelle le message a été signé</translation>
+        <source>The GDE address the message was signed with</source>
+        <translation>L'adresse GDE avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GEC address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse GEC renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified GDE address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse GDE renseignée</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>

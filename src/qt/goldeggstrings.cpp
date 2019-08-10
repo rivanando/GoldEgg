@@ -81,10 +81,10 @@ QT_TRANSLATE_NOOP("goldegg-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("goldegg-core", ""
-"Fees (in GEC/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in GDE/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("goldegg-core", ""
-"Fees (in GEC/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in GDE/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("goldegg-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -168,7 +168,7 @@ QT_TRANSLATE_NOOP("goldegg-core", ""
 "Unable to bind to %s on this computer. Goldegg Core is probably already running."),
 QT_TRANSLATE_NOOP("goldegg-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000 "
-"GEC."),
+"GDE."),
 QT_TRANSLATE_NOOP("goldegg-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -276,7 +276,7 @@ QT_TRANSLATE_NOOP("goldegg-core", "Failed to listen on any port. Use -listen=0 i
 QT_TRANSLATE_NOOP("goldegg-core", "Failed to read block index"),
 QT_TRANSLATE_NOOP("goldegg-core", "Failed to read block"),
 QT_TRANSLATE_NOOP("goldegg-core", "Failed to write block index"),
-QT_TRANSLATE_NOOP("goldegg-core", "Fee (in GEC/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("goldegg-core", "Fee (in SEC/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("goldegg-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("goldegg-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("goldegg-core", "Found enough users, signing ( waiting %s )"),

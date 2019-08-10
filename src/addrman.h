@@ -171,7 +171,7 @@ private:
     //! critical section to protect the inner data structures
     mutable CCriticalSection cs;
 
-    //! gecret key to randomize bucket select with
+    //! secret key to randomize bucket select with
     uint256 nKey;
 
     //! last used nId

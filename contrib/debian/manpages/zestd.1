@@ -112,12 +112,12 @@ Returns the number of connections to other nodes.
 Returns the proof-of-work difficulty as a multiple of the minimum difficulty.
 .TP
 \fBgetgenerate\fR
-Returns boolean true if server is trying to generate GEC, false otherwise.
+Returns boolean true if server is trying to generate GDE, false otherwise.
 .TP
 \fBsetgenerate 'generate' ['genproclimit']\fR
 Generation is limited to ['genproclimit'] processors, \-1 is unlimited.
 .TP
-\fBgethashespergec\fR
+\fBgethashespersec\fR
 Returns a recent hashes per second performance measurement while generating.
 .TP
 \fBgetinfo\fR
@@ -183,7 +183,7 @@ Returns a list of the last ['count'] transactions for 'account' \- for all accou
 Moves funds between accounts.
 .TP
 \fBsendfrom* <'account'> <'goldeggaddress'> <'amount'> ['minconf=1'] ['comment'] ['comment-to']\fR
-Sends amount from account's balance to 'goldeggaddress'. This method will fail if there is less than amount GEC with ['minconf'] confirmations in the account's balance (unless account is the empty-string-named default account; it behaves like the *sendtoaddress* method). Returns transaction ID on success.
+Sends amount from account's balance to 'goldeggaddress'. This method will fail if there is less than amount GDE with ['minconf'] confirmations in the account's balance (unless account is the empty-string-named default account; it behaves like the *sendtoaddress* method). Returns transaction ID on success.
 .TP
 \fBsendtoaddress 'goldeggaddress' 'amount' ['comment'] ['comment-to']\fR
 Sends amount from the server's available balance to 'goldeggaddress'. amount is a real and is rounded to the nearest 0.01. Returns transaction id on success.

@@ -3,9 +3,9 @@ AC_INIT([libsecp256k1],[0.1])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 AC_CANONICAL_HOST
-AH_TOP([#ifndef LIBGECP256K1_CONFIG_H])
-AH_TOP([#define LIBGECP256K1_CONFIG_H])
-AH_BOTTOM([#endif //LIBGECP256K1_CONFIG_H])
+AH_TOP([#ifndef LIBSECP256K1_CONFIG_H])
+AH_TOP([#define LIBSECP256K1_CONFIG_H])
+AH_BOTTOM([#endif //LIBSECP256K1_CONFIG_H])
 AM_INIT_AUTOMAKE([foreign])
 LT_INIT
 
@@ -106,13 +106,13 @@ AC_CHECK_TYPES([__int128])
 AC_CHECK_DECL(__builtin_expect,AC_DEFINE(HAVE_BUILTIN_EXPECT,1,[Define this symbol if __builtin_expect is available]),,)
 
 if test x"$req_field" = x"auto"; then
-  GECP_64BIT_ASM_CHECK
+  GDEP_64BIT_ASM_CHECK
   if test x"$has_64bit_asm" = x"yes"; then
     set_field=64bit_asm
   fi
 
   if test x"$set_field" = x; then
-    GECP_INT128_CHECK
+    GDEP_INT128_CHECK
     if test x"$has_int128" = x"yes"; then
       set_field=64bit
     fi
@@ -125,13 +125,13 @@ else
   set_field=$req_field
   case $set_field in
   64bit_asm)
-    GECP_64BIT_ASM_CHECK
+    GDEP_64BIT_ASM_CHECK
     ;;
   64bit)
-    GECP_INT128_CHECK
+    GDEP_INT128_CHECK
     ;;
   gmp)
-    GECP_GMP_CHECK
+    GDEP_GMP_CHECK
     ;;
   32bit)
     ;;
@@ -143,7 +143,7 @@ fi
 
 if test x"$req_scalar" = x"auto"; then
   if test x"$set_scalar" = x; then
-    GECP_INT128_CHECK
+    GDEP_INT128_CHECK
     if test x"$has_int128" = x"yes"; then
       set_scalar=64bit
     fi
@@ -155,7 +155,7 @@ else
   set_scalar=$req_scalar
   case $set_scalar in
   64bit)
-    GECP_INT128_CHECK
+    GDEP_INT128_CHECK
     ;;
   32bit)
     ;;
@@ -173,7 +173,7 @@ else
   set_bignum=$req_bignum
   case $set_bignum in
   gmp)
-    GECP_GMP_CHECK
+    GDEP_GMP_CHECK
     ;;
   none)
     ;;
@@ -237,15 +237,15 @@ case $set_scalar in
 esac
 
 if test x"$use_tests" = x"yes"; then
-  GECP_OPENSSL_CHECK
+  GDEP_OPENSSL_CHECK
   if test x"$has_openssl_ec" == x"yes"; then
     AC_DEFINE(ENABLE_OPENSSL_TESTS, 1, [Define this symbol if OpenSSL EC functions are available])
-    GECP_TEST_INCLUDES="$SSL_CFLAGS $CRYPTO_CFLAGS"
-    GECP_TEST_LIBS="$CRYPTO_LIBS"
+    GDEP_TEST_INCLUDES="$SSL_CFLAGS $CRYPTO_CFLAGS"
+    GDEP_TEST_LIBS="$CRYPTO_LIBS"
 
     case $host in
     *mingw*)
-      GECP_TEST_LIBS="$GECP_TEST_LIBS -lgdi32"
+      GDEP_TEST_LIBS="$GDEP_TEST_LIBS -lgdi32"
       ;;
     esac
 
@@ -253,8 +253,8 @@ if test x"$use_tests" = x"yes"; then
 fi
 
 if test x"$set_field" = x"gmp" || test x"$set_bignum" = x"gmp"; then
-  GECP_LIBS="$GECP_LIBS $GMP_LIBS"
-  GECP_INCLUDES="$GECP_INCLUDES $GMP_CPPFLAGS"
+  GDEP_LIBS="$GDEP_LIBS $GMP_LIBS"
+  GDEP_INCLUDES="$GDEP_INCLUDES $GMP_CPPFLAGS"
 fi
 
 if test x"$use_endomorphism" = x"yes"; then
@@ -267,10 +267,10 @@ AC_MSG_NOTICE([Using scalar implementation: $set_scalar])
 
 AC_CONFIG_HEADERS([src/libsecp256k1-config.h])
 AC_CONFIG_FILES([Makefile libsecp256k1.pc])
-AC_SUBST(GECP_INCLUDES)
-AC_SUBST(GECP_LIBS)
-AC_SUBST(GECP_TEST_LIBS)
-AC_SUBST(GECP_TEST_INCLUDES)
+AC_SUBST(GDEP_INCLUDES)
+AC_SUBST(GDEP_LIBS)
+AC_SUBST(GDEP_TEST_LIBS)
+AC_SUBST(GDEP_TEST_INCLUDES)
 AC_SUBST(YASM_BINFMT)
 AM_CONDITIONAL([USE_ASM], [test x"$set_field" == x"64bit_asm"])
 AM_CONDITIONAL([USE_TESTS], [test x"$use_tests" != x"no"])

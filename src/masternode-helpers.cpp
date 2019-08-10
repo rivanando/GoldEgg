@@ -65,29 +65,29 @@ bool CMasternodeSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
     return false;
 }
 
-bool CMasternodeSigner::SetKey(std::string strGecret, std::string& errorMessage, CKey& key, CPubKey& pubkey)
+bool CMasternodeSigner::SetKey(std::string strSecret, std::string& errorMessage, CKey& key, CPubKey& pubkey)
 {
-    CBitcoinGecret vchGecret;
-    bool fGood = vchGecret.SetString(strGecret);
+    CBitcoinSecret vchSecret;
+    bool fGood = vchSecret.SetString(strSecret);
 
     if (!fGood) {
         errorMessage = _("Invalid private key.");
         return false;
     }
 
-    key = vchGecret.GetKey();
+    key = vchSecret.GetKey();
     pubkey = key.GetPubKey();
 
     return true;
 }
 
-bool CMasternodeSigner::GetKeysFromGecret(std::string strGecret, CKey& keyRet, CPubKey& pubkeyRet)
+bool CMasternodeSigner::GetKeysFromGderet(std::string strSecret, CKey& keyRet, CPubKey& pubkeyRet)
 {
-    CBitcoinGecret vchGecret;
+    CBitcoinSecret vchSecret;
 
-    if (!vchGecret.SetString(strGecret)) return false;
+    if (!vchSecret.SetString(strSecret)) return false;
 
-    keyRet = vchGecret.GetKey();
+    keyRet = vchSecret.GetKey();
     pubkeyRet = keyRet.GetPubKey();
 
     return true;

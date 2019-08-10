@@ -20,7 +20,7 @@ ZIPFILES=$(ls $OUTDIR/bin/* || true)
 
 # Linux artifacts
 [ -z "$ZIPFILES" ] || \
-       zip -uj $RELEASEDIR/GEC-$COMMIT.zip ${ZIPFILES}
+       zip -uj $RELEASEDIR/GDE-$COMMIT.zip ${ZIPFILES}
 
 # MaxOSX artifacts
 cp -a *.dmg $RELEASEDIR || true

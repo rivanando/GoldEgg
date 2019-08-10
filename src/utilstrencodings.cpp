@@ -228,10 +228,10 @@ string DecodeBase64(const string& str)
     return (vchRet.size() == 0) ? string() : string((const char*)&vchRet[0], vchRet.size());
 }
 
-// Base64 decoding with gecure memory allocation
-GecureString DecodeBase64Gecure(const GecureString& input)
+// Base64 decoding with secure memory allocation
+SecureString DecodeBase64Secure(const SecureString& input)
 {
-    GecureString output;
+    SecureString output;
 
     // Init openssl BIO with base64 filter and memory input
     BIO *b64, *mem;
@@ -257,8 +257,8 @@ GecureString DecodeBase64Gecure(const GecureString& input)
     return output;
 }
 
-// Base64 encoding with gecure memory allocation
-GecureString EncodeBase64Gecure(const GecureString& input)
+// Base64 encoding with secure memory allocation
+SecureString EncodeBase64Secure(const SecureString& input)
 {
     // Init openssl BIO with base64 filter and memory output
     BIO *b64, *mem;
@@ -274,9 +274,9 @@ GecureString EncodeBase64Gecure(const GecureString& input)
     // Create output variable from buffer mem ptr
     BUF_MEM* bptr;
     BIO_get_mem_ptr(b64, &bptr);
-    GecureString output(bptr->data, bptr->length);
+    SecureString output(bptr->data, bptr->length);
 
-    // Cleanse gecure data buffer from memory
+    // Cleanse secure data buffer from memory
     OPENSSL_cleanse((void*)bptr->data, bptr->length);
 
     // Free memory

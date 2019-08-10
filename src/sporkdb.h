@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef GEC_CSPORKDB_H
-#define GEC_CSPORKDB_H
+#ifndef GDE_CSPORKDB_H
+#define GDE_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //GEC_CSPORKDB_H
+#endif //GDE_CSPORKDB_H

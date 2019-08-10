@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_NUM_REPR_
-#define _GECP256K1_NUM_REPR_
+#ifndef _GDEP256K1_NUM_REPR_
+#define _GDEP256K1_NUM_REPR_
 
 #include <gmp.h>
 

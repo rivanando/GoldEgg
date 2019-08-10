@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_FIELD_INNER5X52_IMPL_H_
-#define _GECP256K1_FIELD_INNER5X52_IMPL_H_
+#ifndef _GDEP256K1_FIELD_INNER5X52_IMPL_H_
+#define _GDEP256K1_FIELD_INNER5X52_IMPL_H_
 
 #include <stdint.h>
 
@@ -15,7 +15,7 @@
 #define VERIFY_BITS(x, n) do { } while(0)
 #endif
 
-GECP256K1_INLINE static void secp256k1_fe_mul_inner(const uint64_t *a, const uint64_t * GECP256K1_RESTRICT b, uint64_t *r) {
+GDEP256K1_INLINE static void secp256k1_fe_mul_inner(const uint64_t *a, const uint64_t * GDEP256K1_RESTRICT b, uint64_t *r) {
     VERIFY_BITS(a[0], 56);
     VERIFY_BITS(a[1], 56);
     VERIFY_BITS(a[2], 56);
@@ -152,7 +152,7 @@ GECP256K1_INLINE static void secp256k1_fe_mul_inner(const uint64_t *a, const uin
     /* [r4 r3 r2 r1 r0] = [p8 p7 p6 p5 p4 p3 p2 p1 p0] */
 }
 
-GECP256K1_INLINE static void secp256k1_fe_sqr_inner(const uint64_t *a, uint64_t *r) {
+GDEP256K1_INLINE static void secp256k1_fe_sqr_inner(const uint64_t *a, uint64_t *r) {
     VERIFY_BITS(a[0], 56);
     VERIFY_BITS(a[1], 56);
     VERIFY_BITS(a[2], 56);

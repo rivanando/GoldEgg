@@ -5,8 +5,8 @@
  **********************************************************************/
 
 
-#ifndef _GECP256K1_ECDSA_IMPL_H_
-#define _GECP256K1_ECDSA_IMPL_H_
+#ifndef _GDEP256K1_ECDSA_IMPL_H_
+#define _GDEP256K1_ECDSA_IMPL_H_
 
 #include "scalar.h"
 #include "field.h"
@@ -166,7 +166,7 @@ static int secp256k1_ecdsa_sig_verify(const secp256k1_ecdsa_sig_t *sig, const se
     return ret;
 }
 
-static int secp256k1_ecdsa_sig_sign(secp256k1_ecdsa_sig_t *sig, const secp256k1_scalar_t *geckey, const secp256k1_scalar_t *message, const secp256k1_scalar_t *nonce, int *recid) {
+static int secp256k1_ecdsa_sig_sign(secp256k1_ecdsa_sig_t *sig, const secp256k1_scalar_t *gdekey, const secp256k1_scalar_t *message, const secp256k1_scalar_t *nonce, int *recid) {
     secp256k1_gej_t rp;
     secp256k1_ecmult_gen(&rp, nonce);
     secp256k1_ge_t r;
@@ -180,7 +180,7 @@ static int secp256k1_ecdsa_sig_sign(secp256k1_ecdsa_sig_t *sig, const secp256k1_
     if (recid)
         *recid = (overflow ? 2 : 0) | (secp256k1_fe_is_odd(&r.y) ? 1 : 0);
     secp256k1_scalar_t n;
-    secp256k1_scalar_mul(&n, &sig->r, geckey);
+    secp256k1_scalar_mul(&n, &sig->r, gdekey);
     secp256k1_scalar_add(&n, &n, message);
     secp256k1_scalar_inverse(&sig->s, nonce);
     secp256k1_scalar_mul(&sig->s, &sig->s, &n);

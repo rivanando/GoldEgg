@@ -409,7 +409,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
                     emit receivedPaymentRequest(recipient);
             } else
                 emit message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid GEC address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid GDE address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;
@@ -524,7 +524,7 @@ bool PaymentServer::processPaymentRequest(PaymentRequestPlus& request, SendCoins
             // Append destination address
             addresses.append(QString::fromStdString(CBitcoinAddress(dest).ToString()));
         } else if (!recipient.authenticatedMerchant.isEmpty()) {
-            // Ingecure payments to custom goldegg addresses are not supported
+            // Insecure payments to custom goldegg addresses are not supported
             // (there is no good way to tell the user where they are paying in a way
             // they'd have a chance of understanding).
             emit message(tr("Payment request rejected"),
@@ -548,9 +548,9 @@ bool PaymentServer::processPaymentRequest(PaymentRequestPlus& request, SendCoins
     recipient.address = addresses.join("<br />");
 
     if (!recipient.authenticatedMerchant.isEmpty()) {
-        qDebug() << "PaymentServer::processPaymentRequest : Gecure payment request from " << recipient.authenticatedMerchant;
+        qDebug() << "PaymentServer::processPaymentRequest : Secure payment request from " << recipient.authenticatedMerchant;
     } else {
-        qDebug() << "PaymentServer::processPaymentRequest : Ingecure payment request to " << addresses.join(", ");
+        qDebug() << "PaymentServer::processPaymentRequest : Insecure payment request to " << addresses.join(", ");
     }
 
     return true;

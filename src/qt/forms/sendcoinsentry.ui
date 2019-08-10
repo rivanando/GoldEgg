@@ -63,7 +63,7 @@
       <item>
        <widget class="QValidatedLineEdit" name="payTo">
         <property name="toolTip">
-         <string>The GEC address to send the payment to</string>
+         <string>The GDE address to send the payment to</string>
         </property>
        </widget>
       </item>
@@ -259,7 +259,7 @@ background-color: #094ed9;
     </item>
    </layout>
   </widget>
-  <widget class="QFrame" name="SendCoins_IngecurePaymentRequest">
+  <widget class="QFrame" name="SendCoins_InsecurePaymentRequest">
    <property name="palette">
     <palette>
      <active>
@@ -764,7 +764,7 @@ background-color: #094ed9;
     </item>
    </layout>
   </widget>
-  <widget class="QFrame" name="SendCoins_GecurePaymentRequest">
+  <widget class="QFrame" name="SendCoins_SecurePaymentRequest">
    <property name="palette">
     <palette>
      <active>

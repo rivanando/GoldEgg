@@ -323,7 +323,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/sendtoolbar"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a GEC address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a GDE address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -415,9 +415,9 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     unlockWalletAction->setToolTip(tr("Unlock wallet"));
     lockWalletAction = new QAction(tr("&Lock Wallet"), this);
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your GEC addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your GDE addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified GEC addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified GDE addresses"));
     bip38ToolAction = new QAction(QIcon(":/icons/key"), tr("&BIP38 tool"), this);
     bip38ToolAction->setToolTip(tr("Encrypt and decrypt private keys using a passphrase"));
     multiSendAction = new QAction(QIcon(":/icons/edit"), tr("&MultiSend"), this);
@@ -993,12 +993,12 @@ void BitcoinGUI::setNumBlocks(int count)
 
     QDateTime lastBlockDate = clientModel->getLastBlockDate();
     QDateTime currentDate = QDateTime::currentDateTime();
-    int gecs = lastBlockDate.secsTo(currentDate);
+    int gdes = lastBlockDate.secsTo(currentDate);
 
     tooltip = tr("Processed %n blocks of transaction history.", "", count);
 
     // Set icon state: spinning if catching up, tick otherwise
-    //    if(gecs < 25*60) // 90*60 for bitcoin but we are 4x times faster
+    //    if(gdes < 25*60) // 90*60 for bitcoin but we are 4x times faster
     if (masternodeSync.IsBlockchainSynced()) {
         QString strSyncStatus;
         tooltip = tr("Up to date") + QString(".<br>") + tooltip;
@@ -1041,15 +1041,15 @@ void BitcoinGUI::setNumBlocks(int count)
         const int DAY_IN_SECONDS = 24 * 60 * 60;
         const int WEEK_IN_SECONDS = 7 * 24 * 60 * 60;
         const int YEAR_IN_SECONDS = 31556952; // Average length of year in Gregorian calendar
-        if (gecs < 2 * DAY_IN_SECONDS) {
-            timeBehindText = tr("%n hour(s)", "", gecs / HOUR_IN_SECONDS);
-        } else if (gecs < 2 * WEEK_IN_SECONDS) {
-            timeBehindText = tr("%n day(s)", "", gecs / DAY_IN_SECONDS);
-        } else if (gecs < YEAR_IN_SECONDS) {
-            timeBehindText = tr("%n week(s)", "", gecs / WEEK_IN_SECONDS);
+        if (gdes < 2 * DAY_IN_SECONDS) {
+            timeBehindText = tr("%n hour(s)", "", gdes / HOUR_IN_SECONDS);
+        } else if (gdes < 2 * WEEK_IN_SECONDS) {
+            timeBehindText = tr("%n day(s)", "", gdes / DAY_IN_SECONDS);
+        } else if (gdes < YEAR_IN_SECONDS) {
+            timeBehindText = tr("%n week(s)", "", gdes / WEEK_IN_SECONDS);
         } else {
-            int years = gecs / YEAR_IN_SECONDS;
-            int remainder = gecs % YEAR_IN_SECONDS;
+            int years = gdes / YEAR_IN_SECONDS;
+            int remainder = gdes % YEAR_IN_SECONDS;
             timeBehindText = tr("%1 and %2").arg(tr("%n year(s)", "", years)).arg(tr("%n week(s)", "", remainder / WEEK_IN_SECONDS));
         }
 
@@ -1358,9 +1358,9 @@ void BitcoinGUI::showProgress(const QString& title, int nProgress)
 static bool ThreadSafeMessageBox(BitcoinGUI* gui, const std::string& message, const std::string& caption, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
-    // The GECURE flag has no effect in the Qt GUI.
-    // bool gecure = (style & CClientUIInterface::GECURE);
-    style &= ~CClientUIInterface::GECURE;
+    // The GDEURE flag has no effect in the Qt GUI.
+    // bool secure = (style & CClientUIInterface::GDEURE);
+    style &= ~CClientUIInterface::GDEURE;
     bool ret = false;
     // In case of modal message, use blocking connection to wait for user to click a button
     QMetaObject::invokeMethod(gui, "message",

@@ -20,18 +20,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(GEC);
-    unitlist.append(mGEC);
-    unitlist.append(uGEC);
+    unitlist.append(GDE);
+    unitlist.append(mGDE);
+    unitlist.append(uGDE);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case GEC:
-    case mGEC:
-    case uGEC:
+    case GDE:
+    case mGDE:
+    case uGDE:
         return true;
     default:
         return false;
@@ -41,11 +41,11 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case GEC:
+    case GDE:
         return QString("goldegg");
-    case mGEC:
+    case mGDE:
         return QString("mgoldegg");
-    case uGEC:
+    case uGDE:
         return QString::fromUtf8("ugoldegg");
     default:
         return QString("???");
@@ -56,23 +56,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case GEC:
-            return QString("GEC");
-        case mGEC:
-            return QString("mGEC");
-        case uGEC:
-            return QString::fromUtf8("μGEC");
+        case GDE:
+            return QString("GDE");
+        case mGDE:
+            return QString("mGDE");
+        case uGDE:
+            return QString::fromUtf8("μGDE");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case GEC:
-            return QString("tGEC");
-        case mGEC:
-            return QString("mtGEC");
-        case uGEC:
-            return QString::fromUtf8("μtGEC");
+        case GDE:
+            return QString("tGDE");
+        case mGDE:
+            return QString("mtGDE");
+        case uGDE:
+            return QString::fromUtf8("μtGDE");
         default:
             return QString("???");
         }
@@ -83,23 +83,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case GEC:
-            return QString("GEC");
-        case mGEC:
-            return QString("Milli-GEC (1 / 1" THIN_SP_UTF8 "000)");
-        case uGEC:
-            return QString("Micro-GEC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case GDE:
+            return QString("GDE");
+        case mGDE:
+            return QString("Milli-GDE (1 / 1" THIN_SP_UTF8 "000)");
+        case uGDE:
+            return QString("Micro-GDE (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case GEC:
-            return QString("TestGECs");
-        case mGEC:
-            return QString("Milli-TestGEC (1 / 1" THIN_SP_UTF8 "000)");
-        case uGEC:
-            return QString("Micro-TestGEC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case GDE:
+            return QString("TestGDEs");
+        case mGDE:
+            return QString("Milli-TestGDE (1 / 1" THIN_SP_UTF8 "000)");
+        case uGDE:
+            return QString("Micro-TestGDE (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -109,11 +109,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case GEC:
+    case GDE:
         return 100000000;
-    case mGEC:
+    case mGDE:
         return 100000;
-    case uGEC:
+    case uGDE:
         return 100;
     default:
         return 100000000;
@@ -123,11 +123,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case GEC:
+    case GDE:
         return 8;
-    case mGEC:
+    case mGDE:
         return 5;
-    case uGEC:
+    case uGDE:
         return 2;
     default:
         return 0;

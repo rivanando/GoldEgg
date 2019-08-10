@@ -29,10 +29,10 @@ struct CExtPubKey;
  */
 
 /**
- * gecure_allocator is defined in allocators.h
+ * secure_allocator is defined in allocators.h
  * CPrivKey is a serialized private key, with all parameters included (279 bytes)
  */
-typedef std::vector<unsigned char, gecure_allocator<unsigned char> > CPrivKey;
+typedef std::vector<unsigned char, secure_allocator<unsigned char> > CPrivKey;
 
 /** An encapsulated private key. */
 class CKey
@@ -59,10 +59,10 @@ public:
     }
 
     //! Copy constructor. This is necessary because of memlocking.
-    CKey(const CKey& gecret) : fValid(gecret.fValid), fCompressed(gecret.fCompressed)
+    CKey(const CKey& secret) : fValid(secret.fValid), fCompressed(secret.fCompressed)
     {
         LockObject(vch);
-        memcpy(vch, gecret.vch, sizeof(vch));
+        memcpy(vch, secret.vch, sizeof(vch));
     }
 
     //! Destructor (again necessary because of memlocking).

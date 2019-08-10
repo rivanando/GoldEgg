@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_FIELD_
-#define _GECP256K1_FIELD_
+#ifndef _GDEP256K1_FIELD_
+#define _GDEP256K1_FIELD_
 
 /** Field element module.
  *
@@ -84,7 +84,7 @@ static void secp256k1_fe_add(secp256k1_fe_t *r, const secp256k1_fe_t *a);
 
 /** Sets a field element to be the product of two others. Requires the inputs' magnitudes to be at most 8.
  *  The output magnitude is 1 (but not guaranteed to be normalized). */
-static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * GECP256K1_RESTRICT b);
+static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * GDEP256K1_RESTRICT b);
 
 /** Sets a field element to be the square of another. Requires the input's magnitude to be at most 8.
  *  The output magnitude is 1 (but not guaranteed to be normalized). */

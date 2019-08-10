@@ -24,7 +24,7 @@
 #if 0
 //
 // alertTests contains 7 alerts, generated with this code:
-// (SignAndSave code not shown, alert signing key is gecret)
+// (SignAndSave code not shown, alert signing key is secret)
 //
 {
     CAlert alert;

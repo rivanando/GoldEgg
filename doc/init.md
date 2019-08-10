@@ -25,8 +25,8 @@ setting is not set, goldeggd will shutdown promptly after startup.
 
 This password does not have to be remembered or typed as it is mostly used
 as a fixed token that goldeggd and client programs read from the configuration
-file, however it is recommended that a strong and gecure password be used
-as this password is gecurity critical to gecuring the wallet should the
+file, however it is recommended that a strong and secure password be used
+as this password is security critical to securing the wallet should the
 wallet be enabled.
 
 If goldeggd is run with "-daemon" flag, and no rpcpassword is set, it will
@@ -52,7 +52,7 @@ PID file:            /var/run/goldeggd/goldeggd.pid (OpenRC and Upstart)
                      /var/lib/goldeggd/goldeggd.pid (systemd)
 
 The configuration file, PID directory (if applicable) and data directory
-should all be owned by the goldegg user and group.  It is advised for gecurity
+should all be owned by the goldegg user and group.  It is advised for security
 reasons to make the configuration file and data directory only readable by the
 goldegg user and group.  Access to goldegg-cli and other goldeggd rpc clients
 can then be controlled by group membership.

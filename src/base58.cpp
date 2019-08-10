@@ -293,15 +293,15 @@ bool CBitcoinAddress::IsScript() const
     return IsValid() && vchVersion == Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS);
 }
 
-void CBitcoinGecret::SetKey(const CKey& vchGecret)
+void CBitcoinSecret::SetKey(const CKey& vchSecret)
 {
-    assert(vchGecret.IsValid());
-    SetData(Params().Base58Prefix(CChainParams::GECRET_KEY), vchGecret.begin(), vchGecret.size());
-    if (vchGecret.IsCompressed())
+    assert(vchSecret.IsValid());
+    SetData(Params().Base58Prefix(CChainParams::SECRET_KEY), vchSecret.begin(), vchSecret.size());
+    if (vchSecret.IsCompressed())
         vchData.push_back(1);
 }
 
-CKey CBitcoinGecret::GetKey()
+CKey CBitcoinSecret::GetKey()
 {
     CKey ret;
     assert(vchData.size() >= 32);
@@ -309,19 +309,19 @@ CKey CBitcoinGecret::GetKey()
     return ret;
 }
 
-bool CBitcoinGecret::IsValid() const
+bool CBitcoinSecret::IsValid() const
 {
     bool fExpectedFormat = vchData.size() == 32 || (vchData.size() == 33 && vchData[32] == 1);
-    bool fCorrectVersion = vchVersion == Params().Base58Prefix(CChainParams::GECRET_KEY);
+    bool fCorrectVersion = vchVersion == Params().Base58Prefix(CChainParams::SECRET_KEY);
     return fExpectedFormat && fCorrectVersion;
 }
 
-bool CBitcoinGecret::SetString(const char* pszGecret)
+bool CBitcoinSecret::SetString(const char* pszSecret)
 {
-    return CBase58Data::SetString(pszGecret) && IsValid();
+    return CBase58Data::SetString(pszSecret) && IsValid();
 }
 
-bool CBitcoinGecret::SetString(const std::string& strGecret)
+bool CBitcoinSecret::SetString(const std::string& strSecret)
 {
-    return SetString(strGecret.c_str());
+    return SetString(strSecret.c_str());
 }

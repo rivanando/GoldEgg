@@ -126,19 +126,19 @@ public:
 };
 
 /**
- * A base58-encoded gecret key
+ * A base58-encoded secret key
  */
-class CBitcoinGecret : public CBase58Data
+class CBitcoinSecret : public CBase58Data
 {
 public:
-    void SetKey(const CKey& vchGecret);
+    void SetKey(const CKey& vchSecret);
     CKey GetKey();
     bool IsValid() const;
-    bool SetString(const char* pszGecret);
-    bool SetString(const std::string& strGecret);
+    bool SetString(const char* pszSecret);
+    bool SetString(const std::string& strSecret);
 
-    CBitcoinGecret(const CKey& vchGecret) { SetKey(vchGecret); }
-    CBitcoinGecret() {}
+    CBitcoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
+    CBitcoinSecret() {}
 };
 
 template <typename K, int Size, CChainParams::Base58Type Type>
@@ -167,7 +167,7 @@ public:
     CBitcoinExtKeyBase() {}
 };
 
-typedef CBitcoinExtKeyBase<CExtKey, 74, CChainParams::EXT_GECRET_KEY> CBitcoinExtKey;
+typedef CBitcoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CBitcoinExtKey;
 typedef CBitcoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CBitcoinExtPubKey;
 
 #endif // BITCOIN_BASE58_H

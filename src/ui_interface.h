@@ -67,7 +67,7 @@ public:
         MODAL = 0x10000000U,
 
         /** Do not print contents of message to debug log */
-        GECURE = 0x40000000U,
+        GDEURE = 0x40000000U,
 
         /** Predefined combinations for certain default usage cases */
         MSG_INFORMATION = ICON_INFORMATION,

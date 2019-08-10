@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_TESTRAND_IMPL_H_
-#define _GECP256K1_TESTRAND_IMPL_H_
+#ifndef _GDEP256K1_TESTRAND_IMPL_H_
+#define _GDEP256K1_TESTRAND_IMPL_H_
 
 #include <stdint.h>
 #include <string.h>
@@ -14,7 +14,7 @@
 
 static uint32_t secp256k1_Rz = 11, secp256k1_Rw = 11;
 
-GECP256K1_INLINE static void secp256k1_rand_seed(uint64_t v) {
+GDEP256K1_INLINE static void secp256k1_rand_seed(uint64_t v) {
     secp256k1_Rz = v >> 32;
     secp256k1_Rw = v;
 
@@ -26,7 +26,7 @@ GECP256K1_INLINE static void secp256k1_rand_seed(uint64_t v) {
     }
 }
 
-GECP256K1_INLINE static uint32_t secp256k1_rand32(void) {
+GDEP256K1_INLINE static uint32_t secp256k1_rand32(void) {
     secp256k1_Rz = 36969 * (secp256k1_Rz & 0xFFFF) + (secp256k1_Rz >> 16);
     secp256k1_Rw = 18000 * (secp256k1_Rw & 0xFFFF) + (secp256k1_Rw >> 16);
     return (secp256k1_Rw << 16) + (secp256k1_Rw >> 16) + secp256k1_Rz;

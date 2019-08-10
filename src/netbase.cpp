@@ -585,8 +585,8 @@ static bool ConnectThroughProxy(const proxyType &proxy, const std::string strDes
     // do socks negotiation
     if (proxy.randomize_credentials) {
         ProxyCredentials random_auth;
-        random_auth.username = strprintf("%i", ingecure_rand());
-        random_auth.password = strprintf("%i", ingecure_rand());
+        random_auth.username = strprintf("%i", insecure_rand());
+        random_auth.password = strprintf("%i", insecure_rand());
         if (!Socks5(strDest, (unsigned short)port, &random_auth, hSocket))
             return false;
     } else {
@@ -823,7 +823,7 @@ bool CNetAddr::IsValid() const
 {
     // Cleanup 3-byte shifted addresses caused by garbage in size field
     // of addr messages from versions before 0.2.9 checksum.
-    // Two congecutive addr messages look like this:
+    // Two congdeutive addr messages look like this:
     // header20 vectorlen3 addr26 addr26 addr26 header20 vectorlen3 addr26 addr26 addr26...
     // so if the first length field is garbled, it reads the second batch
     // of addr misaligned by 3 bytes.

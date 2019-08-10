@@ -238,12 +238,12 @@ BOOST_AUTO_TEST_CASE(util_IsHex)
     BOOST_CHECK(!IsHex("0x0000"));
 }
 
-BOOST_AUTO_TEST_CASE(util_seed_ingecure_rand)
+BOOST_AUTO_TEST_CASE(util_seed_insecure_rand)
 {
     int i;
     int count=0;
 
-    seed_ingecure_rand(true);
+    seed_insecure_rand(true);
 
     for (int mod=2;mod<11;mod++)
     {
@@ -259,7 +259,7 @@ BOOST_AUTO_TEST_CASE(util_seed_ingecure_rand)
         {
             uint32_t rval;
             do{
-                rval=ingecure_rand()&mask;
+                rval=insecure_rand()&mask;
             }while(rval>=(uint32_t)mod);
             count += rval==0;
         }

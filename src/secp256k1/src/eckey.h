@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _GECP256K1_ECKEY_
-#define _GECP256K1_ECKEY_
+#ifndef _GDEP256K1_ECKEY_
+#define _GDEP256K1_ECKEY_
 
 #include "group.h"
 #include "scalar.h"
